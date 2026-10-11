@@ -1,0 +1,86 @@
+# 飞书（HHH IM 插件）
+
+HHH 的飞书插件：在 HHH 里看飞书的群聊、私聊与话题，回消息、发图片和文件、撤回、点表情回应。
+
+它是从 HHH 内置的飞书搬出来的独立插件，走 HHH 的统一插座 HHH-IM-Protocol v1。界面、登录方式和各种说明文字都和内置时一样，
+本机已经存下的聊天记录和头像照样能用。装上后会接过内置飞书的登录，不用重新登录。
+
+## 能做什么
+
+- **登录**：两种方式，和内置的登录面板一样。
+  - 通过中继：用中继上配置的飞书应用。
+  - 使用自己的应用：填企业的飞书自建应用（App ID、App Secret），登录和续期都只在这台电脑上。
+- **续期**：登录快过期时自动续期，换到的新授权先交给 HHH 存好再用。HHH 没在用这个插件时，也会按时叫它续期。
+- **读取**：会话列表、搜群、搜人、找私聊、群成员、最近聊过的会话、消息与话题、表情回应、人员资料。
+- **内容**：文字、提及、富文本、卡片（含表格、图片组、人员）、图片、文件、视频、表情包。
+- **发送与动作**：回复、回到话题里、@某人与 @所有人、发图片和文件、撤回、加表情回应、去掉表情回应。
+- **资源**：图片、文件、头像、表情图都分段交给 HHH。
+
+聊天记录、凭据和配置都由 HHH 保存，插件自己不存。
+
+## 构建
+
+```sh
+cargo build --release
+cargo test
+cargo fmt --check
+cargo clippy --all-targets
+```
+
+程序是 `target/release/hhh-im-feishu`，Windows 上是 `hhh-im-feishu.exe`。Windows 上按窗口程序编译，HHH 拉起它时不弹控制台窗口。
+
+> 协议包 `hhh-im-protocol` 现在按本机路径引用，`Cargo.toml` 里有说明。hhh-im-sdk 打好 `v0.2.0` 标签后，会换成按标签取的固定版本。
+
+## 自检
+
+装自检和打包工具（协议 v14 的字段与签名需要 v0.2.0）：
+
+```sh
+cargo install --git https://github.com/MagicLizi/hhh-im-sdk --tag v0.2.0 hhh-im-protocol --features transport,package
+```
+
+打包后自检，全部通过才算改好：
+
+```sh
+powershell -File scripts/pack.ps1
+hhh-im-check dist/stage/hhh-im-provider.json
+```
+
+## 在 HHH 里试
+
+| 方式 | 什么时候用 |
+|---|---|
+| 设置 → IM → 添加 IM → 文件夹 | 开发时，选 `dist/stage` |
+| 添加 IM → 安装包 | 选 `dist/` 里的 `.hhhim`，和用户装的一样 |
+| 卡片「管理 → 从文件更新」 | 已经装过，换成新打的包或文件夹 |
+
+## 发版本
+
+飞书是官方插件：HHH 只认官方私钥签过名的版本索引。目前只发 Windows 的包（`windows-x64`）。
+
+1. 改清单 `hhh-im-provider.json` 和 `Cargo.toml` 里的 `version`，写好 `notes.md`（给用户看的更新说明）。
+2. 提交，打标签 `v<版本>`，推送提交和标签。
+3. 发布令牌放在环境变量 `HHH_IM_PUBLISH_TOKEN` 里。签名私钥在私有的密钥仓库 `hhh-keys` 里，**不进这个仓库**：
+
+   ```sh
+   powershell -File scripts/pack.ps1 -SignKey <hhh-keys>/official/hhh-official-signing.key -Publish
+   ```
+
+   打包工具写出 `.hhhim`、版本索引 `hhhim-release.json` 和签名 `hhhim-release.json.sig`，三样一起传到 GitHub Release。
+
+详细规矩见 [hhh-im-sdk 的发版本规范](https://github.com/MagicLizi/hhh-im-sdk/blob/main/docs/release.md)。
+
+## 仓库里有什么
+
+| 位置 | 内容 |
+|---|---|
+| `src/im/`、`src/net.rs`、`src/feishu/` | 从 HHH 搬来的飞书适配器：统一消息类型、统一 TLS 握手、飞书接口与翻译 |
+| `src/server/` | 协议服务：握手声明、登录、续期、交接、读取与动作、资源与上传，以及统一类型和线上类型之间的翻译 |
+| `tests/fixtures/feishu/` | 飞书响应的取样（人名、编号和内容都是编的），以及内置飞书翻出来的样子（`*.expected.json`） |
+| `tests/fixtures/feishu-protocol/` | 协议样例：插件发给 HHH 的线上消息。这些样例会拷进 HHH，用宿主真正的翻译再核对一遍 |
+| `scripts/pack.ps1`、`scripts/pack.sh` | 打包与发布 |
+| `scripts/emoji-snapshot.mjs` | 重新生成随包的表情快照 |
+
+## 许可证
+
+[MIT](LICENSE)

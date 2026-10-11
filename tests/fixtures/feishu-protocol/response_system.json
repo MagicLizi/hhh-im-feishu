@@ -1,0 +1,18 @@
+{
+  "content": [
+    {
+      "kind": "system",
+      "label": "群通知",
+      "type": "unsupported"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000000000,
+  "id": "om_system",
+  "incomplete": true,
+  "sender": {
+    "idType": "",
+    "kind": "system"
+  },
+  "updatedAtMs": 1700000000000
+}

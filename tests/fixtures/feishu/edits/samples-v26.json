@@ -1,0 +1,243 @@
+{
+  "source": "契约 hhh-im client v26 §2：2026-10-03 在只有本人的“示例测试”群里取样（doc/product-contracts/hhh-im/client/evidence/v26/sample-edited-v26.json），身份换成占位",
+  "pairs": [
+    {
+      "name": "text_edited_in_web",
+      "edited": true,
+      "before": {
+        "body": {
+          "content": "{\"text\":\"v26取样A：普通文字\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791001700265",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a01",
+        "message_position": "415",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791001700265",
+        "updated": false
+      },
+      "after": {
+        "body": {
+          "content": "{\"text\":\"<p>v26取样A：普通文字（改过）</p>\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791001700265",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a01",
+        "message_position": "415",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791001850551",
+        "updated": true
+      }
+    },
+    {
+      "name": "post_edited_in_web",
+      "edited": true,
+      "before": {
+        "body": {
+          "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"v26取样C：富文本列表\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"v26取样C：富文本列表\",\"style\":[]}]]}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791001895048",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a02",
+        "message_position": "417",
+        "msg_type": "post",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791001895048",
+        "updated": false
+      },
+      "after": {
+        "body": {
+          "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"v26取样C：富文本列表（改过）\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"v26取样C：富文本列表（改过）\",\"style\":[]}]]}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791001895048",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a02",
+        "message_position": "417",
+        "msg_type": "post",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791001954381",
+        "updated": true
+      }
+    },
+    {
+      "name": "text_with_link_updated_by_preview",
+      "edited": false,
+      "before": {
+        "body": {
+          "content": "{\"text\":\"v26取样D：文字链接 https://www.feishu.cn/ 结束\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002125577",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a03",
+        "message_position": "421",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002125577",
+        "updated": false
+      },
+      "after": {
+        "body": {
+          "content": "{\"text\":\"v26取样D：文字链接 https://www.feishu.cn/ 结束\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002125577",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a03",
+        "message_position": "421",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002133119",
+        "updated": true
+      }
+    },
+    {
+      "name": "text_with_mention_updated_after_sending",
+      "edited": false,
+      "before": {
+        "body": {
+          "content": "{\"text\":\"v26取样E：@_user_1 接口发的提及\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002163712",
+        "deleted": false,
+        "mentions": [
+          {
+            "id": "ou_self",
+            "id_type": "open_id",
+            "key": "@_user_1",
+            "name": "王小明",
+            "tenant_key": "tenant"
+          }
+        ],
+        "message_id": "om_x100b000000000000000000000000a04",
+        "message_position": "423",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002163712",
+        "updated": false
+      },
+      "after": {
+        "body": {
+          "content": "{\"text\":\"v26取样E：@_user_1 接口发的提及\"}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002163712",
+        "deleted": false,
+        "mentions": [
+          {
+            "id": "ou_self",
+            "id_type": "open_id",
+            "key": "@_user_1",
+            "name": "王小明",
+            "tenant_key": "tenant"
+          }
+        ],
+        "message_id": "om_x100b000000000000000000000000a04",
+        "message_position": "423",
+        "msg_type": "text",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002163790",
+        "updated": true
+      }
+    },
+    {
+      "name": "post_with_image_updated_after_sending",
+      "edited": false,
+      "before": {
+        "body": {
+          "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"v26取样F：带图的富文本 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://www.feishu.cn/\",\"text\":\"飞书\",\"style\":[]}],[{\"tag\":\"img\",\"image_key\":\"img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g\",\"width\":64,\"height\":64}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"v26取样F：带图的富文本 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://www.feishu.cn/\",\"text\":\"飞书\",\"style\":[]}],[{\"tag\":\"img\",\"image_key\":\"img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g\",\"width\":64,\"height\":64}]]}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002267718",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a05",
+        "message_position": "424",
+        "msg_type": "post",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002267718",
+        "updated": false
+      },
+      "after": {
+        "body": {
+          "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"v26取样F：带图的富文本 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://www.feishu.cn/\",\"text\":\"飞书\",\"style\":[]}],[{\"tag\":\"img\",\"image_key\":\"img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g\",\"width\":64,\"height\":64}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"v26取样F：带图的富文本 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://www.feishu.cn/\",\"text\":\"飞书\",\"style\":[]}],[{\"tag\":\"img\",\"image_key\":\"img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g\",\"width\":64,\"height\":64}]]}"
+        },
+        "chat_id": "oc_hhh_test",
+        "create_time": "1791002267718",
+        "deleted": false,
+        "message_id": "om_x100b000000000000000000000000a05",
+        "message_position": "424",
+        "msg_type": "post",
+        "sender": {
+          "id": "ou_self",
+          "id_type": "open_id",
+          "sender_type": "user",
+          "tenant_key": "tenant",
+          "sender_name": "王小明"
+        },
+        "update_time": "1791002268733",
+        "updated": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "about": "契约 hhh-im client v17 §7 对拍夹具：飞书平台说明里“目录外表情”的规则（unlistedEmoji），与飞书适配器猜图（guessed_images）逐例一致；Friend 前端用同一组规则与例子检查界面的判断。guess 为真的类型会去猜图，placeholder 为真的类型（且不在目录里）画占位图标。",
+  "rules": {
+    "guessPattern": "^(?=.*[A-Za-z_])[A-Za-z0-9_]{1,48}$",
+    "placeholderPattern": "^[0-9]+$",
+    "placeholderLabel": "企业表情"
+  },
+  "cases": [
+    { "emojiType": "THUMBSUP", "guess": true, "placeholder": false },
+    { "emojiType": "NewFace2027", "guess": true, "placeholder": false },
+    { "emojiType": "Snow_Man", "guess": true, "placeholder": false },
+    { "emojiType": "_", "guess": true, "placeholder": false },
+    { "emojiType": "A23456789012345678901234567890123456789012345678", "guess": true, "placeholder": false },
+    { "emojiType": "A234567890123456789012345678901234567890123456789", "guess": false, "placeholder": false },
+    { "emojiType": "7412345678901234567", "guess": false, "placeholder": true },
+    { "emojiType": "2026", "guess": false, "placeholder": true },
+    { "emojiType": "", "guess": false, "placeholder": false },
+    { "emojiType": "thumbs-up", "guess": false, "placeholder": false },
+    { "emojiType": "赞", "guess": false, "placeholder": false },
+    { "emojiType": "OK ", "guess": false, "placeholder": false },
+    { "emojiType": "12a", "guess": true, "placeholder": false }
+  ]
+}

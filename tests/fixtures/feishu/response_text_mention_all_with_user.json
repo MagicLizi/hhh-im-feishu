@@ -1,0 +1,8 @@
+{
+  "message_id": "om_at_all_and_user", "chat_id": "oc_group", "msg_type": "text",
+  "create_time": "1700000001000", "update_time": "1700000001000",
+  "deleted": false, "updated": false, "message_position": "421",
+  "sender": {"id": "ou_sender", "id_type": "open_id", "sender_type": "user", "tenant_key": "tenant_x"},
+  "body": {"content": "{\"text\":\"取样：@_user_1 和 @_all\"}"},
+  "mentions": [{"id": "ou_me", "id_type": "open_id", "key": "@_user_1", "name": "Alice", "tenant_key": "tenant_x"}]
+}

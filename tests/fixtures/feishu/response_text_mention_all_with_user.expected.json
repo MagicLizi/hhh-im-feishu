@@ -1,0 +1,11 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_at_all_and_user"},
+  "sender": {"id": "ou_sender", "idType": "open_id", "kind": "user"},
+  "createdAtMs": 1700000001000, "updatedAtMs": 1700000001000,
+  "content": [
+    {"type": "text", "text": "取样："},
+    {"type": "mention", "actor": {"id": "ou_me", "idType": "open_id", "kind": "user", "name": "Alice"}},
+    {"type": "text", "text": " 和 "},
+    {"type": "mention", "everyone": true}
+  ]
+}

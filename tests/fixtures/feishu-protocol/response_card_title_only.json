@@ -1,0 +1,20 @@
+{
+  "content": [
+    {
+      "card": {
+        "title": "PR Review 汇总",
+        "tone": "blue"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790432891530,
+  "id": "om_card_title",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790432891530
+}

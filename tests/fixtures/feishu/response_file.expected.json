@@ -1,0 +1,6 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_file"},
+  "sender": {"id": "ou_sender", "idType": "open_id", "kind": "user"},
+  "createdAtMs": 1700000000000,
+  "content": [{"type": "resource", "resource": {"message": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_file"}, "key": "file_1", "kind": "file"}, "name": "report.json"}]
+}

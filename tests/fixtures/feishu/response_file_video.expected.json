@@ -1,0 +1,32 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_file_video"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1700000000000,
+  "content": [
+    {
+      "type": "resource",
+      "resource": {
+        "message": {
+          "conversation": {
+            "connectionId": "test",
+            "id": "oc_group"
+          },
+          "id": "om_file_video"
+        },
+        "key": "file_v3_mp4",
+        "kind": "file"
+      },
+      "name": "hhh-video-sample-file.mp4"
+    }
+  ]
+}

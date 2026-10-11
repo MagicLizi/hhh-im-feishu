@@ -1,0 +1,265 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[HHH v51 取样 2] Markdown 写法"
+                  }
+                ],
+                "type": "strong"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "加粗"
+                  }
+                ],
+                "type": "strong"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "斜体"
+                  }
+                ],
+                "type": "emphasis"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "删除线"
+                  }
+                ],
+                "type": "delete"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "type": "inlineCode",
+                "value": "行内代码"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "链接"
+                  }
+                ],
+                "type": "link",
+                "url": "https://www.feishu.cn"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "第一项"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "第二项"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "嵌套无序一"
+                              }
+                            ],
+                            "type": "paragraph"
+                          }
+                        ],
+                        "type": "listItem"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "嵌套无序二"
+                              }
+                            ],
+                            "type": "paragraph"
+                          }
+                        ],
+                        "type": "listItem"
+                      }
+                    ],
+                    "ordered": false,
+                    "type": "list"
+                  }
+                ],
+                "type": "listItem"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "第三项"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              }
+            ],
+            "ordered": true,
+            "type": "list"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "无序一"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "无序二"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              }
+            ],
+            "ordered": false,
+            "type": "list"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "引用一行"
+                  },
+                  {
+                    "type": "break"
+                  },
+                  {
+                    "type": "text",
+                    "value": "引用第二行"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "blockquote"
+          },
+          {
+            "lang": "python",
+            "type": "code",
+            "value": "print('hi')"
+          },
+          {
+            "type": "thematicBreak"
+          },
+          {
+            "children": [
+              {
+                "actor": {
+                  "id": "ou_sample_me",
+                  "idType": "open_id",
+                  "kind": "user",
+                  "name": "张三"
+                },
+                "type": "mention"
+              },
+              {
+                "type": "text",
+                "value": " 提及"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "createdAtMs": 1790578199257,
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_sample_chat"
+    },
+    "id": "om_sample_2"
+  },
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790578199257
+}

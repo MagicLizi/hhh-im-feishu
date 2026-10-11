@@ -1,0 +1,166 @@
+{
+  "capabilities": {
+    "conversations": {
+      "findDirect": true,
+      "list": true,
+      "members": true,
+      "recentActivity": true,
+      "search": true
+    },
+    "edit": false,
+    "events": {
+      "conversations": false,
+      "deletions": false,
+      "messages": false,
+      "people": false,
+      "reactions": false
+    },
+    "messages": {
+      "get": true,
+      "list": true
+    },
+    "people": {
+      "get": true,
+      "search": true
+    },
+    "reactions": {
+      "add": true,
+      "catalog": true,
+      "list": true,
+      "remove": true
+    },
+    "recall": true,
+    "resources": {
+      "avatars": true,
+      "read": true
+    },
+    "retranslate": false,
+    "send": {
+      "file": true,
+      "image": true,
+      "lookup": false,
+      "mentionAll": true,
+      "mentions": true,
+      "text": true
+    },
+    "session": {
+      "renew": true
+    }
+  },
+  "loginMethods": [
+    {
+      "id": "relay",
+      "kind": "relay",
+      "label": "通过中继登录",
+      "note": "用中继上配置的飞书应用，只有这个应用所在企业的成员能登录；令牌会经过中继，中继不保存。",
+      "placeholder": "输入中继地址，https://…"
+    },
+    {
+      "callbackHelp": "登记到飞书开发者后台 → 安全设置 → 重定向 URL。地址里有 Friend 的端口，换了端口要再登记一个（飞书可以登记多个）。",
+      "callbackPath": "callback",
+      "createLink": {
+        "after": "，创建完成后填入 App ID 与 App Secret。",
+        "label": "前往飞书开放平台创建",
+        "url": "https://open.feishu.cn/page/launcher?from=backend_oneclick"
+      },
+      "id": "own",
+      "idLabel": "App ID",
+      "idPlaceholder": "cli_…",
+      "kind": "ownApp",
+      "label": "使用自己的应用",
+      "note": "填你企业的飞书自建应用，登录与续期只在这台电脑上。",
+      "secretHelp": "飞书开放平台 → 凭证与基础信息。只保存在本机。",
+      "secretLabel": "App Secret",
+      "secretPlaceholder": "输入 App Secret"
+    }
+  ],
+  "platform": {
+    "actions": {
+      "react": true,
+      "recall": {
+        "own": true
+      },
+      "reply": true,
+      "thread": true
+    },
+    "avatarIdentity": {
+      "keyPattern": "^(?i:https)://[^/?#]*(?i:\\.feishucdn\\.com|\\.pstatp\\.com)(?::[0-9]*)?(?:/[^/?#]*)*?/(v3_[^/?#]*)",
+      "variantPattern": "^[^#]*?[?&]image_size=([^&#]*)"
+    },
+    "avatarShape": "circle",
+    "chatLink": "https://applink.feishu.cn/client/chat/open?openChatId={conversation}",
+    "conversationNouns": {
+      "channel": "群",
+      "direct": "会话",
+      "group": "群",
+      "unknown": "会话"
+    },
+    "discovery": {
+      "coldPages": 40,
+      "fastestSecs": 15,
+      "pages": 10
+    },
+    "downloads": {
+      "perMinute": 1000,
+      "perSecond": 50
+    },
+    "editsByContent": [
+      "text",
+      "mention",
+      "rich"
+    ],
+    "emoji": {
+      "namePattern": "^[A-Za-z0-9_]{1,64}$",
+      "textPattern": "\\[([^\\[\\]\\r\\n]{1,12})\\]",
+      "unlisted": {
+        "guess": true,
+        "guessPattern": "^(?=.*[A-Za-z_])[A-Za-z0-9_]{1,48}$",
+        "placeholderLabel": "企业表情",
+        "placeholderPattern": "^[0-9]+$"
+      },
+      "whiteBackground": true
+    },
+    "fileSegmentBytes": 33554432,
+    "history": "server",
+    "imageNamePrefix": "飞书图片",
+    "limits": {
+      "attachmentNameMaxBytes": 250,
+      "fileUploadMaxBytes": 31457280,
+      "imageUploadMaxBytes": 10485760
+    },
+    "pageMax": 50,
+    "readDefaults": {
+      "active": 5,
+      "discover": 30,
+      "dormant": 300,
+      "people": 600,
+      "profile": 600,
+      "quiet": 60,
+      "stale": 600,
+      "threadDays": 7,
+      "watching": 2
+    },
+    "reads": {
+      "perMinute": 800,
+      "perSecond": 40
+    },
+    "threads": {
+      "activityOnRoot": false,
+      "broadcast": {
+        "attachments": true,
+        "native": false
+      },
+      "readsAfter": false
+    },
+    "userAdjustable": [
+      "readIntervals"
+    ]
+  },
+  "protocolVersion": 1,
+  "provider": {
+    "id": "feishu",
+    "name": "飞书",
+    "version": "1.0.0"
+  },
+  "settings": []
+}

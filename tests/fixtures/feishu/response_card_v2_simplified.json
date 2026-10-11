@@ -1,0 +1,18 @@
+{
+  "body": {
+    "content": "{\"title\":\"HHH 测试卡 1：标题栏与文字\\n副标题：取样用，稍后撤回\",\"elements\":[[{\"tag\":\"img\",\"image_key\":\"img_v3_upgrade\"},{\"tag\":\"text\",\"text\":\"请升级至最新版本客户端，以查看内容\"},{\"tag\":\"text\",\"text\":\"\"}]]}"
+  },
+  "chat_id": "oc_group",
+  "create_time": "1790756048592",
+  "deleted": false,
+  "message_id": "om_card_v2_simplified",
+  "msg_type": "interactive",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "tenant"
+  },
+  "update_time": "1790756048592",
+  "updated": false
+}

@@ -1,0 +1,17 @@
+{
+  "message_id": "om_card_simplified",
+  "chat_id": "oc_group",
+  "msg_type": "interactive",
+  "create_time": "1790500389023",
+  "update_time": "1790500389023",
+  "deleted": false,
+  "updated": false,
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user"
+  },
+  "body": {
+    "content": "{\"title\":\"PR Review 汇总\",\"elements\":[[{\"tag\":\"text\",\"text\":\"acme/rocket\"},{\"tag\":\"text\",\"text\":\"  ·  auto  ·  2026-09-27 17:02:43 GMT+8\"}],[{\"tag\":\"text\",\"text\":\"238\"},{\"tag\":\"text\",\"text\":\"\\n当前 PR\"},{\"tag\":\"text\",\"text\":\"13\"},{\"tag\":\"text\",\"text\":\"\\n本轮有变化\"},{\"tag\":\"text\",\"text\":\"3\"},{\"tag\":\"text\",\"text\":\"\\n进入 Review\"}],[{\"tag\":\"text\",\"text\":\"1\"},{\"tag\":\"text\",\"text\":\"\\n本轮已合并\"},{\"tag\":\"text\",\"text\":\"2\"},{\"tag\":\"text\",\"text\":\"\\n本轮未合并\"}],[{\"tag\":\"hr\"}],[{\"tag\":\"text\",\"text\":\"✅ 本轮已合并 PR\"}],[{\"tag\":\"a\",\"href\":\"https://github.com/acme/rocket/pull/5149\",\"text\":\"#5149 · feat(mobile): 设置页对齐新版样式\"}]]}"
+  }
+}

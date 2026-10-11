@@ -1,0 +1,5 @@
+{
+  "groups": {"items": [{"reference": {"connectionId": "test", "id": "oc_research"}, "name": "研发讨论群", "kind": "group", "avatarUrl": "https://example.test/group.png"}], "notice": "部分结果不可见"},
+  "users": {"items": [{"reference": {"connectionId": "test", "id": "ou_target"}, "name": "测试用户", "avatarUrl": "https://example.test/user.png"}]},
+  "direct": {"conversation": {"connectionId": "test", "id": "oc_direct"}, "notice": "搜索索引可能有延迟"}
+}

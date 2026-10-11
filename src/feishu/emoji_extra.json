@@ -1,0 +1,825 @@
+{
+ "sampled": "2026-09-30",
+ "sources": {
+  "catalog": "https://open.feishu.cn/document_portal/v1/document/get_detail?fullPath=/server-docs/im-v1/message-reaction/emojis-introduce",
+  "map": "https://lf-package-cn.feishucdn.com/obj/feishu-static/eesz/bear/docx/module/ud-biz-react-emoji_es6.206852cb.chunk.js",
+  "names": "https://lf-package-cn.feishucdn.com/obj/feishu-static/eesz/bear/docx/module/dx_63567_es6.ea61cac8.chunk.js",
+  "imageBase": "https://sf3-ttcdn-tos.pstatp.com/obj/lark-reaction-cn/"
+ },
+ "names": {
+  "2022": "2022年",
+  "OK": "OK",
+  "THUMBSUP": "赞",
+  "THANKS": "双手合十",
+  "MUSCLE": "加油",
+  "FINGERHEART": "比心",
+  "APPLAUSE": "鼓掌",
+  "FISTBUMP": "碰拳",
+  "JIAYI": "+1",
+  "DONE": "完成",
+  "SMILE": "微笑",
+  "BLUSH": "呲牙",
+  "LAUGH": "大笑",
+  "SMIRK": "坏笑",
+  "LOL": "笑哭",
+  "FACEPALM": "捂脸",
+  "LOVE": "送心",
+  "WINK": "调皮",
+  "PROUD": "得意",
+  "WITTY": "灵光一闪",
+  "SMART": "机智",
+  "SCOWL": "惊呆",
+  "THINKING": "思考",
+  "SOB": "流泪",
+  "CRY": "泣不成声",
+  "ERROR": "黑线",
+  "NOSEPICK": "抠鼻",
+  "HAUGHTY": "烦躁",
+  "SLAP": "打脸",
+  "SPITBLOOD": "吐血",
+  "TOASTED": "衰",
+  "GLANCE": "看",
+  "DULL": "呆无辜",
+  "INNOCENTSMILE": "无辜笑",
+  "JOYFUL": "笑",
+  "WOW": "惊喜",
+  "TRICK": "嬉笑",
+  "YEAH": "耶",
+  "ENOUGH": "我想静静",
+  "TEARS": "泪奔",
+  "EMBARRASSED": "尬笑",
+  "KISS": "亲亲",
+  "SMOOCH": "飞吻",
+  "DROOL": "爱慕",
+  "OBSESSED": "心心脸",
+  "MONEY": "财迷",
+  "TEASE": "做鬼脸",
+  "SHOWOFF": "酷",
+  "COMFORT": "摸头",
+  "CLAP": "欢呼",
+  "PRAISE": "强",
+  "STRIVE": "奋斗",
+  "XBLUSH": "脸红",
+  "SILENT": "闭嘴",
+  "WAVE": "再见",
+  "WHAT": "什么？",
+  "FROWN": "皱眉",
+  "SHY": "害羞",
+  "DIZZY": "晕",
+  "LOOKDOWN": "鄙视",
+  "CHUCKLE": "偷笑",
+  "WAIL": "大哭",
+  "CRAZY": "抓狂",
+  "WHIMPER": "可怜",
+  "HUG": "求抱抱",
+  "BLUBBER": "快哭了",
+  "WRONGED": "委屈",
+  "HUSKY": "翻白眼",
+  "SHHH": "嘘",
+  "SMUG": "撇嘴",
+  "ANGRY": "发怒",
+  "HAMMER": "敲打",
+  "SHOCKED": "震惊",
+  "TERROR": "惊恐",
+  "PETRIFIED": "石化",
+  "SKULL": "骷髅",
+  "SWEAT": "汗",
+  "SPEECHLESS": "无语",
+  "SLEEP": "鼾睡",
+  "DROWSY": "困",
+  "YAWN": "哈欠",
+  "SICK": "戴口罩",
+  "PUKE": "吐",
+  "BETRAYED": "背叛",
+  "HEADSET": "听歌",
+  "EatingFood": "吃饭",
+  "MeMeMe": "举手",
+  "Sigh": "叹气",
+  "Typing": "敲键盘",
+  "Lemon": "柠檬",
+  "Get": "了解",
+  "LGTM": "我看行",
+  "OnIt": "在做了",
+  "OneSecond": "稍等",
+  "VRHeadset": "VR",
+  "YouAreTheBest": "送你小红花",
+  "SALUTE": "抱拳",
+  "SHAKE": "握手",
+  "HIGHFIVE": "击掌",
+  "UPPERLEFT": "点击",
+  "ThumbsDown": "踩",
+  "SLIGHT": "白眼",
+  "TONGUE": "吐舌",
+  "EYESCLOSED": "不看",
+  "RoarForYou": "萌虎打Call",
+  "CALF": "小牛",
+  "BEAR": "啊？",
+  "BULL": "公牛",
+  "RAINBOWPUKE": "彩虹",
+  "ROSE": "玫瑰",
+  "HEART": "爱心",
+  "PARTY": "撒花",
+  "LIPS": "嘴唇",
+  "BEER": "啤酒",
+  "CAKE": "蛋糕",
+  "GIFT": "礼物",
+  "CUCUMBER": "胡瓜",
+  "Drumstick": "鸡腿",
+  "Pepper": "辣椒",
+  "CANDIEDHAWS": "冰糖葫芦",
+  "BubbleTea": "奶茶",
+  "Coffee": "咖啡",
+  "Yes": "Yes",
+  "No": "No",
+  "OKR": "OKR",
+  "CheckMark": "勾号",
+  "CrossMark": "叉号",
+  "MinusOne": "-1",
+  "Hundred": "100分",
+  "AWESOMEN": "牛",
+  "Pin": "图钉",
+  "Alarm": "闹钟",
+  "Loudspeaker": "喇叭",
+  "Trophy": "奖杯",
+  "Fire": "火",
+  "BOMB": "炸弹",
+  "Music": "音乐",
+  "XmasTree": "圣诞树",
+  "Snowman": "雪人",
+  "XmasHat": "圣诞帽",
+  "FIREWORKS": "烟花",
+  "REDPACKET": "红包",
+  "FORTUNE": "发",
+  "LUCK": "福",
+  "FIRECRACKER": "爆竹",
+  "StickyRiceBalls": "元宵",
+  "HEARTBROKEN": "心碎",
+  "POOP": "便便",
+  "StatusFlashOfInspiration": "灵光一现",
+  "18X": "18禁",
+  "CLEAVER": "刀",
+  "Soccer": "足球",
+  "Basketball": "篮球",
+  "GeneralDoNotDisturb": "请勿打扰",
+  "Status_PrivateMessage": "思考中",
+  "GeneralInMeetingBusy": "日程",
+  "StatusReading": "精神补给",
+  "StatusInFlight": "飞行中",
+  "GeneralBusinessTrip": "出差",
+  "GeneralWorkFromHome": "在家办公",
+  "StatusEnjoyLife": "美好生活",
+  "GeneralTravellingCar": "出行",
+  "StatusBus": "公交车",
+  "GeneralSun": "辛勤营业",
+  "GeneralMoonRest": "天色已晚",
+  "MoonRabbit": "玉兔",
+  "Mooncake": "月饼",
+  "JubilantRabbit": "欢兔喝彩",
+  "TV": "电视",
+  "Movie": "电影",
+  "Pumpkin": "南瓜灯",
+  "BeamingFace": "笑容满面",
+  "Delighted": "愉快",
+  "ColdSweat": "冷汗",
+  "FullMoonFace": "满月脸",
+  "Partying": "派对",
+  "GoGoGo": "冲！",
+  "ThanksFace": "感谢",
+  "SaluteFace": "致敬",
+  "Shrug": "耸肩摊手",
+  "ClownFace": "小丑脸",
+  "HappyDragon": "龙光焕发"
+ },
+ "extras": [
+  {
+   "type": "BIGKISS",
+   "image": "emoji_bigkiss.png",
+   "name": "如花",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "EATING",
+   "image": "emoji_eating.png",
+   "name": "吃瓜群众",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "BLACKFACE",
+   "image": "emoji_blackface.png",
+   "name": "新月脸",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "DULLSTARE",
+   "image": "emoji_dullstare.png",
+   "name": "凝视",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "DONNOTGO",
+   "image": "emoji_donnotgo.png",
+   "name": "紫薇别走",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "ATTENTION",
+   "image": "emoji_attention.png",
+   "name": "来看我",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "WELLDONE",
+   "image": "emoji_welldone.png",
+   "name": "V5",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "FOLLOWME",
+   "image": "emoji_followme.png",
+   "name": "互粉",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "DETERGENT",
+   "image": "emoji_detergent.png",
+   "name": "去污粉",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "AWESOME",
+   "image": "emoji_awesome.png",
+   "name": "666",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "GOODJOB",
+   "image": "emoji_goodjob.png",
+   "name": "给力",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "MediumLightThumbsup",
+   "image": "emoji_mediumlightthumbsup_v2.png",
+   "name": "赞（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightThumbsup",
+   "image": "emoji_lightthumbsup_v2.png",
+   "name": "赞（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumThumbsup",
+   "image": "emoji_mediumthumbsup_v2.png",
+   "name": "赞（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkThumbsup",
+   "image": "emoji_mediumdarkthumbsup_v2.png",
+   "name": "赞（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkThumbsup",
+   "image": "emoji_darkthumbsup_v2.png",
+   "name": "赞（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightThanks",
+   "image": "emoji_mediumlightthanks_v2.png",
+   "name": "双手合十（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightThanks",
+   "image": "emoji_lightthanks_v2.png",
+   "name": "双手合十（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumThanks",
+   "image": "emoji_mediumthanks_v2.png",
+   "name": "双手合十（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkThanks",
+   "image": "emoji_mediumdarkthanks_v2.png",
+   "name": "双手合十（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkThanks",
+   "image": "emoji_darkthanks_v2.png",
+   "name": "双手合十（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightFightOn",
+   "image": "emoji_mediumlightfighton_v2.png",
+   "name": "加油（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightFightOn",
+   "image": "emoji_lightfighton_v2.png",
+   "name": "加油（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumFightOn",
+   "image": "emoji_mediumfighton_v2.png",
+   "name": "加油（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkFightOn",
+   "image": "emoji_mediumdarkfighton_v2.png",
+   "name": "加油（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkFightOn",
+   "image": "emoji_darkfighton_v2.png",
+   "name": "加油（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightFingerHeart",
+   "image": "emoji_mediumlightfingerheart_v2.png",
+   "name": "比心（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightFingerHeart",
+   "image": "emoji_lightfingerheart_v2.png",
+   "name": "比心（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumFingerHeart",
+   "image": "emoji_mediumfingerheart_v2.png",
+   "name": "比心（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkFingerHeart",
+   "image": "emoji_mediumdarkfingerheart_v2.png",
+   "name": "比心（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkFingerHeart",
+   "image": "emoji_darkfingerheart_v2.png",
+   "name": "比心（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightApplaud",
+   "image": "emoji_mediumlightapplaud_v2.png",
+   "name": "鼓掌（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightApplaud",
+   "image": "emoji_lightapplaud_v2.png",
+   "name": "鼓掌（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumApplaud",
+   "image": "emoji_mediumapplaud_v2.png",
+   "name": "鼓掌（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkApplaud",
+   "image": "emoji_mediumdarkapplaud_v2.png",
+   "name": "鼓掌（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkApplaud",
+   "image": "emoji_darkapplaud_v2.png",
+   "name": "鼓掌（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightFistBump",
+   "image": "emoji_mediumlightfistbump_v2.png",
+   "name": "碰拳（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightFistBump",
+   "image": "emoji_lightfistbump_v2.png",
+   "name": "碰拳（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumFistBump",
+   "image": "emoji_mediumfistbump_v2.png",
+   "name": "碰拳（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkFistBump",
+   "image": "emoji_mediumdarkfistbump_v2.png",
+   "name": "碰拳（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkFistBump",
+   "image": "emoji_darkfistbump_v2.png",
+   "name": "碰拳（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightHighFive",
+   "image": "emoji_mediumlighthighfive_v2.png",
+   "name": "击掌（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightHighFive",
+   "image": "emoji_lighthighfive_v2.png",
+   "name": "击掌（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumHighFive",
+   "image": "emoji_mediumhighfive_v2.png",
+   "name": "击掌（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkHighFive",
+   "image": "emoji_mediumdarkhighfive_v2.png",
+   "name": "击掌（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkHighFive",
+   "image": "emoji_darkhighfive_v2.png",
+   "name": "击掌（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightClick",
+   "image": "emoji_mediumlightclick_v2.png",
+   "name": "点击（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightClick",
+   "image": "emoji_lightclick_v2.png",
+   "name": "点击（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumClick",
+   "image": "emoji_mediumclick_v2.png",
+   "name": "点击（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkClick",
+   "image": "emoji_mediumdarkclick_v2.png",
+   "name": "点击（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkClick",
+   "image": "emoji_darkclick_v2.png",
+   "name": "点击（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightThumbsDown",
+   "image": "emoji_mediumlightthumbsdown_v2.png",
+   "name": "踩（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightThumbsDown",
+   "image": "emoji_lightthumbsdown_v2.png",
+   "name": "踩（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumThumbsDown",
+   "image": "emoji_mediumthumbsdown_v2.png",
+   "name": "踩（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkThumbsDown",
+   "image": "emoji_mediumdarkthumbsdown_v2.png",
+   "name": "踩（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkThumbsDown",
+   "image": "emoji_darkthumbsdown_v2.png",
+   "name": "踩（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightSalute",
+   "image": "emoji_mediumlightsalute_v2.png",
+   "name": "抱拳（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightSalute",
+   "image": "emoji_lightsalute_v2.png",
+   "name": "抱拳（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumSalute",
+   "image": "emoji_mediumsalute_v2.png",
+   "name": "抱拳（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkSalute",
+   "image": "emoji_mediumdarksalute_v2.png",
+   "name": "抱拳（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkSalute",
+   "image": "emoji_darksalute_v2.png",
+   "name": "抱拳（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "MediumLightShake",
+   "image": "emoji_mediumlightshake_v2.png",
+   "name": "握手（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightShake",
+   "image": "emoji_lightshake_v2.png",
+   "name": "握手（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumShake",
+   "image": "emoji_mediumshake_v2.png",
+   "name": "握手（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumDarkShake",
+   "image": "emoji_mediumdarkshake_v2.png",
+   "name": "握手（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkShake",
+   "image": "emoji_darkshake_v2.png",
+   "name": "握手（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "GeneralVacation",
+   "image": "emoji_onleavestatus.png",
+   "name": "休假",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "MediumlightYouAreTheBest",
+   "image": "emoji_mediumlightyouarethebest_v1.png",
+   "name": "送你小红花（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightYouAreTheBest",
+   "image": "emoji_lightyouarethebest_v1.png",
+   "name": "送你小红花（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumYouAreTheBest",
+   "image": "emoji_mediumyouarethebest_v1.png",
+   "name": "送你小红花（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumdarkYouAreTheBest",
+   "image": "emoji_mediumdarkyouarethebest_v1.png",
+   "name": "送你小红花（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkYouAreTheBest",
+   "image": "emoji_darkyouarethebest_v1.png",
+   "name": "送你小红花（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "2023",
+   "image": "emoji_2023_v4.png",
+   "name": "2023",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "2024",
+   "image": "emoji_2024_v1.png",
+   "name": "2024",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "WavingHand",
+   "image": "emoji_wavinghand_v1.png",
+   "name": "挥手",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "MediumlightWavingHand",
+   "image": "emoji_mediumlightwavinghand_v1.png",
+   "name": "挥手（中等浅色）",
+   "panel": false,
+   "tone": "中等浅色"
+  },
+  {
+   "type": "LightWavingHand",
+   "image": "emoji_lightwavinghand_v1.png",
+   "name": "挥手（浅色）",
+   "panel": false,
+   "tone": "浅色"
+  },
+  {
+   "type": "MediumWavingHand",
+   "image": "emoji_mediumwavinghand_v1.png",
+   "name": "挥手（中等色）",
+   "panel": false,
+   "tone": "中等色"
+  },
+  {
+   "type": "MediumdarkWavingHand",
+   "image": "emoji_mediumdarkwavinghand_v1.png",
+   "name": "挥手（中等深色）",
+   "panel": false,
+   "tone": "中等深色"
+  },
+  {
+   "type": "DarkWavingHand",
+   "image": "emoji_darkwavinghand_v1.png",
+   "name": "挥手（深色）",
+   "panel": false,
+   "tone": "深色"
+  },
+  {
+   "type": "2025",
+   "image": "emoji_2025_v1.png",
+   "name": "2025",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "SiSiASYouWish",
+   "image": "emoji_sisiasyouwish_v1.png",
+   "name": "巳巳如意",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "2026",
+   "image": "emoji_2026_v1.png",
+   "name": "2026",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "BeAtTheForefront",
+   "image": "emoji_beattheforefront_v1.png",
+   "name": "一马当先",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "PursueUltimate",
+   "image": "emoji_pursueultimate_v2.png",
+   "name": "追求极致",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "CustomerSuccess",
+   "image": "emoji_customersuccess_v2.png",
+   "name": "成就客户",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "Responsible",
+   "image": "emoji_bereliableandtakeownership.png",
+   "name": "有担当可信赖",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "Ambitious",
+   "image": "emoji_bepatientandthinklongterm.png",
+   "name": "谋远大有耐心",
+   "panel": false,
+   "tone": null
+  },
+  {
+   "type": "2021",
+   "image": "emoji_twentytwentyone_v2.png",
+   "name": "2021年",
+   "panel": true,
+   "tone": null
+  },
+  {
+   "type": "AINailedIt",
+   "image": "emoji_ai_nailed_it_zh_v2.png",
+   "name": "AI答对了",
+   "panel": true,
+   "tone": null
+  }
+ ]
+}

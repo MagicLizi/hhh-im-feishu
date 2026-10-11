@@ -1,0 +1,19 @@
+{
+  "body": {
+    "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 8] 无序列表与嵌套\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"无序一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"  - \",\"style\":[]},{\"tag\":\"text\",\"text\":\"嵌套一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"无序二\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"1. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"  a. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序下的嵌套\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"2. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序二\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"列表之后的正文\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 8] 无序列表与嵌套\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"无序一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"  - \",\"style\":[]},{\"tag\":\"text\",\"text\":\"嵌套一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"无序二\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"1. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序一\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"  a. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序下的嵌套\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"2. \",\"style\":[]},{\"tag\":\"text\",\"text\":\"有序二\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"列表之后的正文\",\"style\":[]}]]}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790579516394",
+  "deleted": false,
+  "message_id": "om_sample_5",
+  "message_position": "10",
+  "msg_type": "post",
+  "sender": {
+    "id": "ou_sample_me",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790579516394",
+  "updated": false
+}

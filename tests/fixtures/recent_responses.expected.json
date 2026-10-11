@@ -1,0 +1,8 @@
+{
+  "items": [
+    {"conversation": {"reference": {"connectionId": "test", "id": "oc_team"}, "name": "产品研发群", "kind": "group", "avatarUrl": "https://x/team.png"}, "lastActiveAt": 1790217000},
+    {"conversation": {"reference": {"connectionId": "test", "id": "oc_dm_lin"}, "name": "林然", "kind": "direct", "avatarUrl": "https://x/lin.png"}, "lastActiveAt": 1790216700, "peer": {"connectionId": "test", "id": "ou_lin"}},
+    {"conversation": {"reference": {"connectionId": "test", "id": "oc_weekend"}, "name": "周末去哪儿", "kind": "group"}, "lastActiveAt": 1790197200}
+  ],
+  "notice": "只有你发过消息的私聊无法确认对方，已跳过。"
+}

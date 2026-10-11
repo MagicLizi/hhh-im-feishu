@@ -1,0 +1,8 @@
+{
+  "message_id": "om_reply", "chat_id": "oc_group", "msg_type": "text",
+  "create_time": "1700000001000", "update_time": "1700000002000",
+  "parent_id": "om_parent", "root_id": "om_root", "thread_id": "omt_topic",
+  "sender": {"id": "ou_sender", "id_type": "open_id", "sender_type": "user"},
+  "body": {"content": "{\"text\":\"Hi @_user_1 @Alice\"}"},
+  "mentions": [{"key": "@_user_1", "id": "ou_me", "id_type": "open_id", "name": "Alice", "mentioned_type": "user"}]
+}

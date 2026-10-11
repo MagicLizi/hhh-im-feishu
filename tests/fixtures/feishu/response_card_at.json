@@ -1,0 +1,30 @@
+{
+  "body": {
+    "content": "{\"config\":{},\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"区域：**国内 + 海外** · 渠道：**正式版** · 触发人：<at id=ou_card_app_trigger></at> · 流水线：[#333](https://git.example.com/team/build/-/pipelines/251361)\",\"tag\":\"lark_md\"}},{\"tag\":\"hr\"},{\"tag\":\"div\",\"text\":{\"content\":\"**准备环境**：失败\\n**生成公告**：已跳过\\n**桌面 Promote**：已跳过\\n**上传公告**：未执行\\n**手机 Promote**：已跳过\\n**GitHub Release**：已跳过\",\"tag\":\"lark_md\"}},{\"tag\":\"div\",\"text\":{\"content\":\"**失败任务**\\n• [win-start](https://git.example.com/team/build/-/jobs/895496)\",\"tag\":\"lark_md\"}},{\"actions\":[{\"behaviors\":[{\"type\":\"callback\"}],\"confirm\":{\"text\":{\"content\":\"将在原流水线中重试 win-start。\",\"i18n\":{},\"tag\":\"plain_text\"},\"title\":{\"content\":\"确认重试\",\"i18n\":{},\"tag\":\"plain_text\"}},\"custom_action_id\":\"act_v1_1\",\"tag\":\"button\",\"text\":{\"content\":\"重试 win-start\",\"i18n\":{},\"tag\":\"plain_text\"},\"type\":\"danger\"}],\"tag\":\"action\"},{\"actions\":[{\"behaviors\":[{\"type\":\"callback\"}],\"custom_action_id\":\"act_v1_2\",\"tag\":\"button\",\"text\":{\"content\":\"刷新\",\"i18n\":{},\"tag\":\"plain_text\"},\"type\":\"default\"},{\"behaviors\":[{\"default_url\":\"https://git.example.com/team/build/-/pipelines/251361\",\"type\":\"open_url\"}],\"tag\":\"button\",\"text\":{\"content\":\"查看 GitLab\",\"i18n\":{},\"tag\":\"plain_text\"},\"type\":\"default\"}],\"tag\":\"action\"}],\"header\":{\"template\":\"red\",\"title\":{\"content\":\"发布失败\",\"i18n\":{},\"tag\":\"plain_text\"}}}"
+  },
+  "chat_id": "oc_test",
+  "create_time": "1791114306596",
+  "deleted": false,
+  "mentions": [
+    {
+      "id": "ou_reader_trigger",
+      "id_type": "open_id",
+      "key": "@_user_1",
+      "name": "测试同事",
+      "tenant_key": "tenant_test"
+    }
+  ],
+  "message_id": "om_card_at",
+  "message_position": "1608",
+  "msg_type": "interactive",
+  "sender": {
+    "id": "cli_test_bot",
+    "id_type": "app_id",
+    "sender_type": "app",
+    "tenant_key": "tenant_test"
+  },
+  "thread_id": "omt_card_at",
+  "thread_message_position": "-1",
+  "update_time": "1791118817926",
+  "updated": true
+}

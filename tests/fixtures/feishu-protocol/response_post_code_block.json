@@ -1,0 +1,47 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "[HHH v51 取样 7] 代码块（中间有空行）"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [],
+            "type": "paragraph"
+          },
+          {
+            "type": "code",
+            "value": "let a = 1;\n\nlet b = 2;"
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "代码块之后的正文"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "conversationId": "oc_sample_chat",
+  "createdAtMs": 1790579419912,
+  "id": "om_sample_4",
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790579419912
+}

@@ -1,0 +1,18 @@
+{
+  "body": {
+    "content": "{\"body\":{\"elements\":[{\"content\":\"下面是按钮、选择、表单与图表\",\"element_id\":\"_2\",\"tag\":\"markdown\"},{\"element_id\":\"_3\",\"tag\":\"button\",\"text\":{\"content\":\"打开链接\",\"tag\":\"plain_text\"},\"type\":\"primary\",\"url\":\"https://open.feishu.cn\"},{\"element_id\":\"_5\",\"tag\":\"button\",\"text\":{\"content\":\"危险按钮\",\"tag\":\"plain_text\"},\"type\":\"danger\",\"url\":\"https://open.feishu.cn\"},{\"element_id\":\"_7\",\"options\":[{\"text\":{\"content\":\"甲\",\"tag\":\"plain_text\"},\"value\":\"a\"},{\"text\":{\"content\":\"乙\",\"tag\":\"plain_text\"},\"value\":\"b\"}],\"placeholder\":{\"content\":\"选一个\",\"tag\":\"plain_text\"},\"tag\":\"select_static\"},{\"element_id\":\"_11\",\"placeholder\":{\"content\":\"选日期\",\"tag\":\"plain_text\"},\"tag\":\"date_picker\"},{\"element_id\":\"_13\",\"options\":[{\"text\":{\"content\":\"更多一\",\"tag\":\"plain_text\"},\"value\":\"1\"}],\"tag\":\"overflow\"},{\"background_style\":\"default\",\"behaviors\":[{\"type\":\"callback\"}],\"element_id\":\"_17\",\"elements\":[{\"content\":\"整块可点的交互容器\",\"element_id\":\"_18\",\"tag\":\"markdown\"}],\"has_border\":false,\"tag\":\"interactive_container\"},{\"element_id\":\"_19\",\"elements\":[{\"element_id\":\"_20\",\"label_position\":\"top\",\"max_length\":1000,\"name\":\"input_1\",\"placeholder\":{\"content\":\"填点什么\",\"tag\":\"plain_text\"},\"tag\":\"input\"},{\"element_id\":\"_22\",\"form_action_type\":\"submit\",\"name\":\"submit_1\",\"tag\":\"button\",\"text\":{\"content\":\"提交\",\"tag\":\"plain_text\"},\"type\":\"primary\"}],\"name\":\"form_1\",\"tag\":\"form\"},{\"aspect_ratio\":\"16:9\",\"chart_spec\":{\"data\":{\"values\":[{\"x\":\"一\",\"y\":3},{\"x\":\"二\",\"y\":5}]},\"type\":\"bar\",\"xField\":\"x\",\"yField\":\"y\"},\"color_theme\":\"brand\",\"element_id\":\"_24\",\"preview\":true,\"tag\":\"chart\"}]},\"config\":{\"enable_forward_interaction\":false,\"streaming_mode\":false},\"header\":{\"template\":\"grey\",\"title\":{\"content\":\"HHH 测试卡 4：交互与图表\",\"tag\":\"plain_text\"}},\"schema\":\"2.0\"}"
+  },
+  "chat_id": "oc_group",
+  "create_time": "1790756052676",
+  "deleted": false,
+  "message_id": "om_card_v2_interactive",
+  "msg_type": "interactive",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "tenant"
+  },
+  "update_time": "1790756052676",
+  "updated": false
+}

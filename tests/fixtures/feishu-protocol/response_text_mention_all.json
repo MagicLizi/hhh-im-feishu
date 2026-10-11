@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "everyone": true,
+      "type": "mention"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000001000,
+  "id": "om_at_all",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1700000001000
+}

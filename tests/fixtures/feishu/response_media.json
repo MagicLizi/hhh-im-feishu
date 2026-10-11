@@ -1,0 +1,14 @@
+{
+  "message_id": "om_media",
+  "chat_id": "oc_group",
+  "msg_type": "media",
+  "create_time": "1700000000000",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user"
+  },
+  "body": {
+    "content": "{\"file_key\":\"file_v3_video\",\"file_name\":\"IMG_0001.MOV\",\"image_key\":\"img_v3_cover\",\"duration\":11000}"
+  }
+}

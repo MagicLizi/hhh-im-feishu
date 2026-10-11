@@ -1,0 +1,32 @@
+{
+  "content": [
+    {
+      "text": "取样：",
+      "type": "text"
+    },
+    {
+      "idType": "open_id",
+      "kind": "user",
+      "name": "Alice",
+      "type": "mention",
+      "userId": "ou_me"
+    },
+    {
+      "text": " 和 ",
+      "type": "text"
+    },
+    {
+      "everyone": true,
+      "type": "mention"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000001000,
+  "id": "om_at_all_and_user",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1700000001000
+}

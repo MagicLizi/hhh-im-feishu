@@ -1,0 +1,25 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_card_v2_simplified"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1790756048592,
+  "updatedAtMs": 1790756048592,
+  "content": [
+    {
+      "type": "card",
+      "title": "HHH 测试卡 1：标题栏与文字",
+      "subtitle": "副标题：取样用，稍后撤回",
+      "tone": "neutral"
+    }
+  ],
+  "incomplete": true
+}

@@ -1,0 +1,22 @@
+{
+  "content": [
+    {
+      "card": {
+        "subtitle": "副标题：取样用，稍后撤回",
+        "title": "HHH 测试卡 1：标题栏与文字",
+        "tone": "neutral"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790756048592,
+  "id": "om_card_v2_simplified",
+  "incomplete": true,
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790756048592
+}

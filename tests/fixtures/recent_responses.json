@@ -1,0 +1,26 @@
+{
+  "page1": {
+    "items": [
+      {"id": "om_1", "display_info": "", "meta_data": {"message_id": "om_1", "chat_id": "oc_team", "from_id": "ou_a", "is_p2p_chat": false, "create_time": "2026-09-24T10:20:00+08:00"}},
+      {"id": "om_2", "display_info": "", "meta_data": {"message_id": "om_2", "chat_id": "oc_dm_lin", "from_id": "ou_me", "is_p2p_chat": true, "create_time": "2026-09-24T10:25:00+08:00"}},
+      {"id": "om_3", "display_info": "", "meta_data": {"message_id": "om_3", "chat_id": "oc_team", "from_id": "ou_b", "is_p2p_chat": false, "create_time": "2026-09-24T10:30:00+08:00"}},
+      {"id": "om_4", "display_info": "", "meta_data": {"message_id": "om_4", "chat_id": "oc_dm_lin", "from_id": "ou_lin", "is_p2p_chat": true, "create_time": "2026-09-24T09:00:00+08:00"}}
+    ],
+    "has_more": true,
+    "page_token": "p2"
+  },
+  "page2": {
+    "items": [
+      {"id": "om_5", "display_info": "", "meta_data": {"message_id": "om_5", "chat_id": "oc_weekend", "from_id": "ou_c", "is_p2p_chat": false, "create_time": "2026-09-23T21:00:00Z"}},
+      {"id": "om_6", "display_info": "", "meta_data": {"message_id": "om_6", "chat_id": "oc_dm_self_only", "from_id": "ou_me", "is_p2p_chat": true, "create_time": "2026-09-24T01:00:00Z"}}
+    ],
+    "has_more": false
+  },
+  "chats": {
+    "oc_team": {"chat_id": "oc_team", "name": "产品研发群", "chat_mode": "group", "avatar": "https://x/team.png"},
+    "oc_weekend": {"name": "周末去哪儿", "chat_mode": "group"}
+  },
+  "users": {
+    "items": [{"open_id": "ou_lin", "name": "林然", "avatar": {"avatar_72": "https://x/lin.png", "avatar_240": "https://x/lin-240.png"}}]
+  }
+}

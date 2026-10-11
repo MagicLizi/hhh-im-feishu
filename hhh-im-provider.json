@@ -1,0 +1,15 @@
+{
+  "manifestVersion": 1,
+  "id": "feishu",
+  "name": "飞书",
+  "version": "1.0.0",
+  "command": "hhh-im-feishu",
+  "os": ["windows"],
+  "logo": "logo.svg",
+  "logoStyle": "mark",
+  "logoInk": { "x": 3.16, "y": 5.48, "width": 26.49, "height": 21.07 },
+  "publisher": "MagicLizi",
+  "homepage": "https://github.com/MagicLizi/hhh-im-feishu",
+  "imType": "feishu",
+  "source": { "type": "github", "repo": "MagicLizi/hhh-im-feishu" }
+}

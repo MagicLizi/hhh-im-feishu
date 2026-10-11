@@ -1,0 +1,7 @@
+{
+  "items": [
+    {"reaction_id":"reaction-user=","operator":{"operator_id":"ou_alice","operator_type":"user"},"action_time":"1700000003000","reaction_type":{"emoji_type":"THUMBSUP"}},
+    {"reaction_id":"reaction-app","operator":{"operator_id":"cli_app","operator_type":"app"},"action_time":"1700000004000","reaction_type":{"emoji_type":"SMILE"}}
+  ],
+  "has_more": false
+}

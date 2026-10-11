@@ -1,0 +1,19 @@
+{
+  "body": {
+    "content": "{\"text\":\"[HHH v51 取样 3] 纯文字：裸网址 https://x.com/ExampleDevs/status/1000000000000000001?s=20 紧跟中文句号https://www.feishu.cn。括号（https://open.feishu.cn）不带协议 www.feishu.cn 链接写法 [飞书](https://www.feishu.cn) 表情码[看][微笑] http 的 http://example.com 带端口 https://example.com:8443/a_b-c?x=1&y=2#frag\"}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790578273899",
+  "deleted": false,
+  "message_id": "om_sample_3",
+  "message_position": "4",
+  "msg_type": "text",
+  "sender": {
+    "id": "ou_sample_me",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790578273899",
+  "updated": false
+}

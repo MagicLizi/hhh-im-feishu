@@ -1,0 +1,13 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_reply"},
+  "sender": {"id": "ou_sender", "idType": "open_id", "kind": "user"},
+  "createdAtMs": 1700000001000, "updatedAtMs": 1700000002000,
+  "content": [
+    {"type": "text", "text": "Hi "},
+    {"type": "mention", "actor": {"id": "ou_me", "idType": "open_id", "kind": "user", "name": "Alice"}},
+    {"type": "text", "text": " @Alice"}
+  ],
+  "replyTo": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_parent"},
+  "rootMessage": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_root"},
+  "threadId": "omt_topic"
+}

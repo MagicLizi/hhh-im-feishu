@@ -1,0 +1,25 @@
+{
+  "content": [
+    {
+      "name": "IMG_0001.MOV",
+      "resource": {
+        "cover": {
+          "key": "img_v3_cover"
+        },
+        "durationMs": 11000,
+        "key": "file_v3_video",
+        "kind": "file",
+        "mime": "video/quicktime"
+      },
+      "type": "resource"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000000000,
+  "id": "om_media",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  }
+}

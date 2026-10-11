@@ -1,0 +1,51 @@
+{
+  "content": [
+    {
+      "card": {
+        "blocks": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "下面是按钮、选择、表单与图表"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "rich"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "整块可点的交互容器"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "rich"
+          }
+        ],
+        "title": "HHH 测试卡 4：交互与图表",
+        "tone": "neutral"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790756052676,
+  "id": "om_card_v2_interactive",
+  "incomplete": true,
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790756052676
+}

@@ -1,0 +1,19 @@
+{
+  "body": {
+    "content": "{\"file_key\":\"v3_00t4_0e1f2a3b-4c5d-4e6f-8091-a2b3c4d5e6fg\"}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790697593729",
+  "deleted": false,
+  "message_id": "om_sample_sticker",
+  "message_position": "53327",
+  "msg_type": "sticker",
+  "sender": {
+    "id": "ou_sample_other",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790697593729",
+  "updated": false
+}

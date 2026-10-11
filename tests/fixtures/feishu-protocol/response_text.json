@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "text": "Hi ",
+      "type": "text"
+    },
+    {
+      "idType": "open_id",
+      "kind": "user",
+      "name": "Alice",
+      "type": "mention",
+      "userId": "ou_me"
+    },
+    {
+      "text": " @Alice",
+      "type": "text"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000001000,
+  "id": "om_reply",
+  "replyTo": "om_parent",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "thread": {
+    "id": "omt_topic",
+    "rootId": "om_root"
+  },
+  "updatedAtMs": 1700000002000
+}

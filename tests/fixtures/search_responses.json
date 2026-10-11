@@ -1,0 +1,16 @@
+{
+  "groups": {
+    "items": [{"id": "oc_research", "display_info": "<h>研发</h>讨论群", "meta_data": {"chat_id": "oc_research", "name": "研发讨论群", "chat_mode": "topic", "avatar": "https://example.test/group.png"}}],
+    "has_more": false,
+    "notice": "部分结果不可见"
+  },
+  "users": {
+    "users": [{"name": "测试用户", "open_id": "ou_target", "department_ids": ["od_team"], "avatar": {"avatar_72": "https://example.test/user.png"}}],
+    "has_more": false
+  },
+  "direct": {
+    "items": [{"id": "om_existing", "display_info": "私聊内容不进入定位结果", "meta_data": {"message_id": "om_existing", "chat_id": "oc_direct", "from_id": "ou_target", "is_p2p_chat": true}}],
+    "has_more": false,
+    "notice": "搜索索引可能有延迟"
+  }
+}

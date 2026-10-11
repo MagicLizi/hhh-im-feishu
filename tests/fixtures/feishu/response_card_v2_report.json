@@ -1,0 +1,18 @@
+{
+  "body": {
+    "content": "{\"body\":{\"elements\":[{\"content\":\"\\n## 稳定性总览\\n\\n| 指标 | 数值 |\\n| -------- | -------- |\\n| 请求完成 | 3,923 / 4,149（94.55%） |\\n| 排除业务受限后的完成率 | 97.66% |\\n| 未完成结构 | 受限 132 / 流中断 74 / 其他失败 20 |\\n| 成功请求 P95 | 首字 14.0s / 总耗时 55.4s |\\n| AI 账号当前可调度 | 8 / 11 |\\n\",\"element_id\":\"_2\",\"tag\":\"markdown\"},{\"content\":\"\\n## AI 账号稳定性\\n\\n| AI 账号 | 成功/总 | 完成率 | 中断/失败 | P95 首字 | 当前 |\\n| -------- | -------- | -------- | -------- | -------- | -------- |\\n| Alpha-A（alpha） | 0 / 0 | —（未验证） | 0 / 0 | — | 暂停 |\\n| Alpha-B（alpha） | 0 / 0 | —（未验证） | 0 / 0 | — | 暂停 |\\n| Alpha-C（alpha） | 7 / 7 | 100.00% | 0 / 0 | 6.8s | 可调度 |\\n| Alpha-D（alpha） | 256 / 256 | 100.00% | 0 / 0 | 9.1s | 可调度 |\\n| Beta-A（beta） | 709 / 759 | 93.41% | 38 / 12 | 22.5s | 可调度 |\\n| Beta-B（beta） | 761 / 761 | 100.00% | 0 / 0 | 7.2s | 可调度 |\\n\",\"element_id\":\"_14\",\"tag\":\"markdown\"},{\"content\":\"\\n## 套餐当天折扣\\n相当于 <font color='green'>**0.9折**</font>（只要官方价的 8.51%）\\n\\n订阅 **4 × 示例套餐 $200/月（Beta-A、Beta-C、Beta-B、Beta-D）**\\n今天已过 **24.0 / 24 小时**，摊到现在 **$26.67**\\n官方价（model-*） **$313.35**\",\"element_id\":\"_215\",\"tag\":\"markdown\"}]},\"config\":{\"enable_forward_interaction\":false,\"streaming_mode\":false,\"width_mode\":\"fill\"},\"header\":{\"subtitle\":{\"content\":\"日期：2026-09-29（Asia/Shanghai，完整一天）\",\"tag\":\"plain_text\"},\"template\":\"blue\",\"title\":{\"content\":\"示例服务 昨日用量与稳定性\",\"tag\":\"plain_text\"}},\"schema\":\"2.0\"}"
+  },
+  "chat_id": "oc_group",
+  "create_time": "1790726449832",
+  "deleted": false,
+  "message_id": "om_card_v2_report",
+  "msg_type": "interactive",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "tenant"
+  },
+  "update_time": "1790726449832",
+  "updated": false
+}

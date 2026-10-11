@@ -1,0 +1,147 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "[HHH v51 取样 8] 无序列表与嵌套"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "无序一"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "嵌套一"
+                              }
+                            ],
+                            "type": "paragraph"
+                          }
+                        ],
+                        "type": "listItem"
+                      }
+                    ],
+                    "ordered": false,
+                    "type": "list"
+                  }
+                ],
+                "type": "listItem"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "无序二"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              }
+            ],
+            "ordered": false,
+            "type": "list"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "有序一"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "有序下的嵌套"
+                              }
+                            ],
+                            "type": "paragraph"
+                          }
+                        ],
+                        "type": "listItem"
+                      }
+                    ],
+                    "ordered": true,
+                    "type": "list"
+                  }
+                ],
+                "type": "listItem"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "有序二"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              }
+            ],
+            "ordered": true,
+            "type": "list"
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "列表之后的正文"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "conversationId": "oc_sample_chat",
+  "createdAtMs": 1790579516394,
+  "id": "om_sample_5",
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790579516394
+}

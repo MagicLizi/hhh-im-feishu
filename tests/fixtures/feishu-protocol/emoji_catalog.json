@@ -1,0 +1,531 @@
+{
+  "categories": [],
+  "emojis": [
+    {
+      "emojiType": "THUMBSUP",
+      "name": "赞",
+      "panel": true
+    },
+    {
+      "emojiType": "SMILE",
+      "name": "微笑",
+      "panel": true
+    },
+    {
+      "emojiType": "BIGKISS",
+      "name": "如花",
+      "panel": true
+    },
+    {
+      "emojiType": "EATING",
+      "name": "吃瓜群众",
+      "panel": true
+    },
+    {
+      "emojiType": "BLACKFACE",
+      "name": "新月脸",
+      "panel": true
+    },
+    {
+      "emojiType": "DULLSTARE",
+      "name": "凝视",
+      "panel": true
+    },
+    {
+      "emojiType": "DONNOTGO",
+      "name": "紫薇别走",
+      "panel": true
+    },
+    {
+      "emojiType": "ATTENTION",
+      "name": "来看我",
+      "panel": false
+    },
+    {
+      "emojiType": "WELLDONE",
+      "name": "V5",
+      "panel": false
+    },
+    {
+      "emojiType": "FOLLOWME",
+      "name": "互粉",
+      "panel": false
+    },
+    {
+      "emojiType": "DETERGENT",
+      "name": "去污粉",
+      "panel": false
+    },
+    {
+      "emojiType": "AWESOME",
+      "name": "666",
+      "panel": false
+    },
+    {
+      "emojiType": "GOODJOB",
+      "name": "给力",
+      "panel": false
+    },
+    {
+      "emojiType": "MediumLightThumbsup",
+      "name": "赞（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightThumbsup",
+      "name": "赞（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumThumbsup",
+      "name": "赞（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkThumbsup",
+      "name": "赞（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkThumbsup",
+      "name": "赞（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightThanks",
+      "name": "双手合十（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightThanks",
+      "name": "双手合十（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumThanks",
+      "name": "双手合十（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkThanks",
+      "name": "双手合十（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkThanks",
+      "name": "双手合十（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightFightOn",
+      "name": "加油（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightFightOn",
+      "name": "加油（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumFightOn",
+      "name": "加油（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkFightOn",
+      "name": "加油（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkFightOn",
+      "name": "加油（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightFingerHeart",
+      "name": "比心（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightFingerHeart",
+      "name": "比心（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumFingerHeart",
+      "name": "比心（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkFingerHeart",
+      "name": "比心（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkFingerHeart",
+      "name": "比心（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightApplaud",
+      "name": "鼓掌（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightApplaud",
+      "name": "鼓掌（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumApplaud",
+      "name": "鼓掌（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkApplaud",
+      "name": "鼓掌（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkApplaud",
+      "name": "鼓掌（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightFistBump",
+      "name": "碰拳（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightFistBump",
+      "name": "碰拳（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumFistBump",
+      "name": "碰拳（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkFistBump",
+      "name": "碰拳（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkFistBump",
+      "name": "碰拳（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightHighFive",
+      "name": "击掌（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightHighFive",
+      "name": "击掌（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumHighFive",
+      "name": "击掌（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkHighFive",
+      "name": "击掌（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkHighFive",
+      "name": "击掌（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightClick",
+      "name": "点击（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightClick",
+      "name": "点击（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumClick",
+      "name": "点击（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkClick",
+      "name": "点击（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkClick",
+      "name": "点击（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightThumbsDown",
+      "name": "踩（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightThumbsDown",
+      "name": "踩（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumThumbsDown",
+      "name": "踩（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkThumbsDown",
+      "name": "踩（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkThumbsDown",
+      "name": "踩（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightSalute",
+      "name": "抱拳（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightSalute",
+      "name": "抱拳（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumSalute",
+      "name": "抱拳（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkSalute",
+      "name": "抱拳（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkSalute",
+      "name": "抱拳（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "MediumLightShake",
+      "name": "握手（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightShake",
+      "name": "握手（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumShake",
+      "name": "握手（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumDarkShake",
+      "name": "握手（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkShake",
+      "name": "握手（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "GeneralVacation",
+      "name": "休假",
+      "panel": true
+    },
+    {
+      "emojiType": "MediumlightYouAreTheBest",
+      "name": "送你小红花（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightYouAreTheBest",
+      "name": "送你小红花（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumYouAreTheBest",
+      "name": "送你小红花（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumdarkYouAreTheBest",
+      "name": "送你小红花（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkYouAreTheBest",
+      "name": "送你小红花（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "2023",
+      "name": "2023",
+      "panel": true
+    },
+    {
+      "emojiType": "2024",
+      "name": "2024",
+      "panel": true
+    },
+    {
+      "emojiType": "WavingHand",
+      "name": "挥手",
+      "panel": true
+    },
+    {
+      "emojiType": "MediumlightWavingHand",
+      "name": "挥手（中等浅色）",
+      "panel": false,
+      "tone": "中等浅色"
+    },
+    {
+      "emojiType": "LightWavingHand",
+      "name": "挥手（浅色）",
+      "panel": false,
+      "tone": "浅色"
+    },
+    {
+      "emojiType": "MediumWavingHand",
+      "name": "挥手（中等色）",
+      "panel": false,
+      "tone": "中等色"
+    },
+    {
+      "emojiType": "MediumdarkWavingHand",
+      "name": "挥手（中等深色）",
+      "panel": false,
+      "tone": "中等深色"
+    },
+    {
+      "emojiType": "DarkWavingHand",
+      "name": "挥手（深色）",
+      "panel": false,
+      "tone": "深色"
+    },
+    {
+      "emojiType": "2025",
+      "name": "2025",
+      "panel": true
+    },
+    {
+      "emojiType": "SiSiASYouWish",
+      "name": "巳巳如意",
+      "panel": true
+    },
+    {
+      "emojiType": "2026",
+      "name": "2026",
+      "panel": true
+    },
+    {
+      "emojiType": "BeAtTheForefront",
+      "name": "一马当先",
+      "panel": true
+    },
+    {
+      "emojiType": "PursueUltimate",
+      "name": "追求极致",
+      "panel": false
+    },
+    {
+      "emojiType": "CustomerSuccess",
+      "name": "成就客户",
+      "panel": false
+    },
+    {
+      "emojiType": "Responsible",
+      "name": "有担当可信赖",
+      "panel": false
+    },
+    {
+      "emojiType": "Ambitious",
+      "name": "谋远大有耐心",
+      "panel": false
+    },
+    {
+      "emojiType": "2021",
+      "name": "2021年",
+      "panel": true
+    },
+    {
+      "emojiType": "AINailedIt",
+      "name": "AI答对了",
+      "panel": true
+    }
+  ],
+  "updatedAtMs": 1700000000000
+}

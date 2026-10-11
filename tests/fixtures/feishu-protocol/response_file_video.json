@@ -1,0 +1,20 @@
+{
+  "content": [
+    {
+      "name": "hhh-video-sample-file.mp4",
+      "resource": {
+        "key": "file_v3_mp4",
+        "kind": "file"
+      },
+      "type": "resource"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1700000000000,
+  "id": "om_file_video",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  }
+}

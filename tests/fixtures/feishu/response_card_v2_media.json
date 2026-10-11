@@ -1,0 +1,18 @@
+{
+  "body": {
+    "content": "{\"body\":{\"elements\":[{\"border\":{\"color\":\"grey\",\"corner_radius\":\"5px\"},\"element_id\":\"_2\",\"elements\":[{\"content\":\"收起时藏着的内容\",\"element_id\":\"_7\",\"tag\":\"markdown\"}],\"expanded\":false,\"header\":{\"icon\":{\"element_id\":\"_4\",\"tag\":\"standard_icon\",\"token\":\"down-small-ccm_outlined\"},\"icon_position\":\"right\",\"position\":\"top\",\"title\":{\"content\":\"**收起的面板**\",\"element_id\":\"_3\",\"tag\":\"markdown\"},\"vertical_align\":\"center\"},\"tag\":\"collapsible_panel\"},{\"element_id\":\"_8\",\"elements\":[{\"content\":\"展开时看得到\",\"element_id\":\"_10\",\"tag\":\"markdown\"},{\"element_id\":\"_11\",\"tag\":\"hr\"},{\"content\":\"面板里的第二段\",\"element_id\":\"_12\",\"tag\":\"markdown\"}],\"expanded\":true,\"header\":{\"icon_position\":\"right\",\"position\":\"top\",\"title\":{\"content\":\"展开的面板\",\"tag\":\"plain_text\"},\"vertical_align\":\"center\"},\"tag\":\"collapsible_panel\"},{\"alt\":{\"content\":\"测试图一\",\"tag\":\"plain_text\"},\"element_id\":\"_13\",\"img_key\":\"img_v3_a\",\"preview\":true,\"tag\":\"img\"},{\"combination_mode\":\"double\",\"element_id\":\"_16\",\"img_list\":[{\"img_key\":\"img_v3_a\"},{\"img_key\":\"img_v3_b\"}],\"tag\":\"img_combination\"},{\"content\":\"Markdown 里的图片：![悬停文字](img_v3_b)\",\"element_id\":\"_19\",\"tag\":\"markdown\"}]},\"config\":{\"enable_forward_interaction\":false,\"streaming_mode\":false},\"header\":{\"template\":\"red\",\"title\":{\"content\":\"HHH 测试卡 3：折叠面板与图片\",\"tag\":\"plain_text\"}},\"schema\":\"2.0\"}"
+  },
+  "chat_id": "oc_group",
+  "create_time": "1790756051282",
+  "deleted": false,
+  "message_id": "om_card_v2_media",
+  "msg_type": "interactive",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "tenant"
+  },
+  "update_time": "1790756051282",
+  "updated": false
+}

@@ -1,0 +1,738 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_card_v2_report"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1790726449832,
+  "updatedAtMs": 1790726449832,
+  "content": [
+    {
+      "type": "card",
+      "title": "示例服务 昨日用量与稳定性",
+      "subtitle": "日期：2026-09-29（Asia/Shanghai，完整一天）",
+      "tone": "blue",
+      "wide": true,
+      "blocks": [
+        {
+          "type": "rich",
+          "children": [
+            {
+              "type": "heading",
+              "depth": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "value": "稳定性总览"
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "align": [
+                null,
+                null
+              ],
+              "pageSize": 10,
+              "children": [
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "指标"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "数值"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "请求完成"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3,923 / 4,149（94.55%）"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "排除业务受限后的完成率"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "97.66%"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "未完成结构"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "受限 132 / 流中断 74 / 其他失败 20"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "成功请求 P95"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "首字 14.0s / 总耗时 55.4s"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "AI 账号当前可调度"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "8 / 11"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rich",
+          "children": [
+            {
+              "type": "heading",
+              "depth": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "value": "AI 账号稳定性"
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "align": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ],
+              "pageSize": 10,
+              "children": [
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "AI 账号"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "成功/总"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "完成率"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "中断/失败"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "P95 首字"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "当前"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Alpha-A（alpha）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—（未验证）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Alpha-B（alpha）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—（未验证）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Alpha-C（alpha）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "7 / 7"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "6.8s"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Alpha-D（alpha）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "256 / 256"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "9.1s"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Beta-A（beta）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "709 / 759"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "93.41%"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "38 / 12"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "22.5s"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "children": [
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Beta-B（beta）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "761 / 761"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "7.2s"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rich",
+          "children": [
+            {
+              "type": "heading",
+              "depth": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "value": "套餐当天折扣"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "相当于 "
+                },
+                {
+                  "type": "color",
+                  "tone": "green",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0.9折"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "（只要官方价的 8.51%）"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "订阅 "
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "4 × 示例套餐 $200/月（Beta-A、Beta-C、Beta-B、Beta-D）"
+                    }
+                  ]
+                },
+                {
+                  "type": "break"
+                },
+                {
+                  "type": "text",
+                  "value": "今天已过 "
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "24.0 / 24 小时"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "，摊到现在 "
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$26.67"
+                    }
+                  ]
+                },
+                {
+                  "type": "break"
+                },
+                {
+                  "type": "text",
+                  "value": "官方价（model-*） "
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$313.35"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

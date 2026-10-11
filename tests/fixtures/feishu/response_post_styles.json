@@ -1,0 +1,28 @@
+{
+  "body": {
+    "content": "{\"title\":\"[HHH v51 取样 1] 富文本标签\",\"content\":[[{\"tag\":\"text\",\"text\":\"普通 \",\"style\":[]},{\"tag\":\"text\",\"text\":\"加粗\",\"style\":[\"bold\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"斜体\",\"style\":[\"italic\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"下划线\",\"style\":[\"underline\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"删除线\",\"style\":[\"lineThrough\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"加粗斜体\",\"style\":[\"bold\",\"italic\"]}],[{\"tag\":\"a\",\"href\":\"https://www.feishu.cn\",\"text\":\"链接文字\",\"style\":[]},{\"tag\":\"text\",\"text\":\" 与 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://open.feishu.cn\",\"text\":\"加粗链接\",\"style\":[\"bold\"]}],[{\"tag\":\"at\",\"user_id\":\"@_user_1\",\"user_name\":\"张三\",\"style\":[]},{\"tag\":\"text\",\"text\":\" 这是 @ 自己\",\"style\":[]}],[{\"tag\":\"emotion\",\"emoji_type\":\"SMILE\"},{\"tag\":\"text\",\"text\":\" 表情\",\"style\":[]}],[{\"tag\":\"hr\"}],[{\"tag\":\"code_block\",\"language\":\"RUST\",\"text\":\"fn main() {\\n\\n    println!(\\\"hi\\\");\\n\\n}\\n\\n\"}],[{\"tag\":\"text\",\"text\":\"手打符号 *星号* #井号 1. 不是列表 <b>尖括号</b> &amp;\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"普通 \",\"style\":[]},{\"tag\":\"text\",\"text\":\"加粗\",\"style\":[\"bold\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"斜体\",\"style\":[\"italic\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"下划线\",\"style\":[\"underline\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"删除线\",\"style\":[\"lineThrough\"]},{\"tag\":\"text\",\"text\":\" \",\"style\":[]},{\"tag\":\"text\",\"text\":\"加粗斜体\",\"style\":[\"bold\",\"italic\"]}],[{\"tag\":\"a\",\"href\":\"https://www.feishu.cn\",\"text\":\"链接文字\",\"style\":[]},{\"tag\":\"text\",\"text\":\" 与 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://open.feishu.cn\",\"text\":\"加粗链接\",\"style\":[\"bold\"]}],[{\"tag\":\"at\",\"user_id\":\"@_user_1\",\"user_name\":\"张三\",\"style\":[]},{\"tag\":\"text\",\"text\":\" 这是 @ 自己\",\"style\":[]}],[{\"tag\":\"emotion\",\"emoji_type\":\"SMILE\"},{\"tag\":\"text\",\"text\":\" 表情\",\"style\":[]}],[{\"tag\":\"hr\"}],[{\"tag\":\"code_block\",\"language\":\"RUST\",\"text\":\"fn main() {\\n\\n    println!(\\\"hi\\\");\\n\\n}\\n\\n\"}],[{\"tag\":\"text\",\"text\":\"手打符号 *星号* #井号 1. 不是列表 <b>尖括号</b> &amp;\",\"style\":[]}]]}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790578183048",
+  "deleted": false,
+  "mentions": [
+    {
+      "id": "ou_sample_me",
+      "id_type": "open_id",
+      "key": "@_user_1",
+      "name": "张三",
+      "tenant_key": "sample_tenant"
+    }
+  ],
+  "message_id": "om_sample_1",
+  "message_position": "2",
+  "msg_type": "post",
+  "sender": {
+    "id": "ou_sample_me",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790578187439",
+  "updated": true
+}

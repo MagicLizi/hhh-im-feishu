@@ -1,0 +1,69 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "[HHH v51 取样 11] 编辑富文本"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "列表项 "
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "https://open.feishu.cn/document"
+                          }
+                        ],
+                        "type": "link",
+                        "url": "https://open.feishu.cn/document"
+                      },
+                      {
+                        "type": "text",
+                        "value": "（已编辑）"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "listItem"
+              }
+            ],
+            "ordered": false,
+            "type": "list"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "createdAtMs": 1790580293113,
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_sample_chat"
+    },
+    "id": "om_sample_6"
+  },
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790588177984
+}

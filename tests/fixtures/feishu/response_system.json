@@ -1,0 +1,10 @@
+{
+  "message_id": "om_system",
+  "chat_id": "oc_group",
+  "msg_type": "system",
+  "create_time": "1700000000000",
+  "update_time": "1700000000000",
+  "deleted": false,
+  "sender": {"id": "", "id_type": "", "sender_type": "", "tenant_key": ""},
+  "body": {"content": "{}"}
+}

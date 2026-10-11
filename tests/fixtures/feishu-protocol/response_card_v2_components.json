@@ -1,0 +1,558 @@
+{
+  "content": [
+    {
+      "card": {
+        "blocks": [
+          {
+            "columns": [
+              [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "238"
+                            }
+                          ],
+                          "type": "strong"
+                        },
+                        {
+                          "type": "break"
+                        },
+                        {
+                          "type": "text",
+                          "value": "当前 PR"
+                        }
+                      ],
+                      "type": "paragraph"
+                    }
+                  ],
+                  "type": "rich"
+                }
+              ],
+              [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "13"
+                            }
+                          ],
+                          "type": "strong"
+                        },
+                        {
+                          "type": "break"
+                        },
+                        {
+                          "type": "text",
+                          "value": "本轮有变化"
+                        }
+                      ],
+                      "type": "paragraph"
+                    }
+                  ],
+                  "type": "rich"
+                }
+              ],
+              [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "自动宽"
+                        }
+                      ],
+                      "type": "paragraph"
+                    }
+                  ],
+                  "type": "rich"
+                }
+              ]
+            ],
+            "type": "columns"
+          },
+          {
+            "children": [
+              {
+                "align": [
+                  "left",
+                  "left",
+                  "right",
+                  "left",
+                  "left",
+                  "left",
+                  "left"
+                ],
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "文档"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "预算"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "阶段"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "负责人"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "截止"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "备注"
+                          }
+                        ],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 A"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "查看"
+                              }
+                            ],
+                            "type": "link",
+                            "url": "https://open.feishu.cn"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$12,345.7"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "进行中",
+                            "tone": "green",
+                            "type": "tag"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "idType": "open_id",
+                            "kind": "user",
+                            "type": "person",
+                            "userId": "ou_me"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "format": "YYYY-MM-DD",
+                            "ms": 1790726449832,
+                            "type": "time"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "重点"
+                              }
+                            ],
+                            "type": "strong"
+                          }
+                        ],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 B"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$800.0"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "待启动",
+                            "tone": "blue",
+                            "type": "tag"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "idType": "open_id",
+                            "kind": "user",
+                            "type": "person",
+                            "userId": "ou_me"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "format": "YYYY-MM-DD",
+                            "ms": 1790726449832,
+                            "type": "time"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 C"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$1.0"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "阻塞",
+                            "tone": "red",
+                            "type": "tag"
+                          },
+                          {
+                            "text": "高",
+                            "tone": "orange",
+                            "type": "tag"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 D"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$2.0"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 E"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$3.0"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "项目 F（第二页）"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "$4.0"
+                          }
+                        ],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      },
+                      {
+                        "children": [],
+                        "type": "tableCell"
+                      }
+                    ],
+                    "type": "tableRow"
+                  }
+                ],
+                "pageSize": 5,
+                "type": "table"
+              }
+            ],
+            "type": "rich"
+          },
+          {
+            "avatar": true,
+            "name": true,
+            "people": [
+              {
+                "idType": "open_id",
+                "kind": "user",
+                "userId": "ou_me"
+              }
+            ],
+            "size": "medium",
+            "type": "people"
+          },
+          {
+            "avatar": true,
+            "name": true,
+            "people": [
+              {
+                "idType": "open_id",
+                "kind": "user",
+                "userId": "ou_me"
+              }
+            ],
+            "size": "small",
+            "type": "people"
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "卡片 2 结束"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "rich"
+          }
+        ],
+        "title": "HHH 测试卡 2：分栏、表格、人员",
+        "tone": "purple"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790756049880,
+  "id": "om_card_v2_components",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790756049880
+}

@@ -1,0 +1,1145 @@
+{
+  "content": [
+    {
+      "blocks": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "T1 12 行混合列（无对齐标记）"
+                    }
+                  ],
+                  "type": "strong"
+                }
+              ],
+              "type": "paragraph"
+            },
+            {
+              "align": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ],
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "成功/总"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "状态"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "完成率"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "P95"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 01（alpha）"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "0 / 0"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—（未验证）"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "—"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 02（alpha）"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "7 / 7"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "6.8s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 03（beta）"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "709 / 759"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "93.41%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "22.5s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 04"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "256 / 256"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "9.1s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 05"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1,426 / 1,485"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "96.03%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "871ms"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 06"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "12"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "99.74%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "883ms"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 07"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "37 / 37"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "8.3s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 08"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "830 / 873"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "95.07%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "22.9s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 09"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "349 / 349"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "5.4s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 10"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "386 / 387"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "99.74%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "883ms"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 11"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "588 / 588"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "可调度"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "100.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "879ms"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "账号 12（第 12 行）"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1 / 2"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "暂停"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "50.00%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1.2s"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                }
+              ],
+              "pageSize": 10,
+              "type": "table"
+            }
+          ],
+          "type": "rich"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "T2 3 行短内容"
+                    }
+                  ],
+                  "type": "strong"
+                }
+              ],
+              "type": "paragraph"
+            },
+            {
+              "align": [
+                null,
+                null
+              ],
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "名"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "数"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "甲"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "乙"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "22"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "丙"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "333"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                }
+              ],
+              "pageSize": 10,
+              "type": "table"
+            }
+          ],
+          "type": "rich"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "T3 带对齐标记"
+                    }
+                  ],
+                  "type": "strong"
+                }
+              ],
+              "type": "paragraph"
+            },
+            {
+              "align": [
+                null,
+                null,
+                null
+              ],
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "左"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "中"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "右"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "一"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "二"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "四四四四"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "五五五五"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "66,666"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "七"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "八"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "9.9%"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                }
+              ],
+              "pageSize": 10,
+              "type": "table"
+            }
+          ],
+          "type": "rich"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "T4 一列长文字"
+                    }
+                  ],
+                  "type": "strong"
+                }
+              ],
+              "type": "paragraph"
+            },
+            {
+              "align": [
+                null,
+                null,
+                null
+              ],
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "项"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "说明"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "值"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "甲"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "这是一段比较长的说明文字，用来看飞书在表格里是换行还是撑宽后横向滑动，以及列宽是不是还平均分"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "乙"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "短"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "22"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "丙"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "中等长度的说明"
+                        }
+                      ],
+                      "type": "tableCell"
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "333"
+                        }
+                      ],
+                      "type": "tableCell"
+                    }
+                  ],
+                  "type": "tableRow"
+                }
+              ],
+              "pageSize": 10,
+              "type": "table"
+            }
+          ],
+          "type": "rich"
+        }
+      ],
+      "title": "HHH 表格取样 A（撑满宽度）",
+      "tone": "blue",
+      "type": "card",
+      "wide": true
+    }
+  ],
+  "createdAtMs": 1790778603300,
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_card_tables"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790778603300
+}

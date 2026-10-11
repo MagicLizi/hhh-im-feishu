@@ -1,0 +1,20 @@
+{
+  "content": [
+    {
+      "resource": {
+        "key": "v3_00t4_0e1f2a3b-4c5d-4e6f-8091-a2b3c4d5e6fg",
+        "kind": "sticker"
+      },
+      "type": "resource"
+    }
+  ],
+  "conversationId": "oc_sample_chat",
+  "createdAtMs": 1790697593729,
+  "id": "om_sample_sticker",
+  "sender": {
+    "id": "ou_sample_other",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790697593729
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "avatar": "https://x/team.png",
+    "id": "oc_team",
+    "kind": "group",
+    "name": "产品研发群"
+  },
+  {
+    "avatar": "https://x/lin.png",
+    "id": "oc_dm_lin",
+    "kind": "direct",
+    "name": "林然",
+    "peer": "ou_lin"
+  },
+  {
+    "id": "oc_weekend",
+    "kind": "group",
+    "name": "周末去哪儿"
+  }
+]

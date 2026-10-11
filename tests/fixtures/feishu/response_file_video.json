@@ -1,0 +1,14 @@
+{
+  "message_id": "om_file_video",
+  "chat_id": "oc_group",
+  "msg_type": "file",
+  "create_time": "1700000000000",
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user"
+  },
+  "body": {
+    "content": "{\"file_key\":\"file_v3_mp4\",\"file_name\":\"hhh-video-sample-file.mp4\"}"
+  }
+}

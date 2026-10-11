@@ -1,0 +1,384 @@
+{
+  "pairs": [
+    {
+      "after": {
+        "content": [
+          {
+            "text": "v26取样A：普通文字（改过）",
+            "type": "text"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791001700265,
+        "editedAtMs": 1791001850551,
+        "id": "om_x100b000000000000000000000000a01",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791001850551
+      },
+      "before": {
+        "content": [
+          {
+            "text": "v26取样A：普通文字",
+            "type": "text"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791001700265,
+        "id": "om_x100b000000000000000000000000a01",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791001700265
+      },
+      "name": "text_edited_in_web"
+    },
+    {
+      "after": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "v26取样C：富文本列表（改过）"
+                            }
+                          ],
+                          "type": "paragraph"
+                        }
+                      ],
+                      "type": "listItem"
+                    }
+                  ],
+                  "ordered": false,
+                  "type": "list"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791001895048,
+        "id": "om_x100b000000000000000000000000a02",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791001954381
+      },
+      "before": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "v26取样C：富文本列表"
+                            }
+                          ],
+                          "type": "paragraph"
+                        }
+                      ],
+                      "type": "listItem"
+                    }
+                  ],
+                  "ordered": false,
+                  "type": "list"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791001895048,
+        "id": "om_x100b000000000000000000000000a02",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791001895048
+      },
+      "name": "post_edited_in_web"
+    },
+    {
+      "after": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "v26取样D：文字链接 "
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "https://www.feishu.cn/"
+                        }
+                      ],
+                      "type": "link",
+                      "url": "https://www.feishu.cn/"
+                    },
+                    {
+                      "type": "text",
+                      "value": " 结束"
+                    }
+                  ],
+                  "type": "paragraph"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002125577,
+        "id": "om_x100b000000000000000000000000a03",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002133119
+      },
+      "before": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "v26取样D：文字链接 "
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "https://www.feishu.cn/"
+                        }
+                      ],
+                      "type": "link",
+                      "url": "https://www.feishu.cn/"
+                    },
+                    {
+                      "type": "text",
+                      "value": " 结束"
+                    }
+                  ],
+                  "type": "paragraph"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002125577,
+        "id": "om_x100b000000000000000000000000a03",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002125577
+      },
+      "name": "text_with_link_updated_by_preview"
+    },
+    {
+      "after": {
+        "content": [
+          {
+            "text": "v26取样E：",
+            "type": "text"
+          },
+          {
+            "idType": "open_id",
+            "kind": "user",
+            "name": "王小明",
+            "type": "mention",
+            "userId": "ou_self"
+          },
+          {
+            "text": " 接口发的提及",
+            "type": "text"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002163712,
+        "id": "om_x100b000000000000000000000000a04",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002163790
+      },
+      "before": {
+        "content": [
+          {
+            "text": "v26取样E：",
+            "type": "text"
+          },
+          {
+            "idType": "open_id",
+            "kind": "user",
+            "name": "王小明",
+            "type": "mention",
+            "userId": "ou_self"
+          },
+          {
+            "text": " 接口发的提及",
+            "type": "text"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002163712,
+        "id": "om_x100b000000000000000000000000a04",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002163712
+      },
+      "name": "text_with_mention_updated_after_sending"
+    },
+    {
+      "after": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "v26取样F：带图的富文本 "
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "飞书"
+                        }
+                      ],
+                      "type": "link",
+                      "url": "https://www.feishu.cn/"
+                    }
+                  ],
+                  "type": "paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "resource": {
+                        "key": "img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g",
+                        "kind": "image"
+                      },
+                      "type": "resource"
+                    }
+                  ],
+                  "type": "paragraph"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002267718,
+        "id": "om_x100b000000000000000000000000a05",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002268733
+      },
+      "before": {
+        "content": [
+          {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "v26取样F：带图的富文本 "
+                    },
+                    {
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "飞书"
+                        }
+                      ],
+                      "type": "link",
+                      "url": "https://www.feishu.cn/"
+                    }
+                  ],
+                  "type": "paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "resource": {
+                        "key": "img_v3_02164_0a0b0c0d-1111-4222-8333-44445555666g",
+                        "kind": "image"
+                      },
+                      "type": "resource"
+                    }
+                  ],
+                  "type": "paragraph"
+                }
+              ],
+              "type": "root"
+            },
+            "type": "rich"
+          }
+        ],
+        "conversationId": "oc_hhh_test",
+        "createdAtMs": 1791002267718,
+        "id": "om_x100b000000000000000000000000a05",
+        "sender": {
+          "id": "ou_self",
+          "idType": "open_id",
+          "kind": "user"
+        },
+        "updatedAtMs": 1791002267718
+      },
+      "name": "post_with_image_updated_after_sending"
+    }
+  ]
+}

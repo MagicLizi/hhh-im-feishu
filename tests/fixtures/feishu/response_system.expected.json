@@ -1,0 +1,8 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_system"},
+  "sender": {"id": "", "idType": "", "kind": "system"},
+  "createdAtMs": 1700000000000,
+  "updatedAtMs": 1700000000000,
+  "content": [{"type": "unsupported", "kind": "system", "label": "群通知"}],
+  "incomplete": true
+}

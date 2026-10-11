@@ -1,0 +1,23 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_card_title"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1790432891530,
+  "updatedAtMs": 1790432891530,
+  "content": [
+    {
+      "type": "card",
+      "title": "PR Review 汇总",
+      "tone": "blue"
+    }
+  ]
+}

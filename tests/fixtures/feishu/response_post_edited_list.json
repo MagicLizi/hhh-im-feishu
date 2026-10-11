@@ -1,0 +1,19 @@
+{
+  "body": {
+    "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 11] 编辑富文本\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"列表项 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://open.feishu.cn/document\",\"text\":\"https://open.feishu.cn/document\",\"style\":[]},{\"tag\":\"text\",\"text\":\"（已编辑）\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 11] 编辑富文本\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"列表项 \",\"style\":[]},{\"tag\":\"a\",\"href\":\"https://open.feishu.cn/document\",\"text\":\"https://open.feishu.cn/document\",\"style\":[]},{\"tag\":\"text\",\"text\":\"（已编辑）\",\"style\":[]}]]}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790580293113",
+  "deleted": false,
+  "message_id": "om_sample_6",
+  "message_position": "13",
+  "msg_type": "post",
+  "sender": {
+    "id": "ou_sample_me",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790588177984",
+  "updated": true
+}

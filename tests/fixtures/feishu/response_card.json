@@ -1,0 +1,17 @@
+{
+  "message_id": "om_card",
+  "chat_id": "oc_group",
+  "msg_type": "interactive",
+  "create_time": "1790500389023",
+  "update_time": "1790500389023",
+  "deleted": false,
+  "updated": false,
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user"
+  },
+  "body": {
+    "content": "{\"config\":{},\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**acme/rocket**  ·  auto  ·  2026-09-27 17:02:43 GMT+8\",\"tag\":\"lark_md\"}},{\"background_style\":\"default\",\"columns\":[{\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**238**\\n当前 PR\",\"tag\":\"lark_md\"}}],\"tag\":\"column\"},{\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**13**\\n本轮有变化\",\"tag\":\"lark_md\"}}],\"tag\":\"column\"},{\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**3**\\n进入 Review\",\"tag\":\"lark_md\"}}],\"tag\":\"column\"}],\"tag\":\"column_set\"},{\"background_style\":\"default\",\"columns\":[{\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**1**\\n本轮已合并\",\"tag\":\"lark_md\"}}],\"tag\":\"column\"},{\"elements\":[{\"tag\":\"div\",\"text\":{\"content\":\"**2**\\n本轮未合并\",\"tag\":\"lark_md\"}}],\"tag\":\"column\"}],\"tag\":\"column_set\"},{\"tag\":\"hr\"},{\"tag\":\"div\",\"text\":{\"content\":\"**✅ 本轮已合并 PR**\",\"tag\":\"lark_md\"}},{\"tag\":\"div\",\"text\":{\"content\":\"[#5149 · feat(mobile): 设置页对齐新版样式](https://github.com/acme/rocket/pull/5149)\",\"tag\":\"lark_md\"}}],\"header\":{\"template\":\"blue\",\"title\":{\"content\":\"PR Review 汇总\",\"i18n\":{},\"tag\":\"plain_text\"}}}"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "body": {
+    "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 7] 代码块（中间有空行）\",\"style\":[]}],[],[{\"tag\":\"code_block\",\"language\":\"PLAIN_TEXT\",\"text\":\"let a = 1;\\n\\nlet b = 2;\\n\"}],[{\"tag\":\"text\",\"text\":\"代码块之后的正文\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"text\",\"text\":\"[HHH v51 取样 7] 代码块（中间有空行）\",\"style\":[]}],[],[{\"tag\":\"code_block\",\"language\":\"PLAIN_TEXT\",\"text\":\"let a = 1;\\n\\nlet b = 2;\\n\"}],[{\"tag\":\"text\",\"text\":\"代码块之后的正文\",\"style\":[]}]]}"
+  },
+  "chat_id": "oc_sample_chat",
+  "create_time": "1790579419912",
+  "deleted": false,
+  "message_id": "om_sample_4",
+  "message_position": "9",
+  "msg_type": "post",
+  "sender": {
+    "id": "ou_sample_me",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "sample_tenant"
+  },
+  "update_time": "1790579419912",
+  "updated": false
+}

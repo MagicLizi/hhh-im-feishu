@@ -1,0 +1,65 @@
+{
+  "reference": {
+    "conversation": { "connectionId": "test", "id": "oc_test" },
+    "id": "om_card_at"
+  },
+  "sender": { "id": "cli_test_bot", "idType": "app_id", "kind": "app" },
+  "createdAtMs": 1791114306596,
+  "updatedAtMs": 1791118817926,
+  "content": [
+    {
+      "type": "card",
+      "title": "发布失败",
+      "tone": "red",
+      "blocks": [
+        {
+          "type": "rich",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                { "type": "text", "value": "区域：" },
+                { "type": "strong", "children": [{ "type": "text", "value": "国内 + 海外" }] },
+                { "type": "text", "value": " · 渠道：" },
+                { "type": "strong", "children": [{ "type": "text", "value": "正式版" }] },
+                { "type": "text", "value": " · 触发人：" },
+                {
+                  "type": "mention",
+                  "actor": { "id": "ou_card_app_trigger", "idType": "open_id", "kind": "user" }
+                },
+                { "type": "text", "value": " · 流水线：" },
+                {
+                  "type": "link",
+                  "url": "https://git.example.com/team/build/-/pipelines/251361",
+                  "children": [{ "type": "text", "value": "#333" }]
+                }
+              ]
+            }
+          ]
+        },
+        { "type": "divider" },
+        {
+          "type": "paragraph",
+          "parts": [
+            {
+              "type": "markdown",
+              "text": "**准备环境**：失败\n**生成公告**：已跳过\n**桌面 Promote**：已跳过\n**上传公告**：未执行\n**手机 Promote**：已跳过\n**GitHub Release**：已跳过"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "parts": [
+            {
+              "type": "markdown",
+              "text": "**失败任务**\n• [win-start](https://git.example.com/team/build/-/jobs/895496)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "threadId": "omt_card_at",
+  "inThread": false,
+  "incomplete": true
+}

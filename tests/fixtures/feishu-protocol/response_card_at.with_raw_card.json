@@ -1,0 +1,109 @@
+{
+  "content": [
+    {
+      "card": {
+        "blocks": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "区域："
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "国内 + 海外"
+                      }
+                    ],
+                    "type": "strong"
+                  },
+                  {
+                    "type": "text",
+                    "value": " · 渠道："
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "正式版"
+                      }
+                    ],
+                    "type": "strong"
+                  },
+                  {
+                    "type": "text",
+                    "value": " · 触发人："
+                  },
+                  {
+                    "idType": "open_id",
+                    "kind": "user",
+                    "name": "测试同事",
+                    "type": "mention",
+                    "userId": "ou_reader_trigger"
+                  },
+                  {
+                    "type": "text",
+                    "value": " · 流水线："
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#333"
+                      }
+                    ],
+                    "type": "link",
+                    "url": "https://git.example.com/team/build/-/pipelines/251361"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "rich"
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "parts": [
+              {
+                "text": "**准备环境**：失败\n**生成公告**：已跳过\n**桌面 Promote**：已跳过\n**上传公告**：未执行\n**手机 Promote**：已跳过\n**GitHub Release**：已跳过",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "parts": [
+              {
+                "text": "**失败任务**\n• [win-start](https://git.example.com/team/build/-/jobs/895496)",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "title": "发布失败",
+        "tone": "red"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_test",
+  "createdAtMs": 1791114306596,
+  "id": "om_card_at",
+  "incomplete": true,
+  "sender": {
+    "id": "cli_test_bot",
+    "idType": "app_id",
+    "kind": "bot"
+  },
+  "thread": {
+    "id": "omt_card_at",
+    "inThread": false
+  },
+  "updatedAtMs": 1791118817926
+}

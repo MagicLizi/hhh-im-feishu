@@ -1,0 +1,8 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_group"}, "id": "om_at_all"},
+  "sender": {"id": "ou_sender", "idType": "open_id", "kind": "user"},
+  "createdAtMs": 1700000001000, "updatedAtMs": 1700000001000,
+  "content": [
+    {"type": "mention", "everyone": true}
+  ]
+}

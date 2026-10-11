@@ -1,0 +1,17 @@
+{
+  "message_id": "om_card_title",
+  "chat_id": "oc_group",
+  "msg_type": "interactive",
+  "create_time": "1790432891530",
+  "update_time": "1790432891530",
+  "deleted": false,
+  "updated": false,
+  "sender": {
+    "id": "ou_sender",
+    "id_type": "open_id",
+    "sender_type": "user"
+  },
+  "body": {
+    "content": "{\"config\":{},\"header\":{\"template\":\"blue\",\"title\":{\"content\":\"PR Review 汇总\",\"i18n\":{},\"tag\":\"plain_text\"}}}"
+  }
+}

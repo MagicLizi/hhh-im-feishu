@@ -1,0 +1,26 @@
+[
+  {
+    "atMs": 1700000003000,
+    "conversationId": "oc_group",
+    "emojiType": "THUMBSUP",
+    "id": "reaction-user=",
+    "messageId": "om_reply",
+    "operator": {
+      "id": "ou_alice",
+      "idType": "open_id",
+      "kind": "user"
+    }
+  },
+  {
+    "atMs": 1700000004000,
+    "conversationId": "oc_group",
+    "emojiType": "SMILE",
+    "id": "reaction-app",
+    "messageId": "om_reply",
+    "operator": {
+      "id": "cli_app",
+      "idType": "app_id",
+      "kind": "bot"
+    }
+  }
+]

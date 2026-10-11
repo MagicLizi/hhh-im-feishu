@@ -1,0 +1,197 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[HHH v51 取样 1] 富文本标签"
+                  }
+                ],
+                "type": "strong"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "普通 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "加粗"
+                  }
+                ],
+                "type": "strong"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "斜体"
+                  }
+                ],
+                "type": "emphasis"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "下划线"
+                  }
+                ],
+                "type": "underline"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "删除线"
+                  }
+                ],
+                "type": "delete"
+              },
+              {
+                "type": "text",
+                "value": " "
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "加粗斜体"
+                      }
+                    ],
+                    "type": "emphasis"
+                  }
+                ],
+                "type": "strong"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "链接文字"
+                  }
+                ],
+                "type": "link",
+                "url": "https://www.feishu.cn"
+              },
+              {
+                "type": "text",
+                "value": " 与 "
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "加粗链接"
+                      }
+                    ],
+                    "type": "link",
+                    "url": "https://open.feishu.cn"
+                  }
+                ],
+                "type": "strong"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "actor": {
+                  "id": "ou_sample_me",
+                  "idType": "open_id",
+                  "kind": "user",
+                  "name": "张三"
+                },
+                "type": "mention"
+              },
+              {
+                "type": "text",
+                "value": " 这是 @ 自己"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "children": [
+              {
+                "emojiType": "SMILE",
+                "type": "emoji"
+              },
+              {
+                "type": "text",
+                "value": " 表情"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "type": "thematicBreak"
+          },
+          {
+            "lang": "rust",
+            "type": "code",
+            "value": "fn main() {\n    println!(\"hi\");\n}"
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "手打符号 *星号* #井号 1. 不是列表 <b>尖括号</b> &amp;"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "createdAtMs": 1790578183048,
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_sample_chat"
+    },
+    "id": "om_sample_1"
+  },
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790578187439
+}

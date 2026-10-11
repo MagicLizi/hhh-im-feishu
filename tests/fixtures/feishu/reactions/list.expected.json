@@ -1,0 +1,4 @@
+[
+  {"message":{"conversation":{"connectionId":"test","id":"oc_group"},"id":"om_reply"},"id":"reaction-user=","operator":{"id":"ou_alice","idType":"open_id","kind":"user"},"emojiType":"THUMBSUP","actionTimeMs":1700000003000},
+  {"message":{"conversation":{"connectionId":"test","id":"oc_group"},"id":"om_reply"},"id":"reaction-app","operator":{"id":"cli_app","idType":"app_id","kind":"app"},"emojiType":"SMILE","actionTimeMs":1700000004000}
+]

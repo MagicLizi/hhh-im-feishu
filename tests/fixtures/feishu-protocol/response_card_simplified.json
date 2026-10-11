@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "card": {
+        "blocks": [
+          {
+            "parts": [
+              {
+                "text": "acme\\/rocket  ·  auto  ·  2026\\-09\\-27 17\\:02\\:43 GMT\\+8",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "parts": [
+              {
+                "text": "238\n当前 PR13\n本轮有变化3\n进入 Review",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "parts": [
+              {
+                "text": "1\n本轮已合并2\n本轮未合并",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "parts": [
+              {
+                "text": "✅ 本轮已合并 PR",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          },
+          {
+            "parts": [
+              {
+                "text": "[\\#5149 · feat\\(mobile\\)\\: 设置页对齐新版样式](<https://github.com/acme/rocket/pull/5149>)",
+                "type": "markdown"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "title": "PR Review 汇总",
+        "tone": "neutral"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790500389023,
+  "id": "om_card_simplified",
+  "incomplete": true,
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790500389023
+}

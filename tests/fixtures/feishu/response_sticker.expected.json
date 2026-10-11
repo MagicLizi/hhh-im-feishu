@@ -1,0 +1,16 @@
+{
+  "reference": {"conversation": {"connectionId": "test", "id": "oc_sample_chat"}, "id": "om_sample_sticker"},
+  "sender": {"id": "ou_sample_other", "idType": "open_id", "kind": "user"},
+  "createdAtMs": 1790697593729,
+  "updatedAtMs": 1790697593729,
+  "content": [
+    {
+      "type": "resource",
+      "resource": {
+        "message": {"conversation": {"connectionId": "test", "id": "oc_sample_chat"}, "id": "om_sample_sticker"},
+        "key": "v3_00t4_0e1f2a3b-4c5d-4e6f-8091-a2b3c4d5e6fg",
+        "kind": "sticker"
+      }
+    }
+  ]
+}

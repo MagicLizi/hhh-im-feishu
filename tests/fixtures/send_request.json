@@ -1,0 +1,1 @@
+{"operationId":"stable_1","target":{"type":"reply","message":{"conversation":{"connectionId":"test","id":"oc_group"},"id":"om_parent"}},"content":[{"type":"text","text":"Hello & <world>"},{"type":"mention","userId":"ou_me","name":"Alice"}]}

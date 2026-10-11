@@ -1,0 +1,48 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_media"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1700000000000,
+  "content": [
+    {
+      "type": "resource",
+      "resource": {
+        "message": {
+          "conversation": {
+            "connectionId": "test",
+            "id": "oc_group"
+          },
+          "id": "om_media"
+        },
+        "key": "file_v3_video",
+        "kind": "file"
+      },
+      "name": "IMG_0001.MOV",
+      "video": {
+        "cover": {
+          "resource": {
+            "message": {
+              "conversation": {
+                "connectionId": "test",
+                "id": "oc_group"
+              },
+              "id": "om_media"
+            },
+            "key": "img_v3_cover",
+            "kind": "image"
+          }
+        },
+        "durationMs": 11000
+      }
+    }
+  ]
+}

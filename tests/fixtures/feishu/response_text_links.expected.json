@@ -1,0 +1,129 @@
+{
+  "content": [
+    {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "[HHH v51 取样 3] 纯文字：裸网址 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://x.com/ExampleDevs/status/1000000000000000001?s=20"
+                  }
+                ],
+                "type": "link",
+                "url": "https://x.com/ExampleDevs/status/1000000000000000001?s=20"
+              },
+              {
+                "type": "text",
+                "value": " 紧跟中文句号"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://www.feishu.cn"
+                  }
+                ],
+                "type": "link",
+                "url": "https://www.feishu.cn"
+              },
+              {
+                "type": "text",
+                "value": "。括号（"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://open.feishu.cn"
+                  }
+                ],
+                "type": "link",
+                "url": "https://open.feishu.cn"
+              },
+              {
+                "type": "text",
+                "value": "）不带协议 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "www.feishu.cn"
+                  }
+                ],
+                "type": "link",
+                "url": "www.feishu.cn"
+              },
+              {
+                "type": "text",
+                "value": " 链接写法 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "飞书"
+                  }
+                ],
+                "type": "link",
+                "url": "https://www.feishu.cn"
+              },
+              {
+                "type": "text",
+                "value": " 表情码[看][微笑] http 的 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "http://example.com"
+                  }
+                ],
+                "type": "link",
+                "url": "http://example.com"
+              },
+              {
+                "type": "text",
+                "value": " 带端口 "
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://example.com:8443/a_b-c?x=1&y=2#frag"
+                  }
+                ],
+                "type": "link",
+                "url": "https://example.com:8443/a_b-c?x=1&y=2#frag"
+              }
+            ],
+            "type": "paragraph"
+          }
+        ],
+        "type": "root"
+      },
+      "type": "rich"
+    }
+  ],
+  "createdAtMs": 1790578273899,
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_sample_chat"
+    },
+    "id": "om_sample_3"
+  },
+  "sender": {
+    "id": "ou_sample_me",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790578273899
+}

@@ -1,0 +1,28 @@
+{
+  "direct": {
+    "conversationId": "oc_direct",
+    "notice": "搜索索引可能有延迟"
+  },
+  "groups": {
+    "items": [
+      {
+        "avatar": "https://example.test/group.png",
+        "id": "oc_research",
+        "kind": "group",
+        "name": "研发讨论群"
+      }
+    ],
+    "notice": "部分结果不可见"
+  },
+  "users": {
+    "items": [
+      {
+        "avatar": "https://example.test/user.png",
+        "id": "ou_target",
+        "idType": "open_id",
+        "kind": "user",
+        "name": "测试用户"
+      }
+    ]
+  }
+}

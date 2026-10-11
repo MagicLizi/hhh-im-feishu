@@ -1,0 +1,151 @@
+{
+  "content": [
+    {
+      "card": {
+        "blocks": [
+          {
+            "blocks": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "收起时藏着的内容"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "rich"
+              }
+            ],
+            "border": true,
+            "expanded": false,
+            "title": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "收起的面板"
+                  }
+                ],
+                "type": "strong"
+              }
+            ],
+            "type": "panel"
+          },
+          {
+            "blocks": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "展开时看得到"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "rich"
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "面板里的第二段"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "type": "rich"
+              }
+            ],
+            "border": false,
+            "expanded": true,
+            "title": [
+              {
+                "type": "text",
+                "value": "展开的面板"
+              }
+            ],
+            "type": "panel"
+          },
+          {
+            "columns": 1,
+            "images": [
+              {
+                "alt": "测试图一",
+                "resource": {
+                  "key": "img_v3_a",
+                  "kind": "image"
+                }
+              }
+            ],
+            "type": "images"
+          },
+          {
+            "columns": 2,
+            "images": [
+              {
+                "resource": {
+                  "key": "img_v3_a",
+                  "kind": "image"
+                }
+              },
+              {
+                "resource": {
+                  "key": "img_v3_b",
+                  "kind": "image"
+                }
+              }
+            ],
+            "type": "images"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Markdown 里的图片："
+                  },
+                  {
+                    "name": "悬停文字",
+                    "resource": {
+                      "key": "img_v3_b",
+                      "kind": "image"
+                    },
+                    "type": "resource"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "type": "rich"
+          }
+        ],
+        "title": "HHH 测试卡 3：折叠面板与图片",
+        "tone": "red"
+      },
+      "type": "card"
+    }
+  ],
+  "conversationId": "oc_group",
+  "createdAtMs": 1790756051282,
+  "id": "om_card_v2_media",
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "updatedAtMs": 1790756051282
+}

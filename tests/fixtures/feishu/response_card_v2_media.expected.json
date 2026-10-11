@@ -1,0 +1,182 @@
+{
+  "reference": {
+    "conversation": {
+      "connectionId": "test",
+      "id": "oc_group"
+    },
+    "id": "om_card_v2_media"
+  },
+  "sender": {
+    "id": "ou_sender",
+    "idType": "open_id",
+    "kind": "user"
+  },
+  "createdAtMs": 1790756051282,
+  "updatedAtMs": 1790756051282,
+  "content": [
+    {
+      "type": "card",
+      "title": "HHH 测试卡 3：折叠面板与图片",
+      "tone": "red",
+      "blocks": [
+        {
+          "type": "panel",
+          "title": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "收起的面板"
+                }
+              ]
+            }
+          ],
+          "expanded": false,
+          "border": true,
+          "blocks": [
+            {
+              "type": "rich",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "收起时藏着的内容"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": [
+            {
+              "type": "text",
+              "value": "展开的面板"
+            }
+          ],
+          "expanded": true,
+          "border": false,
+          "blocks": [
+            {
+              "type": "rich",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "展开时看得到"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "type": "rich",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "面板里的第二段"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "images",
+          "columns": 1,
+          "images": [
+            {
+              "resource": {
+                "message": {
+                  "conversation": {
+                    "connectionId": "test",
+                    "id": "oc_group"
+                  },
+                  "id": "om_card_v2_media"
+                },
+                "key": "img_v3_a",
+                "kind": "image"
+              },
+              "alt": "测试图一"
+            }
+          ]
+        },
+        {
+          "type": "images",
+          "columns": 2,
+          "images": [
+            {
+              "resource": {
+                "message": {
+                  "conversation": {
+                    "connectionId": "test",
+                    "id": "oc_group"
+                  },
+                  "id": "om_card_v2_media"
+                },
+                "key": "img_v3_a",
+                "kind": "image"
+              }
+            },
+            {
+              "resource": {
+                "message": {
+                  "conversation": {
+                    "connectionId": "test",
+                    "id": "oc_group"
+                  },
+                  "id": "om_card_v2_media"
+                },
+                "key": "img_v3_b",
+                "kind": "image"
+              }
+            }
+          ]
+        },
+        {
+          "type": "rich",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Markdown 里的图片："
+                },
+                {
+                  "type": "resource",
+                  "resource": {
+                    "message": {
+                      "conversation": {
+                        "connectionId": "test",
+                        "id": "oc_group"
+                      },
+                      "id": "om_card_v2_media"
+                    },
+                    "key": "img_v3_b",
+                    "kind": "image"
+                  },
+                  "name": "悬停文字"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
