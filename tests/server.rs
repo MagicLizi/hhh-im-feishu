@@ -316,6 +316,70 @@ async fn a_saved_credential_opens_online_and_reads_count_platform_requests() {
     );
 }
 
+/// 人名册单人错误隔离与真实请求数必须完整经过协议交给宿主。
+#[tokio::test]
+async fn people_get_isolates_cross_app_ids_and_counts_every_split_request() {
+    let feishu = MockServer::start().await;
+    mock_identity(&feishu, "u-saved").await;
+    Mock::given(method("GET"))
+        .and(path("/open-apis/contact/v3/users/batch"))
+        .respond_with(|request: &Request| {
+            let ids: Vec<String> = request
+                .url
+                .query_pairs()
+                .filter(|(key, _)| key == "user_ids")
+                .map(|(_, id)| id.into_owned())
+                .collect();
+            if ids.iter().any(|id| id == "ou_foreign") {
+                return ResponseTemplate::new(400)
+                    .set_body_json(json!({"code":99992361,"msg":"open_id cross app"}));
+            }
+            let items: Vec<Value> = ids
+                .iter()
+                .map(|id| {
+                    json!({"open_id":id,"name":id,
+                "avatar":{"avatar_72":format!("https://s1-imfile.feishucdn.com/{id}.png")}})
+                })
+                .collect();
+            ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{"items":items}}))
+        })
+        .expect(5)
+        .mount(&feishu)
+        .await;
+    let host = Host::start(options(&feishu)).await;
+    host.initialize().await;
+    let open = host
+        .call(
+            "session/open",
+            json!({"credential":relay_credential("u-saved", now_secs()+7200, &feishu.uri()),
+        "credentialReadOnly":true,"settings":{}}),
+        )
+        .await
+        .unwrap();
+    assert_eq!(open["state"], "online");
+    let result = host
+        .call(
+            "people/get",
+            json!({"ids":["ou_good_before","ou_foreign","ou_good_after"]}),
+        )
+        .await
+        .unwrap();
+    assert_eq!(result["missing"], json!(["ou_foreign"]));
+    let found = result["found"].as_array().unwrap();
+    assert_eq!(found.len(), 2);
+    assert_eq!(found[0]["id"], "ou_good_before");
+    assert_eq!(found[1]["id"], "ou_good_after");
+    assert_eq!(
+        found[0]["avatar"],
+        "https://s1-imfile.feishucdn.com/ou_good_before.png"
+    );
+    assert_eq!(
+        found[1]["avatar"],
+        "https://s1-imfile.feishucdn.com/ou_good_after.png"
+    );
+    assert_eq!(result["platformRequests"], 5, "拆分请求全部计入读取额度");
+}
+
 /// 附录 D：接过内置飞书的授权——先存插件自己的凭据、宿主回了成功，才回在线；带回要写进设置的登录方式。
 #[tokio::test]
 async fn handover_saves_first_then_answers_online_with_the_login_in_use() {
