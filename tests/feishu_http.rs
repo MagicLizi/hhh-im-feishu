@@ -1894,6 +1894,102 @@ async fn users_that_do_not_exist_are_left_out_instead_of_failing_the_batch() {
 }
 
 #[tokio::test]
+async fn users_from_another_app_do_not_hide_other_peoples_avatars() {
+    // 2026-10-20 只读取样：单人可读、混合批次被 400 + 99992361（open_id cross app）拒绝。
+    // 编号与资料均已替换；这类单人错误只能影响本人，不能丢掉同批的正常头像。
+    let (server, client) = setup().await;
+    Mock::given(method("GET"))
+        .and(path("/open-apis/contact/v3/users/batch"))
+        .respond_with(|request: &wiremock::Request| {
+            let ids: Vec<String> = request
+                .url
+                .query_pairs()
+                .filter(|(k, _)| k == "user_ids")
+                .map(|(_, v)| v.into_owned())
+                .collect();
+            if ids.iter().any(|id| id.starts_with("ou_foreign")) {
+                return ResponseTemplate::new(400)
+                    .set_body_json(json!({"code":99992361,"msg":"open_id cross app"}));
+            }
+            let items: Vec<Value> = ids
+                .iter()
+                .map(|id| {
+                    json!({
+                        "open_id":id,"name":format!("名字-{id}"),
+                        "avatar":{"avatar_72":format!("https://s1-imfile.feishucdn.com/{id}.png")}
+                    })
+                })
+                .collect();
+            ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{"items":items}}))
+        })
+        .mount(&server)
+        .await;
+    let mut asked: Vec<_> = (0..52).map(|n| user(&format!("ou_good{n}"))).collect();
+    asked.insert(0, user("ou_foreign_first"));
+    asked.insert(25, user("ou_foreign_middle"));
+    asked.push(user("ou_foreign_last"));
+    asked.push(user("ou_good0"));
+    let found = client.users(&asked).await.unwrap();
+    assert_eq!(
+        found.len(),
+        52,
+        "跨过 50 人的批次边界，正常人员全部保留、重复人员只给一次"
+    );
+    for (n, person) in found.iter().enumerate() {
+        assert_eq!(person.reference.id, format!("ou_good{n}"));
+        assert_eq!(person.name, format!("名字-ou_good{n}"));
+        assert_eq!(
+            person.avatar_url,
+            Some(format!("https://s1-imfile.feishucdn.com/ou_good{n}.png"))
+        );
+    }
+    assert!(
+        client
+            .users(&[user("ou_foreign_only")])
+            .await
+            .unwrap()
+            .is_empty()
+    );
+    let requests = server.received_requests().await.unwrap();
+    let batches = requests
+        .iter()
+        .filter(|r| r.url.path() == "/open-apis/contact/v3/users/batch")
+        .count();
+    assert!(
+        batches < 40,
+        "只有失败子批次拆开，正常批次不逐人读取：{batches}"
+    );
+}
+
+#[tokio::test]
+async fn account_wide_and_unknown_people_errors_are_not_split_into_individual_requests() {
+    for (status, code, kind) in [
+        (400, 99991668, ErrorKind::AuthExpired),
+        (400, 99991672, ErrorKind::PermissionDenied),
+        (429, 99991400, ErrorKind::RateLimited),
+        (503, -1, ErrorKind::Disconnected),
+        (400, 12345678, ErrorKind::ProtocolError),
+    ] {
+        let (server, client) = setup().await;
+        Mock::given(method("GET"))
+            .and(path("/open-apis/contact/v3/users/batch"))
+            .respond_with(
+                ResponseTemplate::new(status).set_body_json(json!({"code":code,"msg":"failed"})),
+            )
+            .expect(1)
+            .mount(&server)
+            .await;
+        let error = client
+            .users(&[user("ou_a"), user("ou_b")])
+            .await
+            .unwrap_err();
+        assert_eq!(error.kind, kind);
+        assert_eq!(error.platform_code, Some(code.to_string()));
+        server.verify().await;
+    }
+}
+
+#[tokio::test]
 async fn users_split_large_batches_and_reject_bad_input_before_network() {
     let (server, client) = setup().await;
     Mock::given(method("GET"))

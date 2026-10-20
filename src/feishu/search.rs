@@ -15,6 +15,8 @@ const USERS_BATCH_MAX: usize = 50;
 const USERS_MAX: usize = 500;
 // 通讯录批量接口的“编号不存在或格式不对”：一批里只要有一个，整批被拒（400，取样 2026-09-30，契约 friend/im-watch v60）。
 const USER_ID_NOT_FOUND: &str = "99992351";
+// 编号属于另一应用也会拒绝整批（400 + open_id cross app，取样 2026-10-20）；只隔离这个编号。
+const USER_ID_CROSS_APP: &str = "99992361";
 // 认出私聊对方只读最近一页消息。
 const PEER_LOOKUP_LIMIT: u16 = 20;
 const CONTACT_SCOPE_NOTICE: &str =
@@ -484,7 +486,7 @@ impl FeishuClient {
     }
 
     /// 按 open_id 批量读取用户姓名与头像；返回 open_id → (姓名, 头像)。单次不超过 50 人。
-    /// 读一批人；平台因为其中有不存在的编号整批拒绝时，对半分开再读，直到把读不到的单独挑出来跳过
+    /// 读一批人；平台因为其中有不存在或不属于当前应用的编号整批拒绝时，对半分开再读，直到把读不到的单独挑出来跳过
     /// （k 个读不到的约多 2k·log₂n 次请求，没有读不到的只一次）。别的错误照常返回。
     async fn people_skipping_missing(
         &self,
@@ -495,13 +497,18 @@ impl FeishuClient {
         while let Some(part) = parts.pop() {
             match self.people_by_id(part).await {
                 Ok(found) => people.extend(found),
-                Err(error) if error.platform_code.as_deref() == Some(USER_ID_NOT_FOUND) => {
+                Err(error)
+                    if matches!(
+                        error.platform_code.as_deref(),
+                        Some(USER_ID_NOT_FOUND | USER_ID_CROSS_APP)
+                    ) =>
+                {
                     if part.len() > 1 {
                         let (front, back) = part.split_at(part.len() / 2);
                         parts.push(back);
                         parts.push(front);
                     } else {
-                        tracing::debug!("飞书没有这个用户，按读不到跳过");
+                        tracing::debug!(code = ?error.platform_code, "飞书确认这个用户编号不可读，只跳过这个人");
                     }
                 }
                 Err(error) => return Err(error),
