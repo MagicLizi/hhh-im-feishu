@@ -54,6 +54,13 @@ pub const INFO: PlatformInfo = PlatformInfo {
     }),
 };
 
+/// 表情写进文字的写法（HHH 契约 provider-protocol v31）：与正文写法 `[中文名]` 对应，HHH 输入框的表情按钮按它把表情插进文字。
+pub const EMOJI_TEXT_TEMPLATE: &str = "[{name}]";
+
+/// 写不进文字的表情（只能点成回应），HHH 输入框的表情面板不列。2026-10-22 取样：目录里有名字的 207 个逐个写成 `[名字]`
+/// 从 HHH 发进测试群，`[2021年]` 被飞书服务端改写成 `[NotFound]`（读回的正文就是它），其余 206 个在飞书客户端都显示成表情。
+pub const NOT_IN_TEXT: &[&str] = &["2021"];
+
 /// 附件文件名上限（飞书上传接口对文件名有长度限制）。
 const ATTACHMENT_NAME_MAX_BYTES: usize = 250;
 

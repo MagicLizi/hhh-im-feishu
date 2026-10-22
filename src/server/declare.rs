@@ -231,7 +231,7 @@ pub(crate) fn initialize(params: pm::InitializeParams) -> Result<Value, RpcError
 
 /// `initialize` 的结果（不看宿主参数的那部分）。
 pub(crate) fn result() -> Value {
-    serde_json::to_value(pm::InitializeResult {
+    let mut result = serde_json::to_value(pm::InitializeResult {
         protocol_version: hhh_im_protocol::PROTOCOL_VERSION,
         provider: pm::ProviderInfo {
             id: PROVIDER_ID.into(),
@@ -243,13 +243,55 @@ pub(crate) fn result() -> Value {
         settings: Vec::new(),
         login_methods: login_methods(),
     })
-    .expect("握手结果总能写成 JSON")
+    .expect("握手结果总能写成 JSON");
+    // 表情写进文字的写法（协议 v31，可选字段）：本插件锁的协议包还没有这个字段，直接写进平台说明的 JSON；升级协议包时换成
+    // `EmojiRules::text_template`。
+    result["platform"]["emoji"]["textTemplate"] = Value::from(facts::EMOJI_TEXT_TEMPLATE);
+    result
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
     use crate::FeishuClient;
+
+    /// HHH 契约 provider-protocol v31：写进文字的写法与正文写法对得上——目录里能写进文字的，按写法写出来，正文写法整段认出、
+    /// 认出的就是原来的名字（HHH 的自检工具 hhh-im-check 也这样查）。
+    #[test]
+    fn the_text_template_round_trips_through_the_text_pattern() {
+        let declared = result();
+        let emoji = &declared["platform"]["emoji"];
+        assert_eq!(emoji["textTemplate"], "[{name}]");
+        let pattern = regex_lite::Regex::new(emoji["textPattern"].as_str().unwrap()).unwrap();
+        let catalog = facts::complete_emoji_catalog(crate::EmojiCatalog {
+            emojis: Vec::new(),
+            source_updated_ms: 1,
+            fetched_at_ms: 1,
+            categories: Vec::new(),
+            tones: Vec::new(),
+        });
+        let mut checked = 0;
+        for emoji in catalog
+            .emojis
+            .iter()
+            .filter(|e| !facts::NOT_IN_TEXT.contains(&e.emoji_type.as_str()))
+        {
+            let Some(name) = emoji.name.as_deref() else {
+                continue;
+            };
+            let text = facts::EMOJI_TEXT_TEMPLATE.replace("{name}", name);
+            let found = pattern.captures(&text).expect("认得出");
+            assert_eq!(
+                (&found[0], &found[1]),
+                (text.as_str(), name),
+                "{}",
+                emoji.emoji_type
+            );
+            checked += 1;
+        }
+        // 开放平台的那份目录要联网读，这里查随包快照里有名字的（客户端专有表情与中文名）。
+        assert!(checked > 50, "随包快照里有名字的都查了：{checked}");
+    }
 
     /// 宿主按声明认头像身份（hhh-im `Platform::avatar_identity_of`）：编号对不上时整个键就是身份，变体对不上时没有变体。
     fn declared_identity(key: &str) -> (String, String) {
