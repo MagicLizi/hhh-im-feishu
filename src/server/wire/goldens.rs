@@ -310,7 +310,23 @@ fn the_emoji_catalog_keeps_names_tones_and_the_panel() {
         .expect("快照里有深色的赞");
     assert_eq!(dark.tone.as_deref(), Some("深色"));
     assert!(!dark.panel && dark.tone_of.is_none());
-    lock("emoji_catalog.json", &serde_json::to_value(&wire).unwrap());
+    // 写不进文字的（HHH 契约 provider-protocol v31 取样）标 `inText: false`，别的不写这一项（宿主读成能写进文字）。
+    let json = super::emoji_catalog_json(&catalog);
+    let in_text = |t: &str| {
+        json["emojis"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|e| e["emojiType"] == t)
+            .map(|e| e.get("inText").cloned())
+    };
+    assert_eq!(
+        in_text("2021"),
+        Some(Some(json!(false))),
+        "快照里有 [2021年]，标成写不进文字"
+    );
+    assert_eq!(in_text("THUMBSUP"), Some(None));
+    lock("emoji_catalog.json", &json);
 }
 
 /// 提及机器人（内部记成应用）：线上写 `kind: bot`，宿主记回应用；提及人的写 `kind: user`。飞书提及里原样带来的

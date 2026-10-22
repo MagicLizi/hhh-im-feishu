@@ -518,6 +518,7 @@
     },
     {
       "emojiType": "2021",
+      "inText": false,
       "name": "2021年",
       "panel": true
     },

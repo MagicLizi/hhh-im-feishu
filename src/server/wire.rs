@@ -408,6 +408,24 @@ pub(crate) fn emoji(emoji: &EmojiInfo) -> wire::Emoji {
     }
 }
 
+/// `emoji/catalog` 的 JSON：写不进文字的表情（[`crate::facts::NOT_IN_TEXT`]）加 `inText: false`（协议 v31，可选字段；
+/// 本插件锁的协议包还没有这个字段，直接写进 JSON，升级协议包时换成 `Emoji::in_text`）。
+pub(crate) fn emoji_catalog_json(catalog: &EmojiCatalog) -> Value {
+    let mut value = serde_json::to_value(emoji_catalog(catalog)).expect("表情目录总能写成 JSON");
+    if let Some(emojis) = value.get_mut("emojis").and_then(Value::as_array_mut) {
+        for emoji in emojis {
+            if emoji
+                .get("emojiType")
+                .and_then(Value::as_str)
+                .is_some_and(|t| crate::facts::NOT_IN_TEXT.contains(&t))
+            {
+                emoji["inText"] = Value::Bool(false);
+            }
+        }
+    }
+    value
+}
+
 /// 表情目录（分类、肤色照目录的顺序）。
 pub(crate) fn emoji_catalog(catalog: &EmojiCatalog) -> pm::EmojiCatalogResult {
     pm::EmojiCatalogResult {

@@ -112,6 +112,7 @@
     "emoji": {
       "namePattern": "^[A-Za-z0-9_]{1,64}$",
       "textPattern": "\\[([^\\[\\]\\r\\n]{1,12})\\]",
+      "textTemplate": "[{name}]",
       "unlisted": {
         "guess": true,
         "guessPattern": "^(?=.*[A-Za-z_])[A-Za-z0-9_]{1,48}$",
@@ -160,7 +161,7 @@
   "provider": {
     "id": "feishu",
     "name": "飞书",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "settings": []
 }

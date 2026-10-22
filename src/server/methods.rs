@@ -341,9 +341,9 @@ impl Server {
                 .with_client(|client| async move { client.emoji_catalog().await })
                 .await?;
             let catalog = crate::facts::complete_emoji_catalog(catalog);
-            let result = wire::emoji_catalog(&catalog);
+            let result = wire::emoji_catalog_json(&catalog);
             self.resources.remember_catalog(catalog).await;
-            Ok(to_value(result))
+            Ok(result)
         })
         .await
     }
