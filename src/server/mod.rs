@@ -362,7 +362,23 @@ impl Server {
             | Method::EventsPush
             | Method::Status
             | Method::LogWrite
-            | Method::Cancel => Err(errors::method_not_found(method)),
+            | Method::Cancel
+            // 没有插件操作、不收宿主头像、不自报性能、不维护消息；其余是插件发给宿主的方法。
+            | Method::ActionsStart
+            | Method::ActionStep
+            | Method::ActionSubmit
+            | Method::ActionCancel
+            | Method::ActionFinished
+            | Method::ActionFailed
+            | Method::StepChoose
+            | Method::HostUserName
+            | Method::RequestsAcquire
+            | Method::RequestsReceived
+            | Method::AccountAvatar
+            | Method::MessagesMaintain
+            | Method::PerfStart
+            | Method::PerfStop
+            | Method::PerfReport => Err(errors::method_not_found(method)),
         })
     }
 }

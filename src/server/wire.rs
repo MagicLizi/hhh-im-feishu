@@ -147,6 +147,7 @@ pub(crate) fn message(message: &ImMessage) -> wire::Message {
             .edit_source
             .as_ref()
             .map(|draft| draft.iter().map(outgoing).collect()),
+        agent_attribution: None,
     }
 }
 
@@ -405,37 +406,33 @@ pub(crate) fn emoji(emoji: &EmojiInfo) -> wire::Emoji {
             base: of.base.clone(),
             tone: of.tone.clone(),
         }),
+        in_text: true,
     }
 }
 
-/// `emoji/catalog` 的 JSON：写不进文字的表情（[`crate::facts::NOT_IN_TEXT`]）加 `inText: false`（协议 v31，可选字段；
-/// 本插件锁的协议包还没有这个字段，直接写进 JSON，升级协议包时换成 `Emoji::in_text`）。
+/// `emoji/catalog` 的 JSON：写不进文字的表情（[`crate::facts::NOT_IN_TEXT`]）带 `inText: false`（协议 v31）。
 pub(crate) fn emoji_catalog_json(catalog: &EmojiCatalog) -> Value {
-    let mut value = serde_json::to_value(emoji_catalog(catalog)).expect("表情目录总能写成 JSON");
-    if let Some(emojis) = value.get_mut("emojis").and_then(Value::as_array_mut) {
-        for emoji in emojis {
-            if emoji
-                .get("emojiType")
-                .and_then(Value::as_str)
-                .is_some_and(|t| crate::facts::NOT_IN_TEXT.contains(&t))
-            {
-                emoji["inText"] = Value::Bool(false);
-            }
-        }
-    }
-    value
+    serde_json::to_value(emoji_catalog(catalog)).expect("表情目录总能写成 JSON")
 }
 
 /// 表情目录（分类、肤色照目录的顺序）。
 pub(crate) fn emoji_catalog(catalog: &EmojiCatalog) -> pm::EmojiCatalogResult {
     pm::EmojiCatalogResult {
-        emojis: catalog.emojis.iter().map(emoji).collect(),
+        emojis: catalog
+            .emojis
+            .iter()
+            .map(|item| wire::Emoji {
+                in_text: !crate::facts::NOT_IN_TEXT.contains(&item.emoji_type.as_str()),
+                ..emoji(item)
+            })
+            .collect(),
         categories: catalog
             .categories
             .iter()
             .map(|category| wire::EmojiCategory {
                 id: category.id.clone(),
                 name: category.name.clone(),
+                icon: None,
             })
             .collect(),
         tones: catalog
@@ -458,6 +455,7 @@ pub(crate) fn activity(item: &ActiveConversation) -> pm::ActivityItem {
         first_ms: item.first_ms,
         latest_ms: item.latest_ms,
         peer_id: item.peer.as_ref().map(|peer| peer.id.clone()),
+        conversation: None,
     }
 }
 

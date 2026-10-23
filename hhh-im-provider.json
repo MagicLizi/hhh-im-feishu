@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "feishu",
   "name": "飞书",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "command": "hhh-im-feishu",
   "os": ["windows"],
   "logo": "logo.svg",

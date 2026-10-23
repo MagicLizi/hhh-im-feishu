@@ -111,6 +111,8 @@ pub(crate) fn platform() -> PlatformDesc {
             },
             text_pattern: info.emoji_text_pattern.map(str::to_owned),
             white_background: info.emoji_white_background,
+            // 表情写进文字的写法（协议 v31）：宿主据此给输入框的表情按钮。
+            text_template: Some(facts::EMOJI_TEXT_TEMPLATE.into()),
         }),
         discovery: Some(DiscoveryDesc {
             fastest_secs: facts::DISCOVERY_FASTEST_SECS,
@@ -124,6 +126,8 @@ pub(crate) fn platform() -> PlatformDesc {
         // 同 `facts::edits_shown_by_change`：文字、提及、格式正文组成的消息按内容认编辑。
         edits_by_content: vec![ContentKind::Text, ContentKind::Mention, ContentKind::Rich],
         retranslate_rules: Vec::new(),
+        content_repairs: Vec::new(),
+        content_rereads: Vec::new(),
     }
 }
 
@@ -144,6 +148,8 @@ pub(crate) fn capabilities() -> Capabilities {
         people: PeopleCaps {
             get: true,
             search: true,
+            bots: false,
+            batch_max: None,
         },
         send: Some(SendCaps {
             text: true,
@@ -167,7 +173,12 @@ pub(crate) fn capabilities() -> Capabilities {
         },
         events: Default::default(),
         retranslate: false,
+        message_maintenance: false,
         session: SessionCaps { renew: true },
+        // 不跨账号发收伙伴署名、不收宿主头像、不自报性能。
+        agent_attribution: Default::default(),
+        account: Default::default(),
+        perf: false,
     }
 }
 
@@ -231,7 +242,7 @@ pub(crate) fn initialize(params: pm::InitializeParams) -> Result<Value, RpcError
 
 /// `initialize` 的结果（不看宿主参数的那部分）。
 pub(crate) fn result() -> Value {
-    let mut result = serde_json::to_value(pm::InitializeResult {
+    serde_json::to_value(pm::InitializeResult {
         protocol_version: hhh_im_protocol::PROTOCOL_VERSION,
         provider: pm::ProviderInfo {
             id: PROVIDER_ID.into(),
@@ -242,12 +253,11 @@ pub(crate) fn result() -> Value {
         capabilities: capabilities(),
         settings: Vec::new(),
         login_methods: login_methods(),
+        // 读取不经宿主逐条放行，没有插件操作。
+        read_request_gating: false,
+        actions: Vec::new(),
     })
-    .expect("握手结果总能写成 JSON");
-    // 表情写进文字的写法（协议 v31，可选字段）：本插件锁的协议包还没有这个字段，直接写进平台说明的 JSON；升级协议包时换成
-    // `EmojiRules::text_template`。
-    result["platform"]["emoji"]["textTemplate"] = Value::from(facts::EMOJI_TEXT_TEMPLATE);
-    result
+    .expect("握手结果总能写成 JSON")
 }
 
 #[cfg(test)]
