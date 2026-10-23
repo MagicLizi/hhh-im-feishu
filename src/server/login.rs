@@ -155,6 +155,7 @@ impl Server {
                     url: prepared.pending.authorization_url().to_owned(),
                     label: OPEN_AGAIN.into(),
                     note: None,
+                    links: Vec::new(),
                 },
             },
         );
@@ -412,6 +413,8 @@ impl Server {
             pm::LoginFinishedParams {
                 flow_id: flow_id.to_owned(),
                 account: wire::account(&account),
+                title: None,
+                message: None,
             },
         );
     }
@@ -429,6 +432,8 @@ impl Server {
                 flow_id: flow_id.to_owned(),
                 message,
                 retryable: true,
+                title: None,
+                retry_label: None,
             },
         );
     }
