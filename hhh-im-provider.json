@@ -4,7 +4,7 @@
   "name": "飞书",
   "version": "1.0.3",
   "command": "hhh-im-feishu",
-  "os": ["windows"],
+  "os": ["windows", "macos"],
   "logo": "logo.svg",
   "logoStyle": "mark",
   "logoInk": { "x": 3.16, "y": 5.48, "width": 26.49, "height": 21.07 },
