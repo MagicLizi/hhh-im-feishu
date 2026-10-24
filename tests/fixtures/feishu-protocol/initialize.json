@@ -161,7 +161,7 @@
   "provider": {
     "id": "feishu",
     "name": "飞书",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "settings": []
 }
