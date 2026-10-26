@@ -1,0 +1,18 @@
+{
+  "body": {
+    "content": "{\"title\":\"\",\"content\":[[{\"tag\":\"text\",\"text\":\"取样A（md）：\",\"style\":[]},{\"tag\":\"text\",\"text\":\"粗体\",\"style\":[\"bold\"]},{\"tag\":\"text\",\"text\":\" 表情码[\",\"style\":[]},{\"tag\":\"text\",\"text\":\"微笑] 冒号写法:SMILE: \",\"style\":[]},{\"tag\":\"text\",\"text\":\"行内代码\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"- \",\"style\":[]},{\"tag\":\"text\",\"text\":\"列表一[\",\"style\":[]},{\"tag\":\"text\",\"text\":\"看\",\"style\":[]},{\"tag\":\"text\",\"text\":\"]\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"引用[\",\"style\":[]},{\"tag\":\"text\",\"text\":\"赞\",\"style\":[]},{\"tag\":\"text\",\"text\":\"]\",\"style\":[]}],[{\"tag\":\"text\",\"text\":\"取样B（原生标签）：\",\"style\":[\"bold\"]},{\"tag\":\"emotion\",\"emoji_type\":\"SMILE\"},{\"tag\":\"text\",\"text\":\" 文字里的[微笑]\",\"style\":[]}]],\"content_v2\":[[{\"tag\":\"md\",\"text\":\"取样A（md）：**粗体** 表情码[微笑] 冒号写法:SMILE: `行内代码`\\n- 列表一[看]\\n> 引用[赞]\"}],[{\"tag\":\"text\",\"text\":\"取样B（原生标签）：\",\"style\":[\"bold\"]},{\"tag\":\"emotion\",\"emoji_type\":\"SMILE\"},{\"tag\":\"text\",\"text\":\" 文字里的[微笑]\",\"style\":[]}]]}"
+  },
+  "chat_id": "oc_sample_md_mixed",
+  "create_time": "1792991683102",
+  "deleted": false,
+  "message_id": "om_sample_md_mixed",
+  "msg_type": "post",
+  "sender": {
+    "id": "ou_sample_sender",
+    "id_type": "open_id",
+    "sender_type": "user",
+    "tenant_key": "tenant_sample"
+  },
+  "update_time": "1792991683102",
+  "updated": false
+}

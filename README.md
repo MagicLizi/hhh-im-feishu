@@ -14,6 +14,7 @@ HHH 的飞书插件：在 HHH 里看飞书的群聊、私聊与话题，回消�
 - **读取**：会话列表、搜群、搜人、找私聊、群成员、最近聊过的会话、消息与话题、表情回应、人员资料。
 - **内容**：文字、提及、富文本、卡片（含表格、图片组、人员）、图片、文件、视频、表情包。
 - **发送与动作**：回复、回到话题里、@某人与 @所有人、发图片和文件、撤回、加表情回应、去掉表情回应。
+- **格式发送**：粗体、斜体、下划线、删除线、链接、行内代码、列表、引用和代码块；普通段落用原生表情。列表、引用中的表情在飞书 App 里仍是文字；同段同时有行内代码和表情时优先保留表情图，行内代码只保留文字。官方飞书仍不支持编辑自己的消息。
 - **资源**：图片、文件、头像、表情图都分段交给 HHH。
 
 聊天记录、凭据和配置都由 HHH 保存，插件自己不存。
@@ -29,14 +30,14 @@ cargo clippy --all-targets
 
 程序是 `target/release/hhh-im-feishu`，Windows 上是 `hhh-im-feishu.exe`。Windows 上按窗口程序编译，HHH 拉起它时不弹控制台窗口。
 
-> 协议包 `hhh-im-protocol` 现在按本机路径引用，`Cargo.toml` 里有说明。hhh-im-sdk 打好 `v0.2.0` 标签后，会换成按标签取的固定版本。
+格式发送使用公开 SDK `v0.12.0` 的 `Outgoing::Rich` 与 `capabilities.richSend`，需要带 IM SDK 0.12.0 或更新版本的 HHH。构建固定公开标签，不依赖本地源码替换。
 
 ## 自检
 
-装自检和打包工具（协议 v14 的字段与签名需要 v0.2.0）：
+装自检和打包工具（格式发送自检需使用含上述新增能力的 SDK）：
 
 ```sh
-cargo install --git https://github.com/MagicLizi/hhh-im-sdk --tag v0.10.0 hhh-im-protocol --features transport,package
+cargo install --git https://github.com/MagicLizi/hhh-im-sdk --tag v0.12.0 hhh-im-protocol --features transport,package
 ```
 
 打包后自检，全部通过才算改好：

@@ -351,6 +351,8 @@ impl Server {
             // 飞书不能以本人身份编辑、不带原始数据（能力里都没声明），也不认宿主发来的插件端方法。
             Method::MessagesEdit
             | Method::MessagesRetranslate
+            | Method::ConversationGroupsList
+            | Method::ConversationGroupsMembers
             | Method::LoginSubmit
             | Method::LoginCancel
             | Method::LoginStep

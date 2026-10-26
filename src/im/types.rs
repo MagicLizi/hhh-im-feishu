@@ -2048,6 +2048,11 @@ pub enum OutgoingContent {
         /// 上传后平台返回的资源编号。
         key: String,
     },
+    /// 格式正文（协议 provider-protocol v40）：宿主只交给声明了格式的插件，是这一条的全部内容，翻成飞书富文本。
+    Rich {
+        /// 格式正文的块（协议的节点）。
+        children: Vec<hhh_im_protocol::content::RichNode>,
+    },
 }
 
 /// 一次本人账号发送；操作编号由调用方先保存。

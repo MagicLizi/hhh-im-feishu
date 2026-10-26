@@ -165,6 +165,10 @@ fn outgoing_in(content: wire::Outgoing) -> Option<OutgoingContent> {
             Some(OutgoingContent::Mention { user_id, name })
         }
         wire::Outgoing::MentionAll => Some(OutgoingContent::MentionAll),
+        // 宿主把带格式的编辑原文读成格式正文（v40）；飞书不给编辑原文，照宿主的形状收下。
+        wire::Outgoing::Rich { root } => hhh_im_protocol::content::rich_nodes(&root)
+            .ok()
+            .map(|children| OutgoingContent::Rich { children }),
         wire::Outgoing::Image { .. } | wire::Outgoing::File { .. } => None,
     }
 }

@@ -160,6 +160,18 @@ fn snapshot() -> &'static Snapshot {
     })
 }
 
+/// 表情的中文名（随包快照）：发富文本的 `md` 段时表情写成 `[名字]`（协议 provider-protocol v40）。
+pub(crate) fn name_of(emoji_type: &str) -> Option<String> {
+    let snapshot = snapshot();
+    snapshot.names.get(emoji_type).cloned().or_else(|| {
+        snapshot
+            .extras
+            .iter()
+            .find(|emoji| emoji.emoji_type == emoji_type)
+            .and_then(|emoji| emoji.name.clone())
+    })
+}
+
 /// 把开放平台目录补全（契约 client v15 §2）：官方表情补上中文名，后面接上快照里目录没有的表情
 /// （飞书以后把它们写进文档时以文档为准，不重复）。本机缓存仍只存开放平台目录，这一步在读目录时做。
 pub(crate) fn complete_catalog(mut catalog: EmojiCatalog) -> EmojiCatalog {
