@@ -371,7 +371,12 @@ impl Server {
         let request = SendRequest {
             operation_id: params.operation_id.clone(),
             target: wire::target_in(params.target, CONNECTION),
-            content: params.content.into_iter().map(wire::outgoing_in).collect(),
+            content: params
+                .content
+                .into_iter()
+                .map(wire::outgoing_in)
+                .collect::<Result<_, _>>()
+                .map_err(errors::invalid_params)?,
         };
         let result = cell
             .get_or_try_init(|| async {

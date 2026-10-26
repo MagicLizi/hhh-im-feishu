@@ -918,8 +918,13 @@ pub(super) fn post_mention(node: &Value, mentions: Option<&Vec<Value>>) -> ImRes
 
 /// 把统一的发送内容翻译成飞书的消息种类与内容 JSON。
 ///
-/// 图片与文件必须单独成一条消息；文字、提及与提及所有人拼成一条 text 消息。
+/// 图片与文件必须单独成一条消息；文字、提及与提及所有人拼成一条 text 消息；格式正文（协议 v40）单独成一条
+/// 富文本（`post`，写法见 `post_send`）。
 pub(crate) fn outgoing(content: &[OutgoingContent]) -> ImResult<(&'static str, String)> {
+    if let [OutgoingContent::Rich { children }] = content {
+        return super::post_send::post_content(children, &super::emoji::name_of)
+            .map(|json| ("post", json));
+    }
     if content.is_empty() || content.len() > CONTENT_BLOCKS_MAX {
         return Err(ImError::new(
             ErrorKind::InvalidRequest,
@@ -1001,6 +1006,12 @@ pub(crate) fn outgoing(content: &[OutgoingContent]) -> ImResult<(&'static str, S
                 return Err(ImError::new(
                     ErrorKind::InvalidRequest,
                     "图片或文件须单独成一条消息。",
+                ));
+            }
+            OutgoingContent::Rich { .. } => {
+                return Err(ImError::new(
+                    ErrorKind::InvalidRequest,
+                    "格式正文须单独成一条消息。",
                 ));
             }
         }
@@ -2190,6 +2201,29 @@ mod tests {
         assert!((super::super::CARD_MENTION_REREAD.applies)(&stored));
         stored.deleted = true;
         assert!(!has_raw_card_at_text(&stored));
+    }
+
+    #[test]
+    fn mixed_markdown_and_native_post_keeps_complete_formats() {
+        let parsed = message("test", &fixture("rich-send/mixed.json")).unwrap();
+        let [ImContent::Rich(rich)] = parsed.content.as_slice() else {
+            panic!("带 Markdown 的富文本应当读成格式正文");
+        };
+        let mut inline_code = false;
+        let mut list = false;
+        let mut quote = false;
+        let mut emoji = false;
+        rich.walk(&mut |node| match node {
+            RichNode::InlineCode { value } => inline_code |= value == "行内代码",
+            RichNode::List { .. } => list = true,
+            RichNode::Blockquote { .. } => quote = true,
+            RichNode::Emoji { emoji_type } => emoji |= emoji_type == "SMILE",
+            _ => {}
+        });
+        assert!(inline_code, "优先读 content_v2 才能保住行内代码");
+        assert!(list, "列表必须保留");
+        assert!(quote, "引用必须保留");
+        assert!(emoji, "混排的原生表情必须保留");
     }
 
     #[test]

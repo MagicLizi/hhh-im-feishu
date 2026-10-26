@@ -482,18 +482,24 @@ fn outgoing(content: &OutgoingContent) -> wire::Outgoing {
         OutgoingContent::MentionAll => wire::Outgoing::MentionAll,
         OutgoingContent::Image { key } => wire::Outgoing::Image { key: key.clone() },
         OutgoingContent::File { key } => wire::Outgoing::File { key: key.clone() },
+        OutgoingContent::Rich { children } => {
+            hhh_im_protocol::content::rich_outgoing(children.clone())
+        }
     }
 }
 
-/// 线上发送内容 → 内部。
-pub(crate) fn outgoing_in(content: wire::Outgoing) -> OutgoingContent {
-    match content {
+/// 线上发送内容 → 内部；格式正文（协议 v40）写法不对时回说明。
+pub(crate) fn outgoing_in(content: wire::Outgoing) -> Result<OutgoingContent, String> {
+    Ok(match content {
         wire::Outgoing::Text { text } => OutgoingContent::Text { text },
         wire::Outgoing::Mention { user_id, name } => OutgoingContent::Mention { user_id, name },
         wire::Outgoing::MentionAll => OutgoingContent::MentionAll,
         wire::Outgoing::Image { key } => OutgoingContent::Image { key },
         wire::Outgoing::File { key } => OutgoingContent::File { key },
-    }
+        wire::Outgoing::Rich { root } => OutgoingContent::Rich {
+            children: hhh_im_protocol::content::rich_nodes(&root)?,
+        },
+    })
 }
 
 /// 线上发送目标 → 内部（补上插件自己的连接编号）。

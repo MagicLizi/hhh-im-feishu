@@ -10,6 +10,7 @@ pub mod facts;
 mod im_client;
 mod markdown;
 mod members;
+mod post_send;
 mod reactions;
 mod resource;
 mod rich;

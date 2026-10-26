@@ -6,7 +6,7 @@ use hhh_im_protocol::platform::{
     ActionRules, Adjustable, AvatarIdentity, AvatarShape, Broadcast, Capabilities, ContentKind,
     ConversationCaps, ConversationNouns, DiscoveryDesc, EmojiRules, HistoryMode, Limits,
     MessageCaps, OwnWithin, PeopleCaps, PlatformDesc, RateBudget, ReactionCaps, ReadIntervalsSecs,
-    ResourceCaps, SendCaps, SessionCaps, Threads, UnlistedEmoji,
+    ResourceCaps, RichFormat, RichSendCaps, SendCaps, SessionCaps, Threads, UnlistedEmoji,
 };
 use hhh_im_protocol::rpc::RpcError;
 use serde_json::Value;
@@ -134,6 +134,7 @@ pub(crate) fn platform() -> PlatformDesc {
 /// 能力：飞书适配器实现了的都声明；不推送（飞书没有本人的实时推送，靠定时读）。
 pub(crate) fn capabilities() -> Capabilities {
     Capabilities {
+        conversation_groups: Default::default(),
         conversations: ConversationCaps {
             list: true,
             search: true,
@@ -161,6 +162,21 @@ pub(crate) fn capabilities() -> Capabilities {
         }),
         recall: true,
         edit: false,
+        // 发送时能带的格式（协议 v40）：全部；写法见 `feishu::post_send`。飞书不能以本人身份编辑消息，不声明带格式改。
+        rich_send: RichSendCaps {
+            formats: vec![
+                RichFormat::Strong,
+                RichFormat::Emphasis,
+                RichFormat::Underline,
+                RichFormat::Delete,
+                RichFormat::InlineCode,
+                RichFormat::Link,
+                RichFormat::Blockquote,
+                RichFormat::List,
+                RichFormat::Code,
+            ],
+            edit: false,
+        },
         reactions: ReactionCaps {
             list: true,
             add: true,

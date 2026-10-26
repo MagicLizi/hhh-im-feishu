@@ -745,6 +745,56 @@ async fn send_and_reply_use_user_token_exact_content_and_stable_uuid() {
 }
 
 #[tokio::test]
+async fn rich_send_uses_native_post_and_preserves_operation_id() {
+    use hhh_im_protocol::content::RichNode as Node;
+    let (server, client) = setup().await;
+    Mock::given(method("POST"))
+        .and(path("/open-apis/im/v1/messages"))
+        .and(header("authorization", "Bearer user_token"))
+        .respond_with(
+            ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":raw_message()})),
+        )
+        .expect(1)
+        .mount(&server)
+        .await;
+    let mut rich = request("rich-op-1");
+    rich.content = vec![OutgoingContent::Rich {
+        children: vec![Node::Paragraph {
+            children: vec![
+                Node::Strong {
+                    children: vec![Node::Text {
+                        value: "原样 **符号**".into(),
+                    }],
+                },
+                Node::Emoji {
+                    emoji_type: "SMILE".into(),
+                },
+            ],
+        }],
+    }];
+    assert!(matches!(
+        client.send(&rich).await.unwrap(),
+        SendOutcome::Accepted { .. }
+    ));
+    let requests = server.received_requests().await.unwrap();
+    let post = requests
+        .iter()
+        .find(|request| request.url.path() == "/open-apis/im/v1/messages")
+        .unwrap();
+    let body: Value = serde_json::from_slice(&post.body).unwrap();
+    assert_eq!(body["uuid"], "rich-op-1");
+    assert_eq!(body["msg_type"], "post");
+    let content: Value = serde_json::from_str(body["content"].as_str().unwrap()).unwrap();
+    assert_eq!(
+        content["zh_cn"]["content"][0],
+        json!([
+            {"tag":"text","text":"原样 **符号**","style":["bold"]},
+            {"tag":"emotion","emoji_type":"SMILE"}
+        ])
+    );
+}
+
+#[tokio::test]
 async fn ambiguous_sends_are_unknown_and_never_retried() {
     for response in [
         ResponseTemplate::new(503),
