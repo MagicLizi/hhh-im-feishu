@@ -161,11 +161,34 @@ fn to_value(chunk: pm::ResourceChunk) -> Value {
 }
 
 impl Server {
+    /// 消息资源接口返回同一份图片；两份已有发送快照的实读取样与上传字节一致。
+    pub(crate) async fn describe_resource(
+        &self,
+        params: pm::ResourcesDescribeParams,
+    ) -> Result<Value, RpcError> {
+        self.with_ready_client(|_| async { Ok(()) }).await?;
+        let description = hhh_im_protocol::ResourceVariants {
+            variants: vec![hhh_im_protocol::ResourceVariant {
+                id: "platform".into(),
+                preview: params.kind != hhh_im_protocol::ResourceKind::File,
+                original: params.kind != hhh_im_protocol::ResourceKind::Sticker,
+                ..Default::default()
+            }],
+        };
+        Ok(serde_json::to_value(description).expect("资源说明总能序列化"))
+    }
+
     /// `resources/read`。
     pub(crate) async fn read_resource(
         &self,
         params: pm::ResourcesReadParams,
     ) -> Result<Value, RpcError> {
+        if params.variant.as_deref().is_some_and(|id| id != "platform") {
+            return Err(errors::rpc(&ImError::new(
+                ErrorKind::NotFound,
+                "飞书开放接口没有这个资源版本。",
+            )));
+        }
         let reference = ResourceRef {
             message: MessageRef {
                 conversation: ConversationRef::new(CONNECTION, &params.conversation_id),
@@ -174,10 +197,7 @@ impl Server {
             key: params.key.clone(),
             kind: wire::resource_kind_in(params.kind),
         };
-        let id = format!(
-            "resource\u{1f}{}\u{1f}{}\u{1f}{}\u{1f}{:?}",
-            params.conversation_id, params.message_id, params.key, reference.kind
-        );
+        let id = params.segment_key();
         if let Some(stream) = self.resources.take(&id, params.offset) {
             return self.finish_read(stream, params.length).await;
         }

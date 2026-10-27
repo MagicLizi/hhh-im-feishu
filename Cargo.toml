@@ -18,7 +18,7 @@ path = "src/main.rs"
 
 [dependencies]
 # 协议包：线上类型与 JSON-RPC 编解码，按标签取 hhh-im-sdk 的固定版本。
-hhh-im-protocol = { git = "https://github.com/MagicLizi/hhh-im-sdk", tag = "v0.12.0" }
+hhh-im-protocol = { git = "https://github.com/MagicLizi/hhh-im-sdk", tag = "v0.14.0" }
 # serde：序列化框架；derive = 在类型上一行 #[derive(Serialize, Deserialize)] 自动生成编解码。
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
@@ -54,7 +54,7 @@ tokio = { version = "1", default-features = false, features = ["macros", "rt-mul
 # wiremock：测试用的本机假飞书服务与假授权中继，验证请求形状与错误分级。
 wiremock = "0.6"
 # 测试里用宿主那一侧的连接层（transport）当宿主，跟插件按协议说话。
-hhh-im-protocol = { git = "https://github.com/MagicLizi/hhh-im-sdk", tag = "v0.12.0", features = ["transport"] }
+hhh-im-protocol = { git = "https://github.com/MagicLizi/hhh-im-sdk", tag = "v0.14.0", features = ["transport"] }
 # regex-lite：宿主认头像身份用的正则库，测试里拿它核对声明的写法与内置的认法一致。
 regex-lite = "0.1"
 

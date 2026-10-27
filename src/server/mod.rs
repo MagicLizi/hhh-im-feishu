@@ -312,6 +312,10 @@ impl Server {
                 Err(error) => Err(error),
             },
             Method::EmojiCatalog => self.emoji_catalog().await,
+            Method::ResourcesDescribe => match params(value) {
+                Ok(p) => self.describe_resource(p).await,
+                Err(error) => Err(error),
+            },
             Method::ResourcesRead => match params(value) {
                 Ok(params) => self.read_resource(params).await,
                 Err(error) => Err(error),
@@ -381,6 +385,7 @@ impl Server {
             | Method::PerfStart
             | Method::PerfStop
             | Method::PerfReport => Err(errors::method_not_found(method)),
+            _ => Err(errors::method_not_found(method)),
         })
     }
 }

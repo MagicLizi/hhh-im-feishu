@@ -169,7 +169,9 @@ fn outgoing_in(content: wire::Outgoing) -> Option<OutgoingContent> {
         wire::Outgoing::Rich { root } => hhh_im_protocol::content::rich_nodes(&root)
             .ok()
             .map(|children| OutgoingContent::Rich { children }),
-        wire::Outgoing::Image { .. } | wire::Outgoing::File { .. } => None,
+        wire::Outgoing::Image { .. }
+        | wire::Outgoing::File { .. }
+        | wire::Outgoing::Sticker { .. } => None,
     }
 }
 
