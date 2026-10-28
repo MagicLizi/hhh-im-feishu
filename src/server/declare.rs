@@ -134,6 +134,7 @@ pub(crate) fn platform() -> PlatformDesc {
 /// 能力：飞书适配器实现了的都声明；不推送（飞书没有本人的实时推送，靠定时读）。
 pub(crate) fn capabilities() -> Capabilities {
     Capabilities {
+        stickers: Default::default(),
         conversation_groups: Default::default(),
         conversations: ConversationCaps {
             list: true,
@@ -184,6 +185,7 @@ pub(crate) fn capabilities() -> Capabilities {
             catalog: true,
         },
         resources: ResourceCaps {
+            variants: true,
             read: true,
             avatars: true,
         },

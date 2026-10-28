@@ -450,6 +450,7 @@ pub(crate) fn emoji_catalog(catalog: &EmojiCatalog) -> pm::EmojiCatalogResult {
 /// 会话发现的一项（只用来认会话，资料宿主另读）。
 pub(crate) fn activity(item: &ActiveConversation) -> pm::ActivityItem {
     pm::ActivityItem {
+        first_page: None,
         conversation_id: item.conversation.id.clone(),
         kind: conversation_kind(&item.kind),
         first_ms: item.first_ms,
@@ -496,6 +497,9 @@ pub(crate) fn outgoing_in(content: wire::Outgoing) -> Result<OutgoingContent, St
         wire::Outgoing::MentionAll => OutgoingContent::MentionAll,
         wire::Outgoing::Image { key } => OutgoingContent::Image { key },
         wire::Outgoing::File { key } => OutgoingContent::File { key },
+        wire::Outgoing::Sticker { .. } => {
+            return Err("飞书开放接口插件没有声明发送贴纸能力。".into());
+        }
         wire::Outgoing::Rich { root } => OutgoingContent::Rich {
             children: hhh_im_protocol::content::rich_nodes(&root)?,
         },
