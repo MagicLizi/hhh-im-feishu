@@ -307,6 +307,18 @@ impl Server {
                 Ok(params) => self.messages_get(params).await,
                 Err(error) => Err(error),
             },
+            Method::ReadingReceipts => match params(value) {
+                Ok(params) => self.reading_receipts(params).await,
+                Err(error) => Err(error),
+            },
+            Method::ReadingPeople => match params(value) {
+                Ok(params) => self.reading_people(params).await,
+                Err(error) => Err(error),
+            },
+            Method::ReadingSync => match params(value) {
+                Ok(params) => self.reading_sync(params).await,
+                Err(error) => Err(error),
+            },
             Method::ReactionsList => match params(value) {
                 Ok(params) => self.reactions_list(params).await,
                 Err(error) => Err(error),
@@ -355,8 +367,7 @@ impl Server {
             // 飞书不能以本人身份编辑、不带原始数据（能力里都没声明），也不认宿主发来的插件端方法。
             Method::MessagesEdit
             | Method::MessagesRetranslate
-            | Method::ConversationGroupsList
-            | Method::ConversationGroupsMembers
+            | Method::ContactsList
             | Method::LoginSubmit
             | Method::LoginCancel
             | Method::LoginStep

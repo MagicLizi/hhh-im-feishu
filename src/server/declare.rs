@@ -135,7 +135,24 @@ pub(crate) fn platform() -> PlatformDesc {
 pub(crate) fn capabilities() -> Capabilities {
     Capabilities {
         stickers: Default::default(),
-        conversation_groups: Default::default(),
+        receipts: Some(hhh_im_protocol::reading::ReceiptCaps {
+            scopes: hhh_im_protocol::reading::ReadScopes {
+                conversations: true,
+                threads: false,
+            },
+            readers: true,
+            unreaders: false,
+            max_age_secs: Some(7 * 24 * 60 * 60),
+        }),
+        mark_read: None,
+        read_sync: Some(hhh_im_protocol::reading::ReadSyncCaps {
+            scopes: hhh_im_protocol::reading::ReadScopes {
+                conversations: true,
+                threads: true,
+            },
+            watermark: false,
+            individual: true,
+        }),
         conversations: ConversationCaps {
             list: true,
             search: true,
@@ -146,8 +163,10 @@ pub(crate) fn capabilities() -> Capabilities {
         messages: MessageCaps {
             list: true,
             get: true,
+            forwarded: false,
         },
         people: PeopleCaps {
+            contacts: false,
             get: true,
             search: true,
             bots: false,

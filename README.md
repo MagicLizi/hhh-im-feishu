@@ -16,6 +16,7 @@ HHH 的飞书插件：在 HHH 里看飞书的群聊、私聊与话题，回消�
 - **发送与动作**：回复、回到话题里、@某人与 @所有人、发图片和文件、撤回、加表情回应、去掉表情回应。
 - **格式发送**：粗体、斜体、下划线、删除线、链接、行内代码、列表、引用和代码块；普通段落用原生表情。列表、引用中的表情在飞书 App 里仍是文字；同段同时有行内代码和表情时优先保留表情图，行内代码只保留文字。官方飞书仍不支持编辑自己的消息。
 - **资源**：图片、文件、头像、表情图都分段交给 HHH。
+- **阅读状态**：近七天的本人会话消息可查询已读人数与已读名单；没有可靠总人数和未读名单，不画比例。本人在其他客户端看过的消息逐条回读，不把一条已读当作连续阅读水位；不声明写回。
 
 聊天记录、凭据和配置都由 HHH 保存，插件自己不存。
 
@@ -30,14 +31,14 @@ cargo clippy --all-targets
 
 程序是 `target/release/hhh-im-feishu`，Windows 上是 `hhh-im-feishu.exe`。Windows 上按窗口程序编译，HHH 拉起它时不弹控制台窗口。
 
-格式发送使用公开 SDK `v0.14.0` 的 `Outgoing::Rich` 与 `capabilities.richSend`，本版需要带 IM SDK 0.14.0 或更新版本的 HHH。构建固定公开标签，不依赖本地源码替换。
+格式发送使用 SDK 的 `Outgoing::Rich` 与 `capabilities.richSend`。阅读扩展使用公开 SDK `v0.16.0` 的固定标签；构建不需要本地源码覆盖。安装与运行需要支持 IM SDK 0.16.0 或更新版本的 HHH。
 
 ## 自检
 
 装自检和打包工具（格式发送自检需使用含上述新增能力的 SDK）：
 
 ```sh
-cargo install --git https://github.com/MagicLizi/hhh-im-sdk --tag v0.14.0 hhh-im-protocol --features transport,package
+cargo install --git https://github.com/MagicLizi/hhh-im-sdk --tag v0.16.0 hhh-im-protocol --features transport,package
 ```
 
 打包后自检，全部通过才算改好：
@@ -84,4 +85,4 @@ hhh-im-check dist/stage/hhh-im-provider.json
 
 开放接口图片使用同一份平台文件供显示和保存；已用两份已有发送快照核对，消息资源接口返回的内容与上传字节一致。接口不提供可选择的缩略图档位，文件仍按原有读取。
 
-新宿主经 `resources/describe` 选择实际版本，读取时带 `variant`；省略 `variant` 的旧调用仍按原来的方式读取；二进制安装仍需通过宿主的最低 SDK 检查。分段缓存包含实际版本，不把预览当成原件。本版固定使用 IM SDK v0.14.0，宿主需支持该版 SDK。
+新宿主经 `resources/describe` 选择实际版本，读取时带 `variant`；省略 `variant` 的旧调用仍按原来的方式读取；二进制安装仍需通过宿主的最低 SDK 检查。分段缓存包含实际版本，不把预览当成原件。本版固定使用 IM SDK v0.16.0，宿主需支持该版 SDK。

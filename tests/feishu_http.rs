@@ -5,6 +5,155 @@ use wiremock::{
     matchers::{body_json, header, method, path, query_param},
 };
 
+fn reading_scope() -> hhh_im_protocol::reading::ReadScope {
+    hhh_im_protocol::reading::ReadScope {
+        conversation_id: "oc_group".into(),
+        thread_root: None,
+    }
+}
+
+#[tokio::test]
+async fn reading_sync_keeps_only_explicit_true_without_a_watermark() {
+    let (server, client) = setup().await;
+    Mock::given(method("POST"))
+        .and(path("/open-apis/im/v1/messages/read_status"))
+        .and(header("authorization", "Bearer user_token"))
+        .and(body_json(json!({"message_ids":["om_read", "om_unread", "om_unknown"]})))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{
+            "items":[{"message_id":"om_read","is_read":true},{"message_id":"om_unread","is_read":false}],
+            "invalid_message_ids":["om_unknown"]
+        }})))
+        .expect(1)
+        .mount(&server).await;
+    let state = client
+        .read_state(&hhh_im_protocol::reading::ReadSyncParams {
+            scope: reading_scope(),
+            message_ids: vec!["om_read".into(), "om_unread".into(), "om_unknown".into()],
+        })
+        .await
+        .unwrap();
+    assert_eq!(state.read_message_ids, ["om_read"]);
+    assert_eq!(state.through, None);
+    assert_eq!(state.scope, reading_scope());
+}
+
+#[tokio::test]
+async fn reading_sync_rejects_foreign_and_ambiguous_facts() {
+    for data in [
+        json!({"items":[{"message_id":"om_other","is_read":true}]}),
+        json!({"items":[{"message_id":"om_read","is_read":"true"}]}),
+        json!({"items":[{"message_id":"om_read","is_read":true}],"invalid_message_ids":["om_read"]}),
+    ] {
+        let (server, client) = setup().await;
+        Mock::given(method("POST"))
+            .and(path("/open-apis/im/v1/messages/read_status"))
+            .respond_with(ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":data})))
+            .mount(&server)
+            .await;
+        let error = client
+            .read_state(&hhh_im_protocol::reading::ReadSyncParams {
+                scope: reading_scope(),
+                message_ids: vec!["om_read".into()],
+            })
+            .await
+            .unwrap_err();
+        assert_eq!(error.kind, ErrorKind::ProtocolError);
+    }
+}
+
+async fn mock_reading_message(server: &MockServer, sender: &str, conversation: &str) {
+    let mut message = raw_message();
+    message["sender"]["id"] = sender.into();
+    message["chat_id"] = conversation.into();
+    for key in ["parent_id", "root_id", "thread_id"] {
+        message.as_object_mut().unwrap().remove(key);
+    }
+    Mock::given(method("GET"))
+        .and(path("/open-apis/im/v1/messages/om_reply"))
+        .respond_with(
+            ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{"items":[message]}})),
+        )
+        .mount(server)
+        .await;
+}
+
+#[tokio::test]
+async fn reading_receipts_use_sampled_reader_shape_and_never_invent_a_denominator() {
+    let (server, client) = setup().await;
+    mock_reading_message(&server, "ou_me", "oc_group").await;
+    // 真实只读取样的形状；人员与时间均已替换。
+    Mock::given(method("GET"))
+        .and(path("/open-apis/im/v1/messages/om_reply/read_users"))
+        .and(header("authorization", "Bearer user_token"))
+        .and(query_param("user_id_type", "open_id"))
+        .and(query_param("page_size", "100"))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{
+            "has_more":false,"items":[{"tenant_key":"tenant","timestamp":"1790000000","user_id":"ou_reader","user_id_type":"open_id"}]
+        }}))).expect(1).mount(&server).await;
+    let response = client
+        .reading_receipts(&hhh_im_protocol::reading::ReceiptsParams {
+            scope: reading_scope(),
+            message_ids: vec!["om_reply".into()],
+        })
+        .await
+        .unwrap();
+    assert_eq!(response.items.len(), 1);
+    let receipt = &response.items[0];
+    assert_eq!(receipt.read_count, Some(1));
+    assert_eq!(receipt.total_count, None);
+    assert!(receipt.readers);
+    assert!(!receipt.unreaders);
+}
+
+#[tokio::test]
+async fn reading_people_requires_own_message_in_the_requested_conversation() {
+    for (sender, conversation, expected) in [
+        ("ou_other", "oc_group", ErrorKind::Unsupported),
+        ("ou_me", "oc_other", ErrorKind::ProtocolError),
+    ] {
+        let (server, client) = setup().await;
+        mock_reading_message(&server, sender, conversation).await;
+        Mock::given(method("GET"))
+            .and(path("/open-apis/im/v1/messages/om_reply/read_users"))
+            .respond_with(ResponseTemplate::new(500))
+            .expect(0)
+            .mount(&server)
+            .await;
+        let error = client
+            .reading_people(&hhh_im_protocol::reading::ReceiptPeopleParams {
+                scope: reading_scope(),
+                message_id: "om_reply".into(),
+                read: true,
+                cursor: None,
+                limit: 50,
+            })
+            .await
+            .unwrap_err();
+        assert_eq!(error.kind, expected);
+    }
+}
+
+#[tokio::test]
+async fn reading_receipts_keep_platform_denial_unknown() {
+    let (server, client) = setup().await;
+    mock_reading_message(&server, "ou_me", "oc_group").await;
+    Mock::given(method("GET"))
+        .and(path("/open-apis/im/v1/messages/om_reply/read_users"))
+        .respond_with(ResponseTemplate::new(200).set_body_json(
+            json!({"code":10071,"msg":"The operator is not the sender of the message."}),
+        ))
+        .mount(&server)
+        .await;
+    let response = client
+        .reading_receipts(&hhh_im_protocol::reading::ReceiptsParams {
+            scope: reading_scope(),
+            message_ids: vec!["om_reply".into()],
+        })
+        .await
+        .unwrap();
+    assert!(response.items.is_empty(), "查询失败不能物化为零人已读");
+}
+
 fn config(server: &MockServer) -> FeishuConfig {
     FeishuConfig {
         api_base: server.uri(),
