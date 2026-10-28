@@ -246,6 +246,9 @@ fn block(message: &MessageRef, b: wire::Block, incomplete: &mut bool) -> ImConte
             *incomplete = true;
             ImContent::Unsupported { kind, label }
         }
+        wire::Block::Forwarded { .. } => {
+            panic!("本插件未声明转发记录，测试输出不应包含该块")
+        }
     }
 }
 

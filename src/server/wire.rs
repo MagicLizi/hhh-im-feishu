@@ -106,6 +106,7 @@ pub(crate) fn message(message: &ImMessage) -> wire::Message {
         || message.thread_activity.is_some()
         || message.thread_copy.is_some();
     wire::Message {
+        read_position: None,
         id: message.reference.id.clone(),
         conversation_id: message.reference.conversation.id.clone(),
         sender: sender(&message.sender),
@@ -182,6 +183,7 @@ fn block(content: &ImContent) -> wire::Block {
             };
             wire::Block::Resource {
                 resource: wire::Resource {
+                    voice: false,
                     key: resource.key.clone(),
                     kind: resource_kind(resource.kind),
                     // 宿主认视频看 `mime` 是视频或带了封面；飞书的视频消息有时没有封面，按文件名给一个视频 MIME，

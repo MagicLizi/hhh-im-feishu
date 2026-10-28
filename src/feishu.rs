@@ -12,6 +12,7 @@ mod markdown;
 mod members;
 mod post_send;
 mod reactions;
+mod reading;
 mod resource;
 mod rich;
 mod search;
