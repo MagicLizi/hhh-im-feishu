@@ -175,6 +175,7 @@ fn block(content: &ImContent) -> wire::Block {
             name,
             size,
             video,
+            audio,
         } => {
             // 视频的宽高是画面宽高（在视频信息里），图片的在资源上；宿主按同一规则翻回来。
             let shown = match video {
@@ -183,14 +184,17 @@ fn block(content: &ImContent) -> wire::Block {
             };
             wire::Block::Resource {
                 resource: wire::Resource {
-                    voice: false,
                     key: resource.key.clone(),
                     kind: resource_kind(resource.kind),
                     // 宿主认视频看 `mime` 是视频或带了封面；飞书的视频消息有时没有封面，按文件名给一个视频 MIME，
                     // 让宿主照样认出是视频（内部不记 MIME，翻回来不多出东西）。
                     mime: video.as_ref().map(|_| video_mime(name.as_deref())),
                     bytes: None,
-                    duration_ms: video.as_ref().and_then(|video| video.duration_ms),
+                    duration_ms: video
+                        .as_ref()
+                        .and_then(|video| video.duration_ms)
+                        .or_else(|| audio.as_ref().and_then(|audio| audio.duration_ms)),
+                    voice: audio.as_ref().is_some_and(|audio| audio.voice),
                     cover: video
                         .as_ref()
                         .and_then(|video| video.cover.as_ref())

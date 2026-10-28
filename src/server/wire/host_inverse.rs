@@ -212,6 +212,14 @@ fn block(message: &MessageRef, b: wire::Block, incomplete: &mut bool) -> ImConte
                 _ => None,
             };
             let video = video_of(message, &resource, size);
+            let audio =
+                (video.is_none() && resource.kind == wire::ResourceKind::File && resource.voice)
+                    .then(|| {
+                        Box::new(AudioInfo {
+                            voice: true,
+                            duration_ms: resource.duration_ms.filter(|ms| *ms > 0),
+                        })
+                    });
             ImContent::Resource {
                 resource: ResourceRef {
                     message: message.clone(),
@@ -221,6 +229,7 @@ fn block(message: &MessageRef, b: wire::Block, incomplete: &mut bool) -> ImConte
                 name,
                 size: if video.is_some() { None } else { size },
                 video,
+                audio,
             }
         }
         wire::Block::Rich { root } => {

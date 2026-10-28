@@ -203,6 +203,24 @@ impl Server {
 mod tests {
     use super::*;
     #[test]
+    fn forwarded_audio_keeps_voice_metadata_and_scopes_its_resource() {
+        let item = json!({
+            "message_id":"om_voice", "upper_message_id":"outer", "chat_id":"oc_demo",
+            "msg_type":"audio", "create_time":"1700000000000",
+            "sender":{"id":"ou_old","id_type":"open_id","sender_type":"user"},
+            "body":{"content":json!({"file_key":"file_fixture_audio","duration":1000}).to_string()}
+        });
+        let record = record("outer", &[item], 1, &mut 0);
+        assert!(!record.incomplete);
+        let wire::Block::Resource { resource, .. } = &record.messages[0].content[0] else {
+            panic!("应保留转发记录中的语音资源")
+        };
+        assert!(resource.voice);
+        assert_eq!(resource.duration_ms, Some(1000));
+        assert_eq!(resource.key, "fw/om_voice/file_fixture_audio");
+    }
+
+    #[test]
     fn maintenance_only_rereads_legacy_forwarded_and_recalled_snapshots_stay_hidden() {
         let reply=maintain(json!({"mode":"reread","rule":"forwarded-record-v1","messages":[
             {"id":"outer","conversationId":"chat","content":[{"type":"unsupported","kind":"merge_forward"}]},
