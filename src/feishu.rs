@@ -5,6 +5,7 @@ pub(crate) mod card;
 mod emoji;
 mod errors;
 mod events;
+mod forwarded;
 // 平台事实：原来登记在 HHH 平台表里的 `PLATFORM` 与连接表单，第二步写进 `initialize` 的声明。
 pub mod facts;
 mod im_client;

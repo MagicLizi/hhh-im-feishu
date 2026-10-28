@@ -127,15 +127,17 @@ pub(crate) fn platform() -> PlatformDesc {
         edits_by_content: vec![ContentKind::Text, ContentKind::Mention, ContentKind::Rich],
         retranslate_rules: Vec::new(),
         content_repairs: Vec::new(),
-        content_rereads: Vec::new(),
+        content_rereads: vec!["forwarded-record-v1".into()],
     }
 }
 
 /// 能力：飞书适配器实现了的都声明；不推送（飞书没有本人的实时推送，靠定时读）。
 pub(crate) fn capabilities() -> Capabilities {
     Capabilities {
+        receipts: None,
+        mark_read: None,
+        read_sync: None,
         stickers: Default::default(),
-        conversation_groups: Default::default(),
         conversations: ConversationCaps {
             list: true,
             search: true,
@@ -146,8 +148,10 @@ pub(crate) fn capabilities() -> Capabilities {
         messages: MessageCaps {
             list: true,
             get: true,
+            forwarded: true,
         },
         people: PeopleCaps {
+            contacts: false,
             get: true,
             search: true,
             bots: false,
@@ -191,7 +195,7 @@ pub(crate) fn capabilities() -> Capabilities {
         },
         events: Default::default(),
         retranslate: false,
-        message_maintenance: false,
+        message_maintenance: true,
         session: SessionCaps { renew: true },
         // 不跨账号发收伙伴署名、不收宿主头像、不自报性能。
         agent_attribution: Default::default(),

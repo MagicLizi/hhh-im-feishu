@@ -1,6 +1,6 @@
 //! 测试用：宿主（HHH 的 hhh-im `provider/translate.rs`，契约 provider-protocol v14）把线上类型翻回内部类型的那一半，
-//! 照抄过来、只改引用路径（表情一项在宿主的 `provider.rs`）。插件这一侧的翻译（上一级模块）要是它的反方向：内部 → 线上 → 这里 → 内部，一字不差。
-//! 宿主那边改了翻译，这里跟着改。
+//! 只覆盖插件旧内核能表达的内容（表情一项在宿主的 `provider.rs`）。上一级模块对这些内容须满足：内部 → 线上 → 这里 → 内部，一字不差。
+//! 转发快照由协议边界直接组装，不经过旧内核；用 `server::forwarded` 的协议测试核对，不能投影成普通卡片。
 
 use hhh_im_protocol::types as wire;
 
@@ -177,6 +177,10 @@ fn outgoing_in(content: wire::Outgoing) -> Option<OutgoingContent> {
 
 fn block(message: &MessageRef, b: wire::Block, incomplete: &mut bool) -> ImContent {
     match b {
+        // 这个逆变换只核对迁出前内核已经表达过的内容；新增快照由协议级测试单独核对。
+        wire::Block::Forwarded { .. } => {
+            panic!("转发快照不能放进旧内核模型的对拍，请使用转发记录的协议测试")
+        }
         wire::Block::Text { text } => ImContent::Text { text },
         wire::Block::Mention {
             user_id,
