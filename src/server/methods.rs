@@ -52,6 +52,81 @@ fn message_ref(conversation: &str, id: &str) -> MessageRef {
 }
 
 impl Server {
+    pub(crate) async fn reading_receipts(
+        &self,
+        params: hhh_im_protocol::reading::ReceiptsParams,
+    ) -> Result<Value, RpcError> {
+        counted(async {
+            self.with_client(|client| {
+                let params = params.clone();
+                async move { client.reading_receipts(&params).await }
+            })
+            .await
+            .map(to_value)
+        })
+        .await
+    }
+
+    pub(crate) async fn reading_people(
+        &self,
+        params: hhh_im_protocol::reading::ReceiptPeopleParams,
+    ) -> Result<Value, RpcError> {
+        counted(async {
+            let mut page = self
+                .with_client(|client| {
+                    let params = params.clone();
+                    async move { client.reading_people(&params).await }
+                })
+                .await?;
+            let users: Vec<UserRef> = page
+                .people
+                .iter()
+                .map(|person| UserRef {
+                    connection_id: CONNECTION.into(),
+                    id: person.id.clone(),
+                })
+                .collect();
+            if !users.is_empty() {
+                match self
+                    .with_client(|client| {
+                        let users = users.clone();
+                        async move { client.users(&users).await }
+                    })
+                    .await
+                {
+                    Ok(found) => {
+                        for person in &mut page.people {
+                            if let Some(user) = found.iter().find(|u| u.reference.id == person.id) {
+                                *person = wire::person(user);
+                            }
+                        }
+                    }
+                    Err(error) => {
+                        tracing::warn!(code = error.code, "已读人员资料暂时读不到，保留真实编号")
+                    }
+                }
+            }
+            Ok(to_value(page))
+        })
+        .await
+    }
+
+    pub(crate) async fn reading_sync(
+        &self,
+        params: hhh_im_protocol::reading::ReadSyncParams,
+    ) -> Result<Value, RpcError> {
+        counted(async {
+            let result = self
+                .with_client(|client| {
+                    let params = params.clone();
+                    async move { client.read_state(&params).await }
+                })
+                .await?;
+            Ok(to_value(result))
+        })
+        .await
+    }
+
     /// `conversations/list`（只列用户所在的群，飞书的群列表不含单聊）。
     pub(crate) async fn conversations_list(
         &self,

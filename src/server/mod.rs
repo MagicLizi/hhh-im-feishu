@@ -308,6 +308,18 @@ impl Server {
                 Ok(params) => self.messages_get(params).await,
                 Err(error) => Err(error),
             },
+            Method::ReadingReceipts => match params(value) {
+                Ok(params) => self.reading_receipts(params).await,
+                Err(error) => Err(error),
+            },
+            Method::ReadingPeople => match params(value) {
+                Ok(params) => self.reading_people(params).await,
+                Err(error) => Err(error),
+            },
+            Method::ReadingSync => match params(value) {
+                Ok(params) => self.reading_sync(params).await,
+                Err(error) => Err(error),
+            },
             Method::ReactionsList => match params(value) {
                 Ok(params) => self.reactions_list(params).await,
                 Err(error) => Err(error),

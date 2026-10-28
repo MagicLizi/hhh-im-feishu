@@ -30,7 +30,17 @@
       "list": true,
       "remove": true
     },
+    "readSync": {
+      "conversations": true,
+      "individual": true,
+      "threads": true
+    },
     "recall": true,
+    "receipts": {
+      "conversations": true,
+      "maxAgeSecs": 604800,
+      "readers": true
+    },
     "resources": {
       "avatars": true,
       "read": true,
