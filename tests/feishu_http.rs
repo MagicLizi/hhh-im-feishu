@@ -13,6 +13,96 @@ fn reading_scope() -> hhh_im_protocol::reading::ReadScope {
 }
 
 #[tokio::test]
+async fn thread_receipts_use_public_read_users_only_for_the_verified_scope() {
+    for requested_root in [Some("om_root"), Some("om_other"), None] {
+        let (server, client) = setup().await;
+        let mut message = raw_message();
+        message["sender"]["id"] = "ou_me".into();
+        message["root_id"] = "om_root".into();
+        message["parent_id"] = "om_root".into();
+        message["thread_id"] = "omt_thread".into();
+        message["thread_message_position"] = "0".into();
+        Mock::given(method("GET"))
+            .and(path("/open-apis/im/v1/messages/om_reply"))
+            .respond_with(
+                ResponseTemplate::new(200)
+                    .set_body_json(json!({"code":0,"data":{"items":[message]}})),
+            )
+            .mount(&server)
+            .await;
+        let accepted = requested_root == Some("om_root");
+        Mock::given(method("GET"))
+            .and(path("/open-apis/im/v1/messages/om_reply/read_users"))
+            .and(header("authorization", "Bearer user_token"))
+            .respond_with(
+                ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{
+                    "items":[{"user_id":"ou_reader","user_id_type":"open_id"}],"has_more":false
+                }})),
+            )
+            .expect(if accepted { 1 } else { 0 })
+            .mount(&server)
+            .await;
+        let result = client
+            .reading_people(&hhh_im_protocol::reading::ReceiptPeopleParams {
+                scope: hhh_im_protocol::reading::ReadScope {
+                    conversation_id: "oc_group".into(),
+                    thread_root: requested_root.map(str::to_owned),
+                },
+                message_id: "om_reply".into(),
+                read: true,
+                cursor: None,
+                limit: 100,
+            })
+            .await;
+        if accepted {
+            let page = result.unwrap();
+            assert!(page.complete);
+            assert_eq!(page.people[0].id, "ou_reader");
+        } else {
+            assert_eq!(result.unwrap_err().kind, ErrorKind::Unsupported);
+        }
+    }
+}
+
+#[tokio::test]
+async fn expired_thread_receipts_remain_unknown_instead_of_zero() {
+    let (server, client) = setup().await;
+    let mut message = raw_message();
+    message["sender"]["id"] = "ou_me".into();
+    message["root_id"] = "om_root".into();
+    message["thread_id"] = "omt_thread".into();
+    message["thread_message_position"] = "0".into();
+    Mock::given(method("GET"))
+        .and(path("/open-apis/im/v1/messages/om_reply"))
+        .respond_with(
+            ResponseTemplate::new(200).set_body_json(json!({"code":0,"data":{"items":[message]}})),
+        )
+        .mount(&server)
+        .await;
+    // 真实公开接口对超过七天的本人话题回复返回 230033。
+    Mock::given(method("GET"))
+        .and(path("/open-apis/im/v1/messages/om_reply/read_users"))
+        .respond_with(
+            ResponseTemplate::new(400)
+                .set_body_json(json!({"code":230033,"msg":"Message has expired"})),
+        )
+        .expect(1)
+        .mount(&server)
+        .await;
+    let result = client
+        .reading_receipts(&hhh_im_protocol::reading::ReceiptsParams {
+            scope: hhh_im_protocol::reading::ReadScope {
+                conversation_id: "oc_group".into(),
+                thread_root: Some("om_root".into()),
+            },
+            message_ids: vec!["om_reply".into()],
+        })
+        .await
+        .unwrap();
+    assert!(result.items.is_empty());
+}
+
+#[tokio::test]
 async fn reading_sync_keeps_only_explicit_true_without_a_watermark() {
     let (server, client) = setup().await;
     Mock::given(method("POST"))
