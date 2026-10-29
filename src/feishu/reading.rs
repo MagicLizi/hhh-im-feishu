@@ -56,6 +56,11 @@ impl FeishuClient {
         params: &ReceiptPeopleParams,
     ) -> ImResult<ReceiptPeopleResult> {
         if !valid_read_scope(&params.scope)
+            || params
+                .scope
+                .thread_root
+                .as_ref()
+                .is_some_and(|root| !root.starts_with("om_"))
             || !params.message_id.starts_with("om_")
             || !valid_read_ids(std::slice::from_ref(&params.message_id))
             || params.limit == 0
@@ -70,10 +75,10 @@ impl FeishuClient {
                 "阅读名单请求不正确。",
             ));
         }
-        if !params.read || params.scope.thread_root.is_some() {
+        if !params.read {
             return Err(ImError::new(
                 ErrorKind::Unsupported,
-                "本插件仅核实了会话消息的已读名单。",
+                "飞书公开接口只提供已读名单。",
             ));
         }
         let reference = MessageRef {
@@ -85,13 +90,28 @@ impl FeishuClient {
         };
         // read_users 响应不含会话与发送者，先沿用消息查询核验归属。
         let message = self.get_message(&reference).await?;
-        if message.sender.id != self.account.user.id
-            || message.deleted
-            || message.in_thread == Some(true)
-        {
+        let reply_root = message
+            .root_message
+            .as_ref()
+            .filter(|root| {
+                message.in_thread != Some(false)
+                    && message.thread_id.is_some()
+                    && root.id != message.reference.id
+            })
+            .map(|root| root.id.as_str());
+        let in_scope = match params.scope.thread_root.as_deref() {
+            None => reply_root.is_none() && message.in_thread != Some(true),
+            Some(root) => {
+                reply_root == Some(root)
+                    || (message.reference.id == root
+                        && message.thread_id.is_some()
+                        && message.in_thread != Some(true))
+            }
+        };
+        if message.sender.id != self.account.user.id || message.deleted || !in_scope {
             return Err(ImError::new(
                 ErrorKind::Unsupported,
-                "只能查询当前本人发送的会话消息回执。",
+                "只能查询当前本人发送且属于指定范围的消息回执。",
             ));
         }
         let mut query = vec![

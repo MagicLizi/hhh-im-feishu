@@ -138,7 +138,7 @@ pub(crate) fn capabilities() -> Capabilities {
         receipts: Some(hhh_im_protocol::reading::ReceiptCaps {
             scopes: hhh_im_protocol::reading::ReadScopes {
                 conversations: true,
-                threads: false,
+                threads: true,
             },
             readers: true,
             unreaders: false,

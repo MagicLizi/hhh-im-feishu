@@ -39,7 +39,8 @@
     "receipts": {
       "conversations": true,
       "maxAgeSecs": 604800,
-      "readers": true
+      "readers": true,
+      "threads": true
     },
     "resources": {
       "avatars": true,
