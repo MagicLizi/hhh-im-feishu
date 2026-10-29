@@ -1,4 +1,4 @@
-﻿# 打包（Windows）：编译、把程序与清单放进 dist/stage、用 hhh-im-pack 打成 .hhhim 并写版本索引。
+# 打包（Windows）：编译、把程序与清单放进 dist/stage、用 hhh-im-pack 打成 .hhhim 并写版本索引。
 # 用法：powershell -File scripts/pack.ps1 [-SignKey <私钥文件>] [-Publish]
 #   -SignKey：用官方私钥给版本索引签名，写出 hhhim-release.json.sig（飞书是官方插件，发版本必须签）。
 #             私钥在私有的密钥仓库：<hhh-keys>/official/hhh-official-signing.key，不放进这个仓库、不贴进对话。

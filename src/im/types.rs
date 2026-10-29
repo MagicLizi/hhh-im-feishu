@@ -623,6 +623,9 @@ pub enum ImContent {
         /// 平台没说、文件名是视频的，交给宿主前由框架补上一个空的（[`ImMessage::complete_videos`]）。
         #[serde(default, skip_serializing_if = "Option::is_none")]
         video: Option<VideoInfo>,
+        /// 明确的音频信息；平台语音与普通音频文件分别保留语义。
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        audio: Option<Box<AudioInfo>>,
     },
     /// 当前无法完整翻译的消息内容。
     Unsupported {
@@ -638,6 +641,15 @@ pub enum ImContent {
     /// 格式正文：带格式或链接的普通消息，结构已在平台适配器里整理成标准 Markdown 语法树
     /// （mdast）的子集。上层按节点显示，不解析文字（契约 client v6）。
     Rich(ImRich),
+}
+
+#[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AudioInfo {
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub voice: bool,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub duration_ms: Option<u64>,
 }
 
 impl ImContent {
@@ -1525,7 +1537,7 @@ impl ImMessage {
     /// let reference = MessageRef { conversation: ConversationRef::new("work", "C01"), id: "1".into() };
     /// let file = |name: &str| ImContent::Resource {
     ///     resource: ResourceRef { message: reference.clone(), key: name.into(), kind: ResourceKind::File },
-    ///     name: Some(name.into()), size: None, video: None,
+    ///     name: Some(name.into()), size: None, video: None, audio: None,
     /// };
     /// let mut message = ImMessage {
     ///     reference: reference.clone(),

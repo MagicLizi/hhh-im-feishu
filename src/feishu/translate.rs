@@ -346,9 +346,10 @@ pub(crate) fn message(connection: &str, raw: &Value) -> ImResult<ImMessage> {
                             text_content(&body, raw.get("mentions").and_then(Value::as_array))?
                         }
                         "image" => vec![resource(&reference, &body, ResourceKind::Image)?],
-                        "file" | "audio" => {
+                        "file" => {
                             vec![resource(&reference, &body, ResourceKind::File)?]
                         }
+                        "audio" => vec![audio_content(&reference, &body)?],
                         // 视频消息自带封面与时长（契约 client v35 §1.3）。
                         "media" => vec![media_content(&reference, &body)?],
                         "sticker" => vec![sticker_content(&reference, &body)],
@@ -515,7 +516,26 @@ pub(super) fn resource(
         name: optional(raw, "file_name"),
         size: None,
         video: None,
+        audio: None,
     })
+}
+
+fn audio_content(message: &MessageRef, raw: &Value) -> ImResult<ImContent> {
+    let mut content = resource(message, raw, ResourceKind::File)?;
+    if let ImContent::Resource { audio, name, .. } = &mut content {
+        *audio = Some(Box::new(AudioInfo {
+            voice: true,
+            duration_ms: raw
+                .get("duration")
+                .and_then(Value::as_u64)
+                .filter(|ms| *ms > 0),
+        }));
+        // 没给文件名时不虚构编码或扩展名，读取的仍是平台原始文件。
+        if name.is_none() {
+            *name = Some("语音".into());
+        }
+    }
+    Ok(content)
 }
 
 /// 视频消息（`media`，契约 client v35 §1.3；取样见 friend/video-preview 回溯 §3）：内容是
@@ -567,6 +587,7 @@ fn sticker_content(message: &MessageRef, raw: &Value) -> ImContent {
             name: None,
             size: None,
             video: None,
+            audio: None,
         },
         None => {
             tracing::warn!("表情包消息里没有认得出的图片编号，按暂不支持显示");
@@ -1500,6 +1521,34 @@ mod tests {
     }
 
     #[test]
+    fn native_audio_preserves_duration_and_explicit_voice_on_the_wire() {
+        // 2026-10-28 原生语音取样：body 只给 file_key 与 duration，没有文件名或 MIME。
+        let mut raw = sample();
+        raw["msg_type"] = "audio".into();
+        for duration in [json!(1000), json!(0), json!(-1), Value::Null] {
+            raw["body"]["content"] = json!({"file_key":"file_fixture_audio", "duration":duration})
+                .to_string()
+                .into();
+            let translated = message("test", &raw).unwrap();
+            let wire = crate::server::wire::message(&translated);
+            let hhh_im_protocol::types::Block::Resource { resource, name, .. } = &wire.content[0]
+            else {
+                panic!("不是音频资源")
+            };
+            assert!(resource.voice);
+            assert_eq!(resource.duration_ms, duration.as_u64().filter(|n| *n > 0));
+            assert!(resource.mime.is_none());
+            assert_eq!(name.as_deref(), Some("语音"));
+        }
+        raw["msg_type"] = "file".into();
+        let wire = crate::server::wire::message(&message("test", &raw).unwrap());
+        let hhh_im_protocol::types::Block::Resource { resource, .. } = &wire.content[0] else {
+            panic!("不是文件")
+        };
+        assert!(!resource.voice);
+    }
+
+    #[test]
     fn cards_translate_from_raw_json_and_unknown_structures_ask_for_a_fallback() {
         let mut raw = sample();
         raw["msg_type"] = "interactive".into();
@@ -1563,7 +1612,7 @@ mod tests {
         );
         assert_eq!(cover.resource.message, full.reference);
         assert_eq!(info.duration_ms, Some(3400));
-        // 音频仍是普通文件。
+        // 语音仍走文件下载，但保留明确的语音语义。
         raw["msg_type"] = "audio".into();
         assert!(!message("test", &raw).unwrap().content[0].is_video());
         // 升级前存下的视频（当时只记成文件）重读一次；有封面或时长的、不是视频的不读。
@@ -1610,7 +1659,7 @@ mod tests {
         assert!(!result.incomplete);
         assert!(matches!(
             &result.content[..],
-            [ImContent::Resource { resource, name: None, size: None, video: None }]
+            [ImContent::Resource { resource, name: None, size: None, video: None, audio: None }]
                 if resource.kind == ResourceKind::Sticker && resource.key == "v3_0010a_22222222-2222-4222-8222-22222222222g"
         ));
         assert!(!is_unsupported_sticker(&result));
