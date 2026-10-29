@@ -127,7 +127,7 @@ pub(crate) fn platform() -> PlatformDesc {
         edits_by_content: vec![ContentKind::Text, ContentKind::Mention, ContentKind::Rich],
         retranslate_rules: Vec::new(),
         content_repairs: Vec::new(),
-        content_rereads: Vec::new(),
+        content_rereads: vec!["forwarded-record-v1".into()],
     }
 }
 
@@ -163,7 +163,7 @@ pub(crate) fn capabilities() -> Capabilities {
         messages: MessageCaps {
             list: true,
             get: true,
-            forwarded: false,
+            forwarded: true,
         },
         people: PeopleCaps {
             contacts: false,
@@ -210,7 +210,7 @@ pub(crate) fn capabilities() -> Capabilities {
         },
         events: Default::default(),
         retranslate: false,
-        message_maintenance: false,
+        message_maintenance: true,
         session: SessionCaps { renew: true },
         // 不跨账号发收伙伴署名、不收宿主头像、不自报性能。
         agent_attribution: Default::default(),

@@ -350,8 +350,12 @@ impl Server {
                     async move { client.list_messages(&query).await }
                 })
                 .await?;
+            let mut items = Vec::with_capacity(page.items.len());
+            for message in &page.items {
+                items.push(self.forwarded_message(message).await);
+            }
             Ok(to_value(pm::Page {
-                items: page.items.iter().map(wire::message).collect(),
+                items,
                 next: wire::cursor_out(page.next.as_ref()),
             }))
         })
@@ -371,7 +375,7 @@ impl Server {
                     async move { client.get_message(&reference).await }
                 })
                 .await?;
-            Ok(to_value(wire::message(&message)))
+            Ok(to_value(self.forwarded_message(&message).await))
         })
         .await
     }

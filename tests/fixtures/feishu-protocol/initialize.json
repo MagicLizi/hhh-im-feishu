@@ -17,7 +17,8 @@
     },
     "messages": {
       "get": true,
-      "list": true
+      "list": true,
+      "forwarded": true
     },
     "people": {
       "get": true,
@@ -69,7 +70,8 @@
     },
     "session": {
       "renew": true
-    }
+    },
+    "messageMaintenance": true
   },
   "loginMethods": [
     {
@@ -179,6 +181,9 @@
     },
     "userAdjustable": [
       "readIntervals"
+    ],
+    "contentRereads": [
+      "forwarded-record-v1"
     ]
   },
   "protocolVersion": 1,

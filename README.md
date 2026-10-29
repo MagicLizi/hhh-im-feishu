@@ -22,6 +22,8 @@ HHH 的飞书插件：在 HHH 里看飞书的群聊、私聊与话题，回消�
 
 ## 构建
 
+本版固定使用公开 IM SDK `v0.16.0`，合并转发读取与阅读状态使用该版的类型与能力声明；宿主需要支持 IM SDK 0.16.0 或更新版本的 HHH。构建不依赖本机源码替换。
+
 ```sh
 cargo build --release
 cargo test
@@ -31,7 +33,7 @@ cargo clippy --all-targets
 
 程序是 `target/release/hhh-im-feishu`，Windows 上是 `hhh-im-feishu.exe`。Windows 上按窗口程序编译，HHH 拉起它时不弹控制台窗口。
 
-格式发送使用 SDK 的 `Outgoing::Rich` 与 `capabilities.richSend`。阅读扩展使用公开 SDK `v0.16.0` 的固定标签；构建不需要本地源码覆盖。安装与运行需要支持 IM SDK 0.16.0 或更新版本的 HHH。
+格式发送使用 SDK 的 `Outgoing::Rich` 与 `capabilities.richSend`。
 
 ## 自检
 
@@ -86,3 +88,7 @@ hhh-im-check dist/stage/hhh-im-provider.json
 开放接口图片使用同一份平台文件供显示和保存；已用两份已有发送快照核对，消息资源接口返回的内容与上传字节一致。接口不提供可选择的缩略图档位，文件仍按原有读取。
 
 新宿主经 `resources/describe` 选择实际版本，读取时带 `variant`；省略 `variant` 的旧调用仍按原来的方式读取；二进制安装仍需通过宿主的最低 SDK 检查。分段缓存包含实际版本，不把预览当成原件。本版固定使用 IM SDK v0.16.0，宿主需支持该版 SDK。
+
+## 合并转发记录
+
+读取开放平台随外层消息返回的合并转发快照，保留顺序、可知的原发送人、时间和嵌套关系。图片、文件键绑定外层消息，下载前重新验证子消息的归属，并沿用开放平台的资源权限；拿不到的部分明确标为不完整。旧的合并转发占位由 `messages/maintain` 选择重读。

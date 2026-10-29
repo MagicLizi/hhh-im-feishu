@@ -11,6 +11,7 @@
 mod credential;
 mod declare;
 mod errors;
+mod forwarded;
 mod log;
 mod login;
 mod methods;
@@ -323,6 +324,7 @@ impl Server {
                 Ok(params) => self.reactions_list(params).await,
                 Err(error) => Err(error),
             },
+            Method::MessagesMaintain => forwarded::maintain(value),
             Method::EmojiCatalog => self.emoji_catalog().await,
             Method::ResourcesDescribe => match params(value) {
                 Ok(p) => self.describe_resource(p).await,
@@ -380,7 +382,7 @@ impl Server {
             | Method::Status
             | Method::LogWrite
             | Method::Cancel
-            // 没有插件操作、不收宿主头像、不自报性能、不维护消息；其余是插件发给宿主的方法。
+            // 没有插件操作、不收宿主头像、不自报性能；其余是插件发给宿主的方法。
             | Method::ActionsStart
             | Method::ActionStep
             | Method::ActionSubmit
@@ -392,7 +394,6 @@ impl Server {
             | Method::RequestsAcquire
             | Method::RequestsReceived
             | Method::AccountAvatar
-            | Method::MessagesMaintain
             | Method::PerfStart
             | Method::PerfStop
             | Method::PerfReport => Err(errors::method_not_found(method)),

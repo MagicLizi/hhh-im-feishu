@@ -97,6 +97,8 @@ impl FeishuClient {
         reference: &ResourceRef,
         range: ResourceRange,
     ) -> ImResult<OpenedResource> {
+        let resolved = self.forwarded_resource(reference).await?;
+        let reference = &resolved;
         if reference.kind == ResourceKind::Sticker {
             // 表情包在图片 CDN 上、不带令牌：不看授权是否过期，只核对归属与编号。
             self.check_conversation(&reference.message.conversation)?;
